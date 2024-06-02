@@ -17,7 +17,7 @@ const renderer = new THREE.WebGLRenderer({
 
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
-camera.position.set(0, 1.6, 3);
+camera.position.set(0, 1.6, 10);
 
 renderer.render(scene, camera);
 
@@ -115,8 +115,14 @@ function animate() {
   requestAnimationFrame(animate);
 
 
-  stars.forEach((star) => {
-    star.rotation.y += 0.01;
+  stars.forEach((star, index) => {
+    if (index % 2 === 0) {
+      // Rotate half of the stars to the left
+      star.rotation.y += 0.01;
+    } else {
+      // Rotate the other half to the right
+      star.rotation.y -= 0.01;
+    }
   });
   // Rotate the loaded model if it exists
   /*if (cellphone) {
