@@ -98,7 +98,7 @@ iframe.style.width = '1024px';
 iframe.style.height = '768px';
 iframe.style.border = '0';
 const cssObject = new CSS3DObject(iframe);
-cssObject.position.set(0, 0, -4000);
+cssObject.position.set(0, 0, -700);
 
 scene.add(cssObject);
 
@@ -148,7 +148,8 @@ function animate() {
   // controls.update();
 
   renderer.render(scene, camera);
-  cssRenderer.render(scene, camera);
+  //THIS LINE RENDERS THE WEBSITE vvvv
+  //cssRenderer.render(scene, camera);
 }
 
 animate();
