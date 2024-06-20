@@ -1,22 +1,27 @@
 import './style.css';
 import * as THREE from 'three';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import { CSS3DRenderer, CSS3DObject } from 'three/examples/jsm/renderers/CSS3DRenderer.js';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
 //3 things (kindof 4) are necessary. objects:
 //scene, camera, renderer, + lighting
 
 const scene = new THREE.Scene();
-
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-
 const renderer = new THREE.WebGLRenderer({
   antialias: true,
   canvas: document.querySelector('#bg'),
 });
+const cssRenderer = new CSS3DRenderer();
 
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
+
+cssRenderer.domElement.className = 'css3d';
+document.body.appendChild(cssRenderer.domElement);
+cssRenderer.setSize(window.innerWidth, window.innerHeight);
+cssRenderer.domElement.style.position = 'absolute';
+cssRenderer.domElement.style.top = '0';
 camera.position.set(0, 1.6, 10);
 
 renderer.render(scene, camera);
@@ -87,9 +92,19 @@ Array(200).fill().forEach(addStar);
 const spaceTexture = new THREE.TextureLoader().load('space.png');
 scene.background = spaceTexture;
 
-// Avatar
+const iframe = document.createElement('iframe');
+iframe.src = 'https://2-d-for-portfolio.vercel.app/';
+iframe.style.width = '1024px';
+iframe.style.height = '768px';
+iframe.style.border = '0';
+const cssObject = new CSS3DObject(iframe);
+cssObject.position.set(0, 0, -4000);
+
+scene.add(cssObject);
 
 
+document.body.appendChild(renderer.domElement);
+document.body.appendChild(cssRenderer.domElement);
 // Scroll Animation
 /*
 function moveCamera() {
@@ -133,6 +148,7 @@ function animate() {
   // controls.update();
 
   renderer.render(scene, camera);
+  cssRenderer.render(scene, camera);
 }
 
 animate();
