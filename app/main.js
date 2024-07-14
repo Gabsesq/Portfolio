@@ -1,5 +1,3 @@
-
-
 import './style.css';
 import * as THREE from 'three';
 import { CSS3DRenderer, CSS3DObject } from 'three/examples/jsm/renderers/CSS3DRenderer.js';
@@ -11,16 +9,16 @@ const renderer = new THREE.WebGLRenderer({
   antialias: true,
   canvas: document.querySelector('#bg')
 });
-const cssRenderer = new CSS3DRenderer({
-  element: document.querySelector('#css-bg')
-});
-cssRenderer.setSize(window.innerWidth, window.innerHeight);
-document.body.appendChild(cssRenderer.domElement);
-cssRenderer.domElement.style.position = 'absolute';
-cssRenderer.domElement.style.top = '0';
-
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
+document.body.appendChild(renderer.domElement);
+
+const cssRenderer = new CSS3DRenderer();
+cssRenderer.setSize(window.innerWidth, window.innerHeight);
+cssRenderer.domElement.style.position = 'absolute';
+cssRenderer.domElement.style.top = '0';
+cssRenderer.domElement.style.zIndex = '1'; // Ensure it is above the WebGLRenderer
+document.body.appendChild(cssRenderer.domElement);
 
 // Set the background using TextureLoader
 const back = new THREE.TextureLoader();
@@ -69,34 +67,13 @@ iframe.style.height = '768px';
 iframe.style.border = '0';
 const cssObject = new CSS3DObject(iframe);
 cssObject.position.set(0, 0, -700);
+cssObject.scale.set(1.2, 1.2, 1.2); // Scale the iframe to fit your scene
 scene.add(cssObject);
-
-document.body.appendChild(renderer.domElement);
-
-let rotate = true; // This flag controls whether the phone should rotate
-let rotationSpeed = 0.05; // Speed of rotation
-let rotationDirection = 1; // 1 for clockwise, -1 for counter-clockwise
-let rotationLimit = Math.PI/8;
-// Event listener for the button
-document.getElementById('stopRotationButton').addEventListener('click', function() {
-  rotate = false; // Stop the rotation when the button is clicked
-});
 
 function animate() {
   requestAnimationFrame(animate);
-
-  // Update the phone's rotation if `rotate` is true
-  if (rotate && cellphone) {
-    cellphone.rotation.x += rotationSpeed * rotationDirection;
-    
-    // Change direction of the rotation at the limits
-    if (cellphone.rotation.x > rotationLimit || cellphone.rotation.x < -rotationLimit) {
-      rotationDirection *= -1; // Reverse the direction
-    }
-  }
-
   renderer.render(scene, camera);
-  if (cssRenderer) cssRenderer.render(scene, camera); // Update CSS3DRenderer if used
+  cssRenderer.render(scene, camera); // Update CSS3DRenderer if used
 }
 
 animate();
