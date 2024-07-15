@@ -20,12 +20,6 @@ cssRenderer.domElement.style.top = '0';
 cssRenderer.domElement.style.zIndex = '1'; // Ensure it is above the WebGLRenderer
 document.body.appendChild(cssRenderer.domElement);
 
-// Set the background using TextureLoader
-const back = new THREE.TextureLoader();
-back.load('emptyRoom.png', function(texture) {
-  scene.background = texture;
-});
-
 camera.position.set(0, 1.6, 10);
 
 // Lighting
@@ -34,31 +28,44 @@ directionalLight.position.set(0, 50, 100);
 scene.add(directionalLight);
 
 let cellphone;
+let mixer; // Animation mixer
 const loader = new GLTFLoader();
 loader.load('NOKIA2.glb', function(gltf) {
   cellphone = gltf.scene;
   scene.add(cellphone);
-  cellphone.position.set(0, 0, -200);
+  cellphone.position.set(0, 0, -170);
   cellphone.rotation.y = -Math.PI / 2;
   cellphone.rotation.x = -.2;
   cellphone.scale.set(50, 50, 50);
+
+  // Hide the "extra knobs" object
+  const extraKnobs = cellphone.getObjectByName('extra knobs');
+  if (extraKnobs) {
+    extraKnobs.visible = false; // This hides the object
+  }
+
+  // Setup the animation mixer
+  mixer = new THREE.AnimationMixer(cellphone);
+  const clip = THREE.AnimationClip.findByName(gltf.animations, 'phone open'); // Use the actual animation name
+  if (clip) {
+    const action = mixer.clipAction(clip);
+    action.setLoop(THREE.LoopOnce); // Set the animation to play only once
+    action.clampWhenFinished = true; // Make sure the animation holds the last frame when finished
+
+    // Add event listener to mixer to handle when the animation finishes
+    mixer.addEventListener('finished', (e) => {
+      if (e.action === action) {
+        console.log('Animation finished playing');
+        // Here you can set any post-animation behavior if needed
+      }
+    });
+
+    document.getElementById('playAnimation').addEventListener('click', function() {
+      action.reset();  // Reset the action to make sure it plays from the start
+      action.play();  // Play the animation
+    });
+  }
 });
-
-const stars = [];
-const textureLoader = new THREE.TextureLoader();
-const diamondTexture = textureLoader.load('pinkchrome.png');
-function addStar() {
-  const geometry = new THREE.OctahedronGeometry(0.25);
-  const material = new THREE.MeshStandardMaterial({ map: diamondTexture, flatShading: true });
-  const star = new THREE.Mesh(geometry, material);
-  star.scale.set(0.5, 1, 0.5);
-  const [x, y, z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread(50));
-  star.position.set(x, y, z);
-  scene.add(star);
-  stars.push(star);
-}
-
-Array(200).fill().forEach(addStar);
 
 const iframe = document.createElement('iframe');
 iframe.src = 'https://2-d-for-portfolio.vercel.app/';
@@ -72,8 +79,9 @@ scene.add(cssObject);
 
 function animate() {
   requestAnimationFrame(animate);
+  if (mixer) mixer.update(clock.getDelta()); // Update the mixer with the frame delta
   renderer.render(scene, camera);
-  cssRenderer.render(scene, camera); // Update CSS3DRenderer if used
 }
 
+const clock = new THREE.Clock(); // Clock to keep track of time for animations
 animate();
