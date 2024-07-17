@@ -1,43 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3D Portfolio!</title>
-    <style>
-      body, html {
-        margin: 0;
-        height: 100%;
-        overflow: hidden;
-      }
-      #playAnimation {
-        position: absolute;
-        top: 20px;
-        left: 20px;
-        z-index: 2;
-        padding: 10px 20px;
-        font-size: 16px;
-        cursor: pointer;
-      }
-      canvas {
-        display: block; /* Removes the margin in the bottom of the canvas */
-        width: 100%;
-        height: 100%;
-      }
-    </style>
-  </head>
-  <body>
-    <button id="playAnimation">Open Phone</button>
-    <canvas id="bg"></canvas>
-    <canvas id="bg" class="cursor-pointer"></canvas>
-    <button id="playAnimation" class="cursor-pointer">Open phone</button>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3D Portfolio!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="bg" class="cursor-pointer"></canvas>
+  <button id="rotateButton">Rotate Phone</button>
 
-    <!-- THREE.js Library -->
-    <script src="https://cdn.jsdelivr.net/npm/three@0.150.1/build/three.min.js"></script>
-    <!-- GLTFLoader from the jsdelivr -->
-    <script src="https://cdn.jsdelivr.net/npm/three@0.150.1/examples/js/loaders/GLTFLoader.js"></script>
-    <!-- Your Custom JavaScript File -->
-    <script type="module" src="/main.js"></script>
-  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.150.1/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.150.1/examples/js/loaders/GLTFLoader.js"></script>
+  <script type="module" src="/main.js"></script>
+</body>
 </html>

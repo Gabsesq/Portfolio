@@ -1,74 +1,43 @@
-/* style.css */
 body {
-  cursor: url('hand.png'), auto; /* Ensure the path is correct */
+  margin: 0;
+  overflow: hidden;
 }
 
-canvas, #bg, .css3d {
-  position: fixed;
+canvas {
+  display: block; /* Removes any padding/margin issues */
+  position: fixed; /* Ensures it covers the whole screen */
   top: 0;
   left: 0;
-}
-
-:root {
-  --dark-bg: rgba(15, 15, 15, 0.95);
-  --spacing: 350px;
-
-  font-family: brandon-grotesque, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-main {
-  width: 100vw;
-  color: white;
-  z-index: 99;
-  position: absolute;
   width: 100%;
-  margin: 0px auto;
-  padding: 120px 0px;
-  
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  height: 100%;
 }
 
-h1, h2, h3, blockquote {
-  font-family: elevon, sans-serif;
-  font-weight: 700;
-  font-style: normal;
+#rotateButton {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 2;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #ee4d90; /* Button background color */
+  border: none; /* Remove border */
+  color: white; /* Button text color */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Shadow effect */
+  transition: all 0.3s ease; /* Smooth transition */
 }
 
-header {
-  background: var(--dark-bg);
-  grid-column: 2 / span 5;
-  font-size: 2.5rem;
-  padding: 2rem;
-  margin-bottom: var(--spacing);
+#rotateButton:hover {
+  background-color: #973c97; /* Darker background on hover */
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
 }
 
-section {
-  grid-column: 2 / 8;
-  padding: 1rem;
-  background: var(--dark-bg);
-  font-size: 1.25rem;
-  line-height: 1.5;
-  margin-bottom: var(--spacing);
-}
-
-blockquote {
-  margin: 0;
-  padding: 0;
-  grid-column: 2 / span 9;
-  margin-bottom: var(--spacing);
-}
-
-blockquote p {
-  color: black;
-  background-color: white;
-  font-size: 4rem;
-  display: inline;
-  line-height: 1;
-}
-
-.left {
-  grid-column: 6 / 12;
+#rotateButton:active {
+  background-color: #752e75; /* Even darker background on click */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Restore shadow on click */
+  transform: translateY(2px); /* Slight move down on click */
 }
