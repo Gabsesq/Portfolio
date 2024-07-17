@@ -13,5 +13,7 @@ export default defineConfig({
       external: ['style.css']
     },
     chunkSizeWarningLimit: 1000 // Adjust the limit to a higher value
-  }
+  },
+  publicDir: 'public', // Ensure Vite knows where to look for public files
+  assetsInclude: ['**/*.glb'] // Include .glb files as static assets
 });
