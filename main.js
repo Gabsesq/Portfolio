@@ -53,7 +53,7 @@ let renderIframe = false; // Flag to control iframe rendering
 const loader = new GLTFLoader();
 let mixer;
 
-loader.load('Public/NOKIA2.glb', (gltf) => {
+loader.load('/public/NOKIA2.glb', (gltf) => {
   const model = gltf.scene;
   model.scale.set(0.1, 0.1, 0.1); // Adjust the scale if necessary
   model.rotation.y = 3 * Math.PI / 2; // Rotate 90 degrees along the Y axis
