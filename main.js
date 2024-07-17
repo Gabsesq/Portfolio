@@ -2,6 +2,7 @@ import './style.css';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+import { CSS3DRenderer, CSS3DObject } from 'three/examples/jsm/renderers/CSS3DRenderer.js';
 import gsap from 'gsap';
 
 // Create the scene
@@ -11,7 +12,15 @@ const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 camera.position.set(0, 2, 1);
 
-// Create the renderer
+// Create the CSS3DRenderer
+const cssRenderer = new CSS3DRenderer();
+cssRenderer.setSize(window.innerWidth, window.innerHeight);
+cssRenderer.domElement.style.position = 'absolute';
+cssRenderer.domElement.style.top = '0';
+cssRenderer.domElement.style.zIndex = '1'; // Ensure it is above the WebGLRenderer
+document.body.appendChild(cssRenderer.domElement);
+
+// Create the WebGLRenderer
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setPixelRatio(window.devicePixelRatio);
@@ -27,7 +36,7 @@ controls.screenSpacePanning = false;
 controls.rotateSpeed = 0.5;
 
 // Add a basic ambient light
-const ambientLight = new THREE.AmbientLight(0xEEDD82, 2); // Soft white light
+const ambientLight = new THREE.AmbientLight(0xEEDD82, 3); // Soft white light
 scene.add(ambientLight);
 
 // Add a directional light
@@ -38,6 +47,7 @@ scene.add(directionalLight);
 let phoneObject; // Define the phoneObject variable
 let animationAction; // Define the animation action variable
 let isAnimating = true; // Flag to track the animation state
+let renderIframe = false; // Flag to control iframe rendering
 
 // Set up the phone ring animation
 const loader = new GLTFLoader();
@@ -46,7 +56,7 @@ let mixer;
 loader.load('/NOKIA2.glb', (gltf) => {
   const model = gltf.scene;
   model.scale.set(0.1, 0.1, 0.1); // Adjust the scale if necessary
-  model.rotation.y = 3*Math.PI/2; // Rotate 90 degrees along the Y axis
+  model.rotation.y = 3 * Math.PI / 2; // Rotate 90 degrees along the Y axis
 
   // Add the model to the scene
   scene.add(model);
@@ -84,11 +94,23 @@ loader.load('/NOKIA2.glb', (gltf) => {
   console.error('An error occurred while loading the model:', error);
 });
 
+// Create an iframe for the 2D site
+const iframe = document.createElement('iframe');
+iframe.src = 'https://2-d-for-portfolio.vercel.app/';
+iframe.style.width = '1024px';
+iframe.style.height = '768px';
+iframe.style.border = '0';
+const cssObject = new CSS3DObject(iframe);
+cssObject.position.set(90, -288, -900);
+cssObject.rotation.x = -.53;
+cssObject.scale.set(1.04, .9, .9); // Scale the iframe to fit your scene
+
 // Handle window resize
 window.addEventListener('resize', () => {
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
   renderer.setSize(window.innerWidth, window.innerHeight);
+  cssRenderer.setSize(window.innerWidth, window.innerHeight);
 });
 
 // Rotate phone and toggle animation function
@@ -96,7 +118,11 @@ function rotatePhone() {
   if (phoneObject) {
     phoneObject.rotation.z += Math.PI / 0.6; // Rotate 90 degrees along the Y axis
 
-    gsap.to(phoneObject.position, { // Use GSAP to smoothly move the camera
+    setTimeout(() => {
+      renderIframe = true;
+      scene.add(cssObject);
+    }, 1950);
+    gsap.to(phoneObject.position, { // Use GSAP to smoothly move the phone
       duration: 2, // Duration of the animation in seconds
       x: 0,
       y: -5,
@@ -106,6 +132,7 @@ function rotatePhone() {
       }
     });
     
+    
     gsap.to(camera.position, { // Use GSAP to smoothly move the camera
       duration: 2, // Duration of the animation in seconds
       x: 0,
@@ -114,7 +141,8 @@ function rotatePhone() {
       onUpdate: () => {
         camera.lookAt(phoneObject.position); // Ensure the camera keeps looking at the phone
       }
-    });
+      
+    })
   } else {
     console.error('Phone object not found, unable to rotate.');
   }
@@ -150,6 +178,11 @@ function animate() {
 
   // Render the scene
   renderer.render(scene, camera);
+
+  // Conditionally render the CSS3DObject (iframe)
+  if (renderIframe) {
+    cssRenderer.render(scene, camera);
+  }
 }
 
 // Start the animation loop
