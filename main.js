@@ -1,7 +1,7 @@
 import './style.css';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { CSS3DRenderer, CSS3DObject } from 'three/examples/jsm/renderers/CSS3DRenderer.js';
 import gsap from 'gsap';
 
@@ -53,7 +53,7 @@ let renderIframe = false; // Flag to control iframe rendering
 const loader = new GLTFLoader();
 let mixer;
 
-loader.load('/public/NOKIA2.glb', (gltf) => {
+loader.load('/NOKIA2.glb', (gltf) => {
   const model = gltf.scene;
   model.scale.set(0.1, 0.1, 0.1); // Adjust the scale if necessary
   model.rotation.y = 3 * Math.PI / 2; // Rotate 90 degrees along the Y axis
