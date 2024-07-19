@@ -10,12 +10,13 @@ const scene = new THREE.Scene();
 
 // Create the camera
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-camera.position.set(0, 2, 1);
+camera.position.set(0, 1.7, 2);
+
 
 // Create the CSS3DRenderer
 const cssRenderer = new CSS3DRenderer();
 cssRenderer.setSize(window.innerWidth, window.innerHeight);
-cssRenderer.domElement.style.position = 'absolute';
+cssRenderer.domElement.style.position = 'relative';
 cssRenderer.domElement.style.top = '0';
 cssRenderer.domElement.style.zIndex = '1'; // Ensure it is above the WebGLRenderer
 document.body.appendChild(cssRenderer.domElement);
@@ -63,7 +64,7 @@ loader.load('/NOKIA2.glb', (gltf) => {
 
   // Find the specific phone part named 'Phone' within the model
   phoneObject = model.getObjectByName('Phone');
-
+  
   if (!phoneObject) {
     console.error('Phone object not found in the GLTF model.');
   }
@@ -94,6 +95,7 @@ loader.load('/NOKIA2.glb', (gltf) => {
   console.error('An error occurred while loading the model:', error);
 });
 
+
 // Create an iframe for the 2D site
 const iframe = document.createElement('iframe');
 iframe.src = 'https://2-d-for-portfolio.vercel.app/';
@@ -101,7 +103,7 @@ iframe.style.width = '1024px';
 iframe.style.height = '768px';
 iframe.style.border = '0';
 const cssObject = new CSS3DObject(iframe);
-cssObject.position.set(90, -288, -900);
+cssObject.position.set(-25, -288, -900);
 cssObject.rotation.x = -.53;
 cssObject.scale.set(1.04, .9, .9); // Scale the iframe to fit your scene
 
@@ -135,7 +137,7 @@ function rotatePhone() {
     
     gsap.to(camera.position, { // Use GSAP to smoothly move the camera
       duration: 2, // Duration of the animation in seconds
-      x: 0,
+      x: .015,
       y: 0.2,
       z: 0.5,
       onUpdate: () => {
