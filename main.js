@@ -10,7 +10,7 @@ const scene = new THREE.Scene();
 
 // Create the camera
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-camera.position.set(0, 1.7, 2);
+camera.position.set(0, 1.5, 1);
 
 
 // Create the CSS3DRenderer
@@ -57,7 +57,8 @@ let mixer;
 loader.load('/NOKIA2.glb', (gltf) => {
   const model = gltf.scene;
   model.scale.set(0.1, 0.1, 0.1); // Adjust the scale if necessary
-  model.rotation.y = 3 * Math.PI / 2; // Rotate 90 degrees along the Y axis
+  model.rotation.y = 3 * Math.PI / 1.99; // Rotate 90 degrees along the Y axis
+  model.position.x = -.009// centers phone
 
   // Add the model to the scene
   scene.add(model);
@@ -118,12 +119,12 @@ window.addEventListener('resize', () => {
 // Rotate phone and toggle animation function
 function rotatePhone() {
   if (phoneObject) {
+    renderIframe = true;
     phoneObject.rotation.z += Math.PI / 0.6; // Rotate 90 degrees along the Y axis
 
     setTimeout(() => {
-      renderIframe = true;
       scene.add(cssObject);
-    }, 1950);
+    }, 1800);
     gsap.to(phoneObject.position, { // Use GSAP to smoothly move the phone
       duration: 2, // Duration of the animation in seconds
       x: 0,
