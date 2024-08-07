@@ -7,5 +7,9 @@ export default defineConfig({
     build: {
         outDir: '../dist', // Output directory for build files
         emptyOutDir: true,
+        rollupOptions: {
+            // Externalize gsap if you want to exclude it from the bundle
+            external: ['gsap'],
+        },
     },
 });
