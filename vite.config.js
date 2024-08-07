@@ -1,19 +1,11 @@
 import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  resolve: {
-    alias: {
-      'three': 'three',
-      'three/examples/jsm': 'three/examples/jsm'
-    }
-  },
-  build: {
-    rollupOptions: {
-      input: '/index.html',
-      external: ['style.css']
+    plugins: [react()],
+    root: 'src', // Set the root to 'src' if your index.html is inside src
+    build: {
+        outDir: '../dist', // Output directory for build files
+        emptyOutDir: true,
     },
-    chunkSizeWarningLimit: 1000 // Adjust the limit to a higher value
-  },
-  publicDir: 'public', // Ensure Vite knows where to look for public files
-  assetsInclude: ['**/*.glb'] // Include .glb files as static assets
 });
