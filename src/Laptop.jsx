@@ -26,11 +26,12 @@ export default function Laptop() {
                 >
                     <Html
                         wrapperClass="laptop"
-                        position={[0, .7, -1.5]}
+                        position={[.03, 1.15, -1.54]}
                         transform
                         distanceFactor={1.16}
-                        rotation-x={-1.55}
-                        rotation-y={.05}
+                        rotation-x={-1.6}
+                        rotation-y={-.01}
+                        rotation-z={-.001}
                     >
                         <iframe src="https://2-d-for-portfolio.vercel.app/" />
                     </Html>
