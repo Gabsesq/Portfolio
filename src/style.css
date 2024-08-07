@@ -1,0 +1,23 @@
+/* In your style.css or within a <style> tag in your JSX */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#root {
+    height: 100%;
+    width: 100%;
+}
+
+canvas {
+    display: block; /* Remove the default margin and padding */
+}
+
+.laptop iframe {
+    width:1060px;
+    height: 650px;
+    border: none;
+    border-radius: 15px;
+}
