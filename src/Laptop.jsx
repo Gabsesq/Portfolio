@@ -2,18 +2,23 @@
 import { Html, Environment, PresentationControls } from "@react-three/drei";
 import { useLoader, useThree } from "@react-three/fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import gsap from 'gsap';
-
+import * as THREE from 'three';
 
 export default function Laptop() {
     const laptop = useLoader(GLTFLoader, "/NOKIA.glb");
     const floor = useLoader(GLTFLoader, "/SCENE.glb");
-    const { camera } = useThree();
+    const { camera, gl } = useThree(); // Include 'gl' for setting background color
     const initialPosition = useRef(camera.position.clone());
 
     // Rotate the laptop model if needed
     laptop.scene.rotation.x = Math.PI / 2;
+
+    // Set the background to black
+    useEffect(() => {
+        gl.setClearColor(new THREE.Color('black'));
+    }, [gl]);
 
     const handleMouseEnter = () => {
         console.log("Mouse entered iframe");
@@ -39,7 +44,7 @@ export default function Laptop() {
 
     return (
         <>
-            <Environment preset="warehouse" />
+            <Environment preset="warehouse" background={false} /> {/* Ensure background is false */}
             <PresentationControls global polar={[-0.4, 0.2]}>
                 <primitive object={floor.scene} position-y={-1.5} />
                 <primitive object={laptop.scene} position-y={-1}>
