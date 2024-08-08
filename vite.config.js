@@ -3,13 +3,9 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
     plugins: [react()],
-    root: 'src', // Set the root to 'src' if your index.html is inside src
+    root: 'src',
     build: {
-        outDir: '../dist', // Output directory for build files
+        outDir: '../dist',
         emptyOutDir: true,
-        rollupOptions: {
-            // Externalize gsap if you want to exclude it from the bundle
-            external: ['gsap'],
-        },
     },
 });

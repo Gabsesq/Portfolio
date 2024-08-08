@@ -3,7 +3,7 @@ import { Html, Environment, PresentationControls } from "@react-three/drei";
 import { useLoader, useThree } from "@react-three/fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { useRef } from "react";
-import gsap from "./node_modules/gsap/index.js";
+import gsap from 'gsap';
 
 
 export default function Laptop() {
