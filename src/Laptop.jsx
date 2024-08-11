@@ -11,6 +11,7 @@ export default function Laptop() {
     const floor = useLoader(GLTFLoader, "/SCENE.glb");
     const { camera, gl } = useThree(); // Include 'gl' for setting background color
     const initialPosition = useRef(camera.position.clone());
+    const buttonRef = useRef();
 
     // Rotate the laptop model if needed
     laptop.scene.rotation.x = Math.PI / 2;
@@ -20,27 +21,28 @@ export default function Laptop() {
         gl.setClearColor(new THREE.Color('black'));
     }, [gl]);
 
-    const handleMouseEnter = () => {
-        console.log("Mouse entered iframe");
-        gsap.to(camera.position, {
-            x: -2,
-            y: 30,
-            z: 200,
-            duration: 1,
-            ease: "power2.inOut"
+    useEffect(() => {
+        // Make the button blink by animating opacity
+        gsap.to(buttonRef.current, {
+            opacity: 0,
+            duration: .99,
+            repeat: -1, // Infinite loop
+            yoyo: true, // Reverse the animation
+            ease: "power1.inOut"
         });
-    };
+    }, []);
 
-    const handleMouseLeave = () => {
-        console.log("Mouse left iframe");
+    const handleButtonClick = () => {
+        console.log('Button Clicked!');
+        // Animate the camera to a new position when the button is clicked
         gsap.to(camera.position, {
-            x: initialPosition.current.x,
-            y: initialPosition.current.y,
-            z: initialPosition.current.z,
+            x: .01,
+            y: 1.7,
+            z: 4,
             duration: 1,
             ease: "power2.inOut"
         });
-    };
+    }
 
     return (
         <>
@@ -56,10 +58,31 @@ export default function Laptop() {
                         rotation-x={-1.6}
                         rotation-y={-.01}
                         rotation-z={-.001}
-                        onPointerEnter={handleMouseEnter}
-                        onPointerLeave={handleMouseLeave}
                     >
                         <iframe src="https://2-d-for-portfolio.vercel.app/" />
+                    </Html>
+
+                    {/* Add the button inside the 3D scene */}
+                    <Html
+                        wrapperClass="button"
+                        position={[0.02, 1.2, -.89]}
+                        transform
+                        distanceFactor={1.2}
+                        rotation={[-Math.PI / 2, 0, 0]}
+                    >
+                        <button
+                            ref={buttonRef}
+                            style={{
+                                padding: '30px 30px',
+                                background: 'white',
+                                border: 'none',
+                                borderRadius: '50px',
+                                cursor: 'pointer'
+                            }}
+                            onClick={handleButtonClick}
+                        >
+                            
+                        </button>
                     </Html>
                 </primitive>
             </PresentationControls>
