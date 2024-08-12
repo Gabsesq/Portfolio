@@ -5,6 +5,7 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { useRef, useEffect } from "react";
 import gsap from 'gsap';
 import * as THREE from 'three';
+import "./style.css"
 
 export default function Laptop() {
     const laptop = useLoader(GLTFLoader, "/NOKIA.glb");
