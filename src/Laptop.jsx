@@ -3,14 +3,14 @@ import { Html, Environment, PresentationControls } from "@react-three/drei";
 import { useLoader, useThree } from "@react-three/fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { useRef, useEffect } from "react";
-import gsap from 'gsap';
+import TWEEN from '@tweenjs/tween.js';
 import * as THREE from 'three';
-import "./style.css"
+import "./style.css";
 
 export default function Laptop() {
     const laptop = useLoader(GLTFLoader, "/NOKIA.glb");
     const floor = useLoader(GLTFLoader, "/SCENE.glb");
-    const { camera, gl } = useThree(); // Include 'gl' for setting background color
+    const { camera, gl } = useThree();
     const initialPosition = useRef(camera.position.clone());
     const buttonRef = useRef();
 
@@ -22,28 +22,19 @@ export default function Laptop() {
         gl.setClearColor(new THREE.Color('black'));
     }, [gl]);
 
-    useEffect(() => {
-        // Make the button blink by animating opacity
-        gsap.to(buttonRef.current, {
-            opacity: 0,
-            duration: .99,
-            repeat: -1, // Infinite loop
-            yoyo: true, // Reverse the animation
-            ease: "power1.inOut"
-        });
-    }, []);
 
     const handleButtonClick = () => {
         console.log('Button Clicked!');
-        // Animate the camera to a new position when the button is clicked
-        gsap.to(camera.position, {
-            x: .01,
-            y: 1.7,
-            z: 4,
-            duration: 1,
-            ease: "power2.inOut"
-        });
-    }
+
+        // Animate the camera to a new position using TWEEN
+        new TWEEN.Tween(camera.position)
+            .to({ x: .01, y: 1.7, z: 4 }, 1000) // Target position over 1 second
+            .easing(TWEEN.Easing.Quadratic.Out)
+            .onUpdate(() => {
+                camera.lookAt(0, 0, 0); // Ensure the camera looks at the origin during animation
+            })
+            .start();
+    };
 
     return (
         <>
@@ -78,11 +69,12 @@ export default function Laptop() {
                                 background: 'white',
                                 border: 'none',
                                 borderRadius: '50px',
-                                cursor: 'pointer'
+                                cursor: 'pointer',
+                                opacity: 1 // Start with full opacity
                             }}
                             onClick={handleButtonClick}
                         >
-                            
+                            {/* Button content */}
                         </button>
                     </Html>
                 </primitive>
