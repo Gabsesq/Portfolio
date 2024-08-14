@@ -1,53 +1,23 @@
-// @ts-nocheck
+// Laptop.jsx
+import React from 'react';
 import { Html, Environment, PresentationControls } from "@react-three/drei";
-import { useLoader, useThree } from "@react-three/fiber";
+import { useLoader } from "@react-three/fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
-import { useRef, useEffect } from "react";
-import gsap from 'gsap';
 import * as THREE from 'three';
-import "./style.css"
+import './style.css';
 
-export default function Laptop() {
+export default function Laptop({ camera }) { // Receive camera as a prop
     const laptop = useLoader(GLTFLoader, "/NOKIA.glb");
     const floor = useLoader(GLTFLoader, "/SCENE.glb");
-    const { camera, gl } = useThree(); // Include 'gl' for setting background color
-    const initialPosition = useRef(camera.position.clone());
-    const buttonRef = useRef();
-
-    // Rotate the laptop model if needed
-    laptop.scene.rotation.x = Math.PI / 2;
-
-    // Set the background to black
-    useEffect(() => {
-        gl.setClearColor(new THREE.Color('black'));
-    }, [gl]);
-
-    useEffect(() => {
-        // Make the button blink by animating opacity
-        gsap.to(buttonRef.current, {
-            opacity: 0,
-            duration: .99,
-            repeat: -1, // Infinite loop
-            yoyo: true, // Reverse the animation
-            ease: "power1.inOut"
-        });
-    }, []);
 
     const handleButtonClick = () => {
         console.log('Button Clicked!');
-        // Animate the camera to a new position when the button is clicked
-        gsap.to(camera.position, {
-            x: .01,
-            y: 1.7,
-            z: 4,
-            duration: 1,
-            ease: "power2.inOut"
-        });
-    }
+        camera.transition(CameraKey.DESK, 2000, TWEEN.Easing.Quadratic.InOut); // Use the passed camera instance
+    };
 
     return (
         <>
-            <Environment preset="warehouse" background={false} /> {/* Ensure background is false */}
+            <Environment preset="warehouse" background={false} />
             <PresentationControls global polar={[-0.4, 0.2]}>
                 <primitive object={floor.scene} position-y={-1.5} />
                 <primitive object={laptop.scene} position-y={-1}>
@@ -63,7 +33,6 @@ export default function Laptop() {
                         <iframe src="https://2-d-for-portfolio.vercel.app/" />
                     </Html>
 
-                    {/* Add the button inside the 3D scene */}
                     <Html
                         wrapperClass="button"
                         position={[0.02, 1.2, -.89]}
@@ -72,7 +41,6 @@ export default function Laptop() {
                         rotation={[-Math.PI / 2, 0, 0]}
                     >
                         <button
-                            ref={buttonRef}
                             style={{
                                 padding: '30px 30px',
                                 background: 'white',
@@ -82,7 +50,7 @@ export default function Laptop() {
                             }}
                             onClick={handleButtonClick}
                         >
-                            
+                            {/* Button content */}
                         </button>
                     </Html>
                 </primitive>
