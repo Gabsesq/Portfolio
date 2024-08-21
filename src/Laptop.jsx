@@ -16,6 +16,7 @@ export default function Laptop() {
 
     // Rotate the laptop model if needed
     laptop.scene.rotation.x = Math.PI / 2;
+    floor.scene.rotation.y = -Math.PI/2;
 
     // Set the background to black
     useEffect(() => {
@@ -23,18 +24,7 @@ export default function Laptop() {
     }, [gl]);
 
 
-    const handleButtonClick = () => {
-        console.log('Button Clicked!');
 
-        // Animate the camera to a new position using TWEEN
-        new TWEEN.Tween(camera.position)
-            .to({ x: .01, y: 1.7, z: 4 }, 1000) // Target position over 1 second
-            .easing(TWEEN.Easing.Quadratic.Out)
-            .onUpdate(() => {
-                camera.lookAt(0, 0, 0); // Ensure the camera looks at the origin during animation
-            })
-            .start();
-    };
 
     return (
         <>
@@ -72,7 +62,7 @@ export default function Laptop() {
                                 cursor: 'pointer',
                                 opacity: 1 // Start with full opacity
                             }}
-                            onClick={handleButtonClick}
+                        
                         >
                             {/* Button content */}
                         </button>

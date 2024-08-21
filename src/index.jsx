@@ -1,27 +1,56 @@
 // @ts-nocheck
 import "./style.css";
 import ReactDOM from "react-dom/client";
-import { Canvas } from "@react-three/fiber";
+import { Canvas, useThree } from "@react-three/fiber";
 import Laptop from "./Laptop.jsx";
 import { OrbitControls } from "@react-three/drei";
+import { useEffect, useState } from "react";
+import gsap from "gsap";
+import Disco from "./Disco.jsx";
 
-const rootElement = document.querySelector("#root"); // Ensure correct selector
+function CameraAnimation({ onComplete }) {
+    const { camera } = useThree();
 
-if (rootElement) {
-    const root = ReactDOM.createRoot(rootElement); // Correctly define root
-    root.render(
+    useEffect(() => {
+        // Zoom in the camera when the page loads
+        gsap.to(camera.position, {
+            z: 5, // Target position on the z-axis for zooming in
+            y:.5,
+            x:0,
+            duration: 4, // Duration of the zoom effect
+            ease: "power2.inOut", // Easing function
+            onComplete, // Call the onComplete function after the animation
+        });
+    }, [camera, onComplete]);
+
+    return null;
+}
+
+function App() {
+    const [controlsEnabled, setControlsEnabled] = useState(false); // Start with controls disabled
+
+    return (
         <Canvas
             camera={{
                 fov: 20,
                 near: 1,
                 far: 2000,
-                position: [-2, 2.0, 20],
+                position: [0, .5, 1000], // Initial camera position
             }}
         >
-            <OrbitControls />
+            <OrbitControls enabled={controlsEnabled} />
+            <CameraAnimation onComplete={() => setControlsEnabled(true)} />
+            <Disco />
             <Laptop />
         </Canvas>
     );
+}
+
+const rootElement = document.querySelector("#root");
+
+if (rootElement) {
+    const root = ReactDOM.createRoot(rootElement);
+    root.render(<App />);
 } else {
     console.error("Root element not found");
 }
