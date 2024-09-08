@@ -14,9 +14,9 @@ function CameraAnimation({ onComplete }) {
     useEffect(() => {
         // Zoom in the camera when the page loads
         gsap.to(camera.position, {
-            z: 5, // Target position on the z-axis for zooming in
-            y:.5,
-            x:0,
+            z: 6, // Target position on the z-axis for zooming in
+            y:2,
+            x:.02,
             duration: 4, // Duration of the zoom effect
             ease: "power2.inOut", // Easing function
             onComplete, // Call the onComplete function after the animation
@@ -38,10 +38,11 @@ function App() {
                 position: [0, .5, 1000], // Initial camera position
             }}
         >
-            <OrbitControls enabled={controlsEnabled} />
-            <CameraAnimation onComplete={() => setControlsEnabled(true)} />
-            <Disco />
+            
+            <OrbitControls enableZoom={true} enablePan={true} />
+            <Disco /> 
             <Laptop />
+            <CameraAnimation onComplete={() => setControlsEnabled(true)} />
         </Canvas>
     );
 }

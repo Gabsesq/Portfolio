@@ -3,7 +3,6 @@ import { Html, Environment, PresentationControls } from "@react-three/drei";
 import { useLoader, useThree } from "@react-three/fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { useRef, useEffect } from "react";
-import TWEEN from '@tweenjs/tween.js';
 import * as THREE from 'three';
 import "./style.css";
 
@@ -29,7 +28,6 @@ export default function Laptop() {
     return (
         <>
             <Environment preset="warehouse" background={false} /> {/* Ensure background is false */}
-            <PresentationControls global polar={[-0.4, 0.2]}>
                 <primitive object={floor.scene} position-y={-1.5} />
                 <primitive object={laptop.scene} position-y={-1}>
                     <Html
@@ -68,7 +66,6 @@ export default function Laptop() {
                         </button>
                     </Html>
                 </primitive>
-            </PresentationControls>
         </>
     );
 }
