@@ -1,5 +1,6 @@
 // @ts-nocheck
 import "./style.css";
+import "./loading.css";
 import ReactDOM from "react-dom/client";
 import { Canvas, useThree } from "@react-three/fiber";
 import Laptop from "./Laptop.jsx";
@@ -27,9 +28,28 @@ function CameraAnimation({ onComplete }) {
 }
 
 function App() {
+    const [loading, setLoading] = useState(true); // Loading state to show the 2D screen
     const [controlsEnabled, setControlsEnabled] = useState(false); // Start with controls disabled
 
+    useEffect(() => {
+        // Set a timer for 12 seconds to hide the loading screen
+        const timer = setTimeout(() => {
+            setLoading(false);
+            setTimeout(() => setShowCanvas(true), 100);
+        }, 8000); // 12 seconds (12,000 milliseconds)
+
+        return () => clearTimeout(timer); // Clear the timer if the component unmounts
+    }, []);
+
     return (
+        <>
+        {/* Show the loading screen for 12 seconds */}
+        {loading ? (
+            <div className="loading-screen">
+                <h1>Loading...</h1>
+                {/* You can add animations, spinners, or any other custom loading UI here */}
+            </div>
+        ) : (
         <Canvas
             camera={{
                 fov: 20,
@@ -44,6 +64,8 @@ function App() {
             <Laptop />
             <CameraAnimation onComplete={() => setControlsEnabled(true)} />
         </Canvas>
+        )}
+        </>
     );
 }
 

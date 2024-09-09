@@ -19,7 +19,7 @@ export default function Laptop() {
 
     // Set the background to black
     useEffect(() => {
-        gl.setClearColor(new THREE.Color('black'));
+        gl.setClearColor(new THREE.Color('black'),1);
     }, [gl]);
 
 
