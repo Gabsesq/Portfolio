@@ -9,19 +9,43 @@ import { useEffect, useState } from "react";
 import gsap from "gsap";
 import Disco from "./Disco.jsx";
 
-function CameraAnimation({ onComplete }) {
+
+export default function CameraAnimation({ onComplete }) {
     const { camera } = useThree();
 
     useEffect(() => {
-        // Zoom in the camera when the page loads
+        // Calculate the target position based on screen width and height
+        const targetX = window.innerWidth * 0;
+        const targetZ = window.innerHeight * 0.005;
+
+        // GSAP animation to zoom based on calculated responsive values
         gsap.to(camera.position, {
-            z: 6, // Target position on the z-axis for zooming in
-            y:2,
-            x:.02,
-            duration: 4, // Duration of the zoom effect
-            ease: "power2.inOut", // Easing function
-            onComplete, // Call the onComplete function after the animation
+            z: targetZ, // Target z position based on screen height
+            y: 2, // You can keep this fixed or make it responsive as well
+            x: targetX, // Target x position based on screen width
+            duration: 4,
+            ease: "power2.inOut",
+            onComplete,
         });
+        
+        // Add a resize listener to recalculate the target positions on window resize
+        const handleResize = () => {
+            const newTargetX = window.innerWidth * 0;
+            const newTargetZ = window.innerHeight * 0.005;
+
+            gsap.to(camera.position, {
+                z: newTargetZ,
+                x: newTargetX,
+                duration: 1, // Smooth adjustment on resize
+                ease: "power2.inOut",
+            });
+        };
+
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            window.removeEventListener("resize", handleResize); // Clean up the event listener
+        };
     }, [camera, onComplete]);
 
     return null;
@@ -32,18 +56,17 @@ function App() {
     const [controlsEnabled, setControlsEnabled] = useState(false); // Start with controls disabled
 
     useEffect(() => {
-        // Set a timer for 12 seconds to hide the loading screen
+        // Set a timer to hide the loading screen
         const timer = setTimeout(() => {
             setLoading(false);
-            setTimeout(() => setShowCanvas(true), 100);
-        }, 8000); // 12 seconds (12,000 milliseconds)
+        }, 1000); 
 
         return () => clearTimeout(timer); // Clear the timer if the component unmounts
     }, []);
 
     return (
         <>
-        {/* Show the loading screen for 12 seconds */}
+        {/* Show the loading screen for x seconds */}
         {loading ? (
             <div className="loading-screen">
                 <h1>Loading...</h1>
@@ -55,7 +78,7 @@ function App() {
                 fov: 20,
                 near: 1,
                 far: 2000,
-                position: [0, .5, 1000], // Initial camera position
+                position: [0, 0.5, 1000], // Initial camera position
             }}
         >
             

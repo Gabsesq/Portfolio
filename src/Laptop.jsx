@@ -42,29 +42,6 @@ export default function Laptop() {
                         <iframe src="https://2-d-for-portfolio.vercel.app/" />
                     </Html>
 
-                    {/* Add the button inside the 3D scene */}
-                    <Html
-                        wrapperClass="button"
-                        position={[0.02, 1.2, -.89]}
-                        transform
-                        distanceFactor={1.2}
-                        rotation={[-Math.PI / 2, 0, 0]}
-                    >
-                        <button
-                            ref={buttonRef}
-                            style={{
-                                padding: '30px 30px',
-                                background: 'white',
-                                border: 'none',
-                                borderRadius: '50px',
-                                cursor: 'pointer',
-                                opacity: 1 // Start with full opacity
-                            }}
-                        
-                        >
-                            {/* Button content */}
-                        </button>
-                    </Html>
                 </primitive>
         </>
     );
