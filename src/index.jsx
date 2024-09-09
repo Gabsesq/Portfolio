@@ -59,7 +59,7 @@ function App() {
         // Set a timer to hide the loading screen
         const timer = setTimeout(() => {
             setLoading(false);
-        }, 1000); 
+        }, 7000); 
 
         return () => clearTimeout(timer); // Clear the timer if the component unmounts
     }, []);
