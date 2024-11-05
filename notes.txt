@@ -1,0 +1,54 @@
+Project improvements:
+    fix that navbar asapppp
+    I would like to add more 3d assets
+    loading in based on assets loading in
+    changing my 3d model a little bit ( green background )
+    add work Project
+    maybe more spatial, more of an entire room type deal instead of stuck to the phone
+    fix button on phone
+    potentially combine 2d and 3d project
+
+
+
+
+helpful chatgpt rec:
+
+It looks like the iframe's size and position are set specifically for larger screens, which may not scale well on smaller screens like phones. Here are a few adjustments you can try:
+
+Add a Media Query in CSS: Use media queries to adjust the iframe size specifically for smaller screens.
+
+css
+Copy code
+@media (max-width: 600px) {
+    .laptop iframe {
+        width: 300px;
+        height: 200px;
+    }
+}
+Dynamic distanceFactor in <Html>: Adjust distanceFactor in the <Html> component to make the iframe scale based on the device’s viewport. You could make this dynamic by detecting the device type or screen size:
+
+jsx
+Copy code
+<Html
+    wrapperClass="laptop"
+    position={[.03, 1.15, -1.54]}
+    transform
+    distanceFactor={window.innerWidth < 600 ? 0.8 : 1.16} // Smaller on phones
+    rotation-x={-1.6}
+    rotation-y={-.01}
+    rotation-z={-.001}
+>
+    <iframe src="https://2-d-for-portfolio.vercel.app/" />
+</Html>
+Set the <iframe> to Scale Responsively: Within the CSS for the iframe itself, add styles to let it scale responsively:
+
+css
+Copy code
+.laptop iframe {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    aspect-ratio: 500 / 310;
+    border: none;
+    border-radius: 15px;
+}
