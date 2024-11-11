@@ -23,7 +23,7 @@ export default function CameraAnimation({ onComplete }) {
             z: targetZ, // Target z position based on screen height
             y: 2, // You can keep this fixed or make it responsive as well
             x: targetX, // Target x position based on screen width
-            duration: 4,
+            duration: 3,
             ease: "power2.inOut",
             onComplete,
         });
