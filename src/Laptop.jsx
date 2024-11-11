@@ -32,7 +32,7 @@ export default function Laptop() {
                 <primitive object={laptop.scene} position-y={-1}>
                     <Html
                         wrapperClass="laptop"
-                        position={[.03, 1.15, -1.54]}
+                        position={[-.27, 1.15, -1.54]}
                         transform
                         distanceFactor={1.16}
                         rotation-x={-1.6}

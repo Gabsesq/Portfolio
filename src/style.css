@@ -1,3 +1,19 @@
+@media (max-width: 600px) {
+    .laptop iframe {
+        width: 300px;
+        height: 200px;
+    }
+}
+
+.laptop iframe {
+    width: 1000%;
+    max-width: 500px;
+    height: auto;
+    aspect-ratio: 500 / 310;
+    border: none;
+    border-radius: 15px;
+}
+
 /* In your style.css or within a <style> tag in your JSX */
 body, html {
     margin: 0;
@@ -17,10 +33,4 @@ canvas {
     background-color: black;
 }
 
-.laptop iframe {
-    width:500px;
-    height: 310px;
-    border: none;
-    border-radius: 15px;
-}
 
