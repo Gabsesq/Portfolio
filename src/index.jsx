@@ -16,7 +16,7 @@ export default function CameraAnimation({ onComplete }) {
     useEffect(() => {
         // Calculate the target position based on screen width and height
         const targetX = window.innerWidth * 0;
-        const targetZ = window.innerHeight * 0.005;
+        const targetZ = window.innerHeight * .009;
 
         // GSAP animation to zoom based on calculated responsive values
         gsap.to(camera.position, {
@@ -31,7 +31,7 @@ export default function CameraAnimation({ onComplete }) {
         // Add a resize listener to recalculate the target positions on window resize
         const handleResize = () => {
             const newTargetX = window.innerWidth * 0;
-            const newTargetZ = window.innerHeight * 0.005;
+            const newTargetZ = window.innerHeight * .009;
 
             gsap.to(camera.position, {
                 z: newTargetZ,
