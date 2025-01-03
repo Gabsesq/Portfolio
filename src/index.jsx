@@ -3,11 +3,10 @@ import "./style.css";
 import "./loading.css";
 import ReactDOM from "react-dom/client";
 import { Canvas, useThree } from "@react-three/fiber";
-import Laptop from "./Laptop.jsx";
+import Room from "./Laptop.jsx";
 import { OrbitControls } from "@react-three/drei";
 import { useEffect, useState } from "react";
 import gsap from "gsap";
-import Disco from "./Disco.jsx";
 
 
 export default function CameraAnimation({ onComplete }) {
@@ -83,8 +82,7 @@ function App() {
         >
             
             <OrbitControls enableZoom={true} enablePan={true} />
-            <Disco /> 
-            <Laptop />
+            <Room />
             <CameraAnimation onComplete={() => setControlsEnabled(true)} />
         </Canvas>
         )}
