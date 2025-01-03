@@ -15,7 +15,7 @@ export default function CameraAnimation({ onComplete }) {
     useEffect(() => {
         // Calculate the target position based on screen width and height
         const targetX = window.innerWidth * 0;
-        const targetZ = window.innerHeight * .009;
+        const targetZ = window.innerHeight * .2;
 
         // GSAP animation to zoom based on calculated responsive values
         gsap.to(camera.position, {
@@ -51,27 +51,9 @@ export default function CameraAnimation({ onComplete }) {
 }
 
 function App() {
-    const [loading, setLoading] = useState(true); // Loading state to show the 2D screen
-    const [controlsEnabled, setControlsEnabled] = useState(false); // Start with controls disabled
-
-    useEffect(() => {
-        // Set a timer to hide the loading screen
-        const timer = setTimeout(() => {
-            setLoading(false);
-        }, 3000); 
-
-        return () => clearTimeout(timer); // Clear the timer if the component unmounts
-    }, []);
+    const [controlsEnabled, setControlsEnabled] = useState(false);
 
     return (
-        <>
-        {/* Show the loading screen for x seconds */}
-        {loading ? (
-            <div className="loading-screen">
-                <h1>Loading...</h1>
-                {/* You can add animations, spinners, or any other custom loading UI here */}
-            </div>
-        ) : (
         <Canvas
             camera={{
                 fov: 20,
@@ -80,13 +62,10 @@ function App() {
                 position: [0, 0.5, 1000], // Initial camera position
             }}
         >
-            
             <OrbitControls enableZoom={true} enablePan={true} />
             <Room />
             <CameraAnimation onComplete={() => setControlsEnabled(true)} />
         </Canvas>
-        )}
-        </>
     );
 }
 

@@ -1,5 +1,4 @@
 // @ts-nocheck
-import { Html, Environment, PresentationControls } from "@react-three/drei";
 import { useLoader, useThree } from "@react-three/fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { useRef, useEffect } from "react";
@@ -8,19 +7,21 @@ import "./style.css";
 import { TextureLoader } from 'three';
 
 export default function Room() {
-    const nokia = useLoader(GLTFLoader, "/NOKIA.glb");
+    // Load all 3D models
     const bed = useLoader(GLTFLoader, "/bed.glb");
+    const table = useLoader(GLTFLoader, "/table.glb");
+    const monitor = useLoader(GLTFLoader, "/monitor.glb");
+    const laptop = useLoader(GLTFLoader, "/laptop.glb");
+    const dresser = useLoader(GLTFLoader, "/dresser.glb");
     const woodTexture = useLoader(TextureLoader, "/woodFloor.jfif");
     const { camera, gl } = useThree();
     const initialPosition = useRef(camera.position.clone());
 
-    // Rotate the nokia model
-    nokia.scene.rotation.x = Math.PI / 2;
-    
     useEffect(() => {
         gl.setClearColor(new THREE.Color('black'),1);
     }, [gl]);
 
+    // Change bed material
     useEffect(() => {
         if (bed.scene) {
             bed.scene.traverse((child) => {
@@ -38,15 +39,14 @@ export default function Room() {
     useEffect(() => {
         if (woodTexture) {
             woodTexture.wrapS = woodTexture.wrapT = THREE.RepeatWrapping;
-            woodTexture.repeat.set(4, 4); // Adjust these numbers to change the texture repeat
+            woodTexture.repeat.set(4, 4);
             woodTexture.encoding = THREE.sRGBEncoding;
         }
     }, [woodTexture]);
 
     return (
         <>
-            {/* Replace Environment with custom lighting */}
-            {/* Ceiling Light */}
+            {/* Lighting */}
             <pointLight 
                 position={[0, 45, 0]} 
                 intensity={5} 
@@ -54,19 +54,14 @@ export default function Room() {
                 distance={200}
                 decay={2}
             />
-            
-            {/* Ambient light for base illumination */}
             <ambientLight intensity={0.2} color="#ffddcc" />
-            
-            {/* Subtle fill light from the front */}
             <directionalLight 
                 position={[0, 20, 50]} 
                 intensity={0.3} 
                 color="#fff5eb"
             />
             
-            {/* Room Walls and Floor */}
-            {/* Floor */}
+            {/* Room Structure */}
             <mesh rotation-x={-Math.PI / 2} position={[0, -12, 0]}>
                 <planeGeometry args={[150, 150]} />
                 <meshStandardMaterial 
@@ -75,44 +70,67 @@ export default function Room() {
                 />
             </mesh>
 
-            {/* Back Wall */}
             <mesh position={[0, 38, -75]}>
                 <planeGeometry args={[150, 100]} />
                 <meshStandardMaterial color="white" roughness={0.2} />
             </mesh>
 
-            {/* Left Wall */}
             <mesh position={[-75, 38, 0]} rotation-y={Math.PI / 2}>
                 <planeGeometry args={[150, 100]} />
                 <meshStandardMaterial color="white" roughness={0.2} />
             </mesh>
 
-            {/* Right Wall */}
             <mesh position={[75, 38, 0]} rotation-y={-Math.PI / 2}>
                 <planeGeometry args={[150, 100]} />
                 <meshStandardMaterial color="white" roughness={0.2} />
             </mesh>
 
-            {/* Nokia Phone with iframe */}
-            <primitive object={nokia.scene} position-y={-1}>
-                <Html
-                    wrapperClass="laptop"
-                    position={[-.27, 1.15, -1.54]}
-                    transform
-                    distanceFactor={1.16}
-                    rotation-x={-1.6}
-                    rotation-y={-.01}
-                    rotation-z={-.001}
-                >
-                    <iframe src="https://2-d-for-portfolio.vercel.app/" />
-                </Html>
-            </primitive>
-
-            {/* Bed model */}
+            {/* 3D Models */}
+            {/* Bed */}
             <primitive 
                 object={bed.scene} 
                 position={[55, -5, -35]}
                 scale={.15}
+            />
+
+            {/* Table */}
+            <primitive 
+                object={table.scene} 
+                position={[0, -11, 65]}
+                scale={[250, 250, 400]}
+                rotation-y={1.6}
+            />
+
+            {/* First Monitor */}
+            <primitive 
+                object={monitor.scene} 
+                position={[-10, 10, 70]}
+                scale={180}
+                rotation-y={45.4}
+            />
+
+            {/* Second Monitor */}
+            <primitive 
+                object={monitor.scene.clone()}
+                position={[19, 10, 70]}
+                scale={180}
+                rotation-y={45.7}
+            />
+
+            {/* Laptop */}
+            <primitive 
+                object={laptop.scene} 
+                position={[50, .5, -30]}
+                scale={.5}
+                rotation-y={-.5}
+            />
+
+            {/* Dresser */}
+            <primitive 
+                object={dresser.scene} 
+                position={[-67, -12, -20]}
+                scale={23}
+                rotation-y={45.55}
             />
         </>
     );
