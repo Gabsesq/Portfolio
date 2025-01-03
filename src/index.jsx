@@ -9,63 +9,101 @@ import { useEffect, useState } from "react";
 import gsap from "gsap";
 
 
-export default function CameraAnimation({ onComplete }) {
+export default function CameraAnimation({ activeView }) {
     const { camera } = useThree();
 
+    const viewPositions = {
+        default: {
+            position: { x: -200, y: 100, z: 400 },
+            rotation: { x: -0.2, y: -0.5, z: 0 }
+        },
+        about: {
+            position: { x: -20, y: 40, z: -10 },
+            rotation: { x: 0, y: Math.PI / 1.05, z: 0 }
+        },
+        projects: {
+            position: { x: 90, y: 40, z: -10 },
+            rotation: { x: 0, y: -Math.PI / -1.05, z: 0 }
+        },
+        contact: {
+            position: { x: 122, y: 20, z: -50 },
+            rotation: { x: 0, y: -Math.PI / 5.5, z: 0 }
+        }
+    };
+
     useEffect(() => {
-        // Calculate the target position based on screen width and height
-        const targetX = window.innerWidth * 0;
-        const targetZ = window.innerHeight * .2;
+        if (activeView === 'default') return;
 
-        // GSAP animation to zoom based on calculated responsive values
-        gsap.to(camera.position, {
-            z: targetZ, // Target z position based on screen height
-            y: 2, // You can keep this fixed or make it responsive as well
-            x: targetX, // Target x position based on screen width
-            duration: 3,
-            ease: "power2.inOut",
-            onComplete,
-        });
+        const view = viewPositions[activeView];
         
-        // Add a resize listener to recalculate the target positions on window resize
-        const handleResize = () => {
-            const newTargetX = window.innerWidth * 0;
-            const newTargetZ = window.innerHeight * .009;
+        gsap.to(camera.position, {
+            x: view.position.x,
+            y: view.position.y,
+            z: view.position.z,
+            duration: 2,
+            ease: "power2.inOut"
+        });
 
-            gsap.to(camera.position, {
-                z: newTargetZ,
-                x: newTargetX,
-                duration: 1, // Smooth adjustment on resize
-                ease: "power2.inOut",
-            });
-        };
-
-        window.addEventListener("resize", handleResize);
-
-        return () => {
-            window.removeEventListener("resize", handleResize); // Clean up the event listener
-        };
-    }, [camera, onComplete]);
+        gsap.to(camera.rotation, {
+            x: view.rotation.x,
+            y: view.rotation.y,
+            z: view.rotation.z,
+            duration: 2,
+            ease: "power2.inOut"
+        });
+    }, [camera, activeView]);
 
     return null;
 }
 
 function App() {
-    const [controlsEnabled, setControlsEnabled] = useState(false);
+    const [activeView, setActiveView] = useState('default');
+
+    const handleViewChange = (view) => {
+        setActiveView(view);
+    };
 
     return (
-        <Canvas
-            camera={{
-                fov: 20,
-                near: 1,
-                far: 2000,
-                position: [0, 0.5, 1000], // Initial camera position
-            }}
-        >
-            <OrbitControls enableZoom={true} enablePan={true} />
-            <Room />
-            <CameraAnimation onComplete={() => setControlsEnabled(true)} />
-        </Canvas>
+        <>
+            {/* Navigation Menu */}
+            <div className="nav-menu">
+                <button 
+                    className={`nav-item ${activeView === 'about' ? 'active' : ''}`}
+                    onClick={() => handleViewChange('about')}
+                >
+                    About Me
+                </button>
+                <button 
+                    className={`nav-item ${activeView === 'projects' ? 'active' : ''}`}
+                    onClick={() => handleViewChange('projects')}
+                >
+                    Projects
+                </button>
+                <button 
+                    className={`nav-item ${activeView === 'contact' ? 'active' : ''}`}
+                    onClick={() => handleViewChange('contact')}
+                >
+                    Contact
+                </button>
+            </div>
+
+            <Canvas
+                camera={{
+                    fov: 45,
+                    near: .1,
+                    far: 10000,
+                    position: [-270, 140, 400],
+                    rotation: [0, -.45, 0]
+                }}
+            >
+                <ambientLight intensity={0.5} />
+                <directionalLight position={[10, 10, 5]} intensity={.5} />
+                <pointLight position={[-10, -10, -5]} intensity={.5} />
+
+                <Room />
+                <CameraAnimation activeView={activeView} />
+            </Canvas>
+        </>
     );
 }
 
