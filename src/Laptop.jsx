@@ -13,6 +13,7 @@ export default function Room() {
     const monitor = useLoader(GLTFLoader, "/monitor.glb");
     const laptop = useLoader(GLTFLoader, "/laptop.glb");
     const dresser = useLoader(GLTFLoader, "/dresser.glb");
+    const lamp = useLoader(GLTFLoader, "/lamp.glb");
     const woodTexture = useLoader(TextureLoader, "/woodFloor.jfif");
     const { camera, gl } = useThree();
     const initialPosition = useRef(camera.position.clone());
@@ -48,7 +49,7 @@ export default function Room() {
         <>
             {/* Lighting */}
             <pointLight 
-                position={[0, 45, 0]} 
+                position={[0, 30, 0]} 
                 intensity={5} 
                 color="#ff9966" 
                 distance={200}
@@ -96,7 +97,7 @@ export default function Room() {
             {/* Table */}
             <primitive 
                 object={table.scene} 
-                position={[0, -11, 65]}
+                position={[0, -12, 68]}
                 scale={[250, 250, 400]}
                 rotation-y={1.6}
             />
@@ -129,8 +130,16 @@ export default function Room() {
             <primitive 
                 object={dresser.scene} 
                 position={[-67, -12, -20]}
-                scale={23}
+                scale={[30, 20, 25]}
                 rotation-y={45.55}
+            />
+
+            {/* Lamp */}
+            <primitive 
+                object={lamp.scene} 
+                position={[0, 80, -35]}
+                scale={10}
+                rotation-y={0}
             />
         </>
     );
