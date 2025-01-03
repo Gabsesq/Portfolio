@@ -15,7 +15,7 @@ export default function CameraAnimation({ activeView }) {
     const viewPositions = {
         default: {
             position: { x: -200, y: 100, z: 400 },
-            rotation: { x: -0.2, y: -0.5, z: 0 }
+            rotation: { x: -0.2, y: -5, z: 0 }
         },
         about: {
             position: { x: -20, y: 40, z: -10 },
@@ -92,9 +92,10 @@ function App() {
                     fov: 45,
                     near: .1,
                     far: 10000,
-                    position: [-270, 140, 400],
-                    rotation: [0, -.45, 0]
+                    position: [-270, 160, 400],
+                    rotation: [-.2, -.6, -.1]
                 }}
+                gl={{ alpha: false }}
             >
                 <ambientLight intensity={0.5} />
                 <directionalLight position={[10, 10, 5]} intensity={.5} />
@@ -102,6 +103,13 @@ function App() {
 
                 <Room />
                 <CameraAnimation activeView={activeView} />
+                <OrbitControls 
+                    enableZoom={true}
+                    enablePan={true}
+                    enableRotate={true}
+                    minDistance={100}
+                    maxDistance={1000}
+                />
             </Canvas>
         </>
     );

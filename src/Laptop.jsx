@@ -19,11 +19,13 @@ export default function Room() {
     const mirror = useLoader(GLTFLoader, "/mirror.glb");
     const chair = useLoader(GLTFLoader, "/chair.glb");
     const woodTexture = useLoader(TextureLoader, "/woodFloor.jfif");
+    const window = useLoader(GLTFLoader, "/window.glb");
+    const curtains = useLoader(GLTFLoader, "/CURTAINS.glb");
     const { camera, gl } = useThree();
     const initialPosition = useRef(camera.position.clone());
 
     useEffect(() => {
-        gl.setClearColor(new THREE.Color('white'), 1);
+        gl.setClearColor(new THREE.Color('black'), 1);
     }, [gl]);
 
     // Change bed material
@@ -44,8 +46,11 @@ export default function Room() {
     useEffect(() => {
         if (woodTexture) {
             woodTexture.wrapS = woodTexture.wrapT = THREE.RepeatWrapping;
-            woodTexture.repeat.set(4, 4);
+            woodTexture.repeat.set(8, 8);
             woodTexture.encoding = THREE.sRGBEncoding;
+            woodTexture.magFilter = THREE.NearestFilter;
+            woodTexture.minFilter = THREE.LinearMipmapLinearFilter;
+            woodTexture.generateMipmaps = true;
         }
     }, [woodTexture]);
 
@@ -82,12 +87,12 @@ export default function Room() {
                 position={[0, 90, 0]}
                 intensity={5} 
                 color="#ff9966" 
-                distance={600}
+                distance={300}
                 decay={2}
             />
-            <ambientLight intensity={0.2} color="#ffddcc" />
+            <ambientLight intensity={0.1} color="#ffddcc" />
             <directionalLight 
-                position={[0, 60, 150]}
+                position={[0, 20, 150]}
                 intensity={0.3} 
                 color="#fff5eb"
             />
@@ -97,23 +102,25 @@ export default function Room() {
                 <planeGeometry args={[450, 450]} />
                 <meshStandardMaterial 
                     map={woodTexture}
-                    roughness={0.8}
+                    roughness={0.7}
+                    metalness={0.1}
+                    side={THREE.DoubleSide}
                 />
             </mesh>
 
             <mesh position={[0, 114, -225]}>
                 <planeGeometry args={[450, 300]} />
-                <meshStandardMaterial color="white" roughness={0.2} />
+                <meshStandardMaterial color="#EAD4B6" roughness={0.2} />
             </mesh>
 
             <mesh position={[-225, 114, 0]} rotation-y={Math.PI / 2}>
                 <planeGeometry args={[450, 300]} />
-                <meshStandardMaterial color="white" roughness={0.2} />
+                <meshStandardMaterial color="#EAD4B6" roughness={0.2} />
             </mesh>
 
             <mesh position={[225, 114, 0]} rotation-y={-Math.PI / 2}>
                 <planeGeometry args={[450, 300]} />
-                <meshStandardMaterial color="white" roughness={0.2} />
+                <meshStandardMaterial color="#EAD4B6" roughness={0.2} />
             </mesh>
 
             {/* 3D Models - All scaled up */}
@@ -277,6 +284,49 @@ export default function Room() {
                 scale={4}
                 rotation-y={Math.PI/4}
             />
+
+            {/* Sky planes behind windows */}
+            <mesh 
+                position={[-90, 160, -223]} // Slightly behind first window
+                rotation-y={Math.PI}
+            >
+                <planeGeometry args={[120, 150]} />
+                <meshStandardMaterial 
+                    color="#55B3E1" 
+                    emissive="#44C1FE"
+                    emissiveIntensity={0.1}
+                    side={THREE.DoubleSide}
+                />
+            </mesh>
+
+            <mesh 
+                position={[213, 160, 80]} // Slightly behind second window
+                rotation-y={Math.PI/2}
+            >
+                <planeGeometry args={[120, 150]} />
+                <meshStandardMaterial 
+                    color="#55B3E1"
+                    emissive="#44C1FE"
+                    emissiveIntensity={0.1}
+                    side={THREE.DoubleSide}
+                />
+            </mesh>
+
+            {/* Windows */}
+            <primitive 
+                object={window.scene} 
+                position={[-90, 160, -210]}
+                scale={.7}
+                rotation-y={Math.PI}
+            />
+
+            <primitive 
+                object={window.scene.clone()} 
+                position={[200, 160, 80]}
+                scale={.7}
+                rotation-y={Math.PI/2}
+            />
+
         </>
     );
 }
