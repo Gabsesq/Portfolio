@@ -15,6 +15,9 @@ export default function Room() {
     const laptop = useLoader(GLTFLoader, "/laptop.glb");
     const dresser = useLoader(GLTFLoader, "/dresser.glb");
     const lamp = useLoader(GLTFLoader, "/lamp.glb");
+    const deskLamp = useLoader(GLTFLoader, "/deskLamp.glb");
+    const mirror = useLoader(GLTFLoader, "/mirror.glb");
+    const chair = useLoader(GLTFLoader, "/chair.glb");
     const woodTexture = useLoader(TextureLoader, "/woodFloor.jfif");
     const { camera, gl } = useThree();
     const initialPosition = useRef(camera.position.clone());
@@ -45,6 +48,32 @@ export default function Room() {
             woodTexture.encoding = THREE.sRGBEncoding;
         }
     }, [woodTexture]);
+
+    // Add this function at the top of your Room component to create a reusable box
+    const IkeaBox = ({ position }) => {
+        return (
+            <mesh 
+                position={position}
+                rotation-y={Math.PI / 2}
+            >
+                <boxGeometry args={[30, 20, 35]} />
+                <meshStandardMaterial 
+                    color="white" 
+                    roughness={0.2}
+                />
+                <mesh 
+                    position={[0, 5, -18]}
+                    rotation-y={Math.PI}
+                >
+                    <circleGeometry args={[2, 32]} />
+                    <meshStandardMaterial 
+                        color="black"
+                        side={THREE.DoubleSide}
+                    />
+                </mesh>
+            </mesh>
+        );
+    };
 
     return (
         <>
@@ -94,6 +123,13 @@ export default function Room() {
                 position={[165, -15, -105]}
                 scale={0.45}
             />
+
+            {/* IKEA Storage Boxes - arranged in a line along z-axis with adjusted spacing */}
+            <IkeaBox position={[140, -25, -35]} />
+            <IkeaBox position={[140, -25, -70]} />
+            <IkeaBox position={[140, -25, -105]} />
+            <IkeaBox position={[140, -25, -140]} />
+            <IkeaBox position={[140, -25, -175]} />
 
             {/* Table */}
             <primitive 
@@ -209,6 +245,37 @@ export default function Room() {
                 position={[0, 240, -105]}
                 scale={30}
                 rotation-y={0}
+            />
+
+            {/* Desk Lamp */}
+            <primitive 
+                object={deskLamp.scene} 
+                position={[-210, 40, -140]}
+                scale={10}
+                rotation-y={0}
+            />
+             {/* Desk Lamp 2 */}
+             <primitive 
+                object={deskLamp.scene.clone()} 
+                position={[-210, 40, 20]}
+                scale={10}
+                rotation-y={0}
+            />
+
+            {/* Mirror */}
+            <primitive 
+                object={mirror.scene} 
+                position={[-220, 50, -60]}
+                scale={[30, 60, 50]}
+                rotation-y={Math.PI / 1}
+            />
+
+            {/* Chair */}
+            <primitive 
+                object={chair.scene} 
+                position={[0, 30, 120]}
+                scale={4}
+                rotation-y={Math.PI/4}
             />
         </>
     );
