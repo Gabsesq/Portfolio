@@ -19,7 +19,7 @@ export default function CameraAnimation({ activeView }) {
         },
         about: {
             position: { x: -20, y: 40, z: -10 },
-            rotation: { x: 0, y: Math.PI / 1.05, z: 0 }
+            rotation: { x: 200, y: 0, z: -20 }
         },
         projects: {
             position: { x: 90, y: 40, z: -10 },
@@ -97,9 +97,7 @@ function App() {
                 }}
                 gl={{ alpha: false }}
             >
-                <ambientLight intensity={0.5} />
-                <directionalLight position={[10, 10, 5]} intensity={.5} />
-                <pointLight position={[-10, -10, -5]} intensity={.5} />
+        
 
                 <Room />
                 <CameraAnimation activeView={activeView} />

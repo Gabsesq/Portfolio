@@ -19,6 +19,7 @@ export default function Room() {
     const mirror = useLoader(GLTFLoader, "/mirror.glb");
     const chair = useLoader(GLTFLoader, "/chair.glb");
     const woodTexture = useLoader(TextureLoader, "/woodFloor.jfif");
+    const wallTexture = useLoader(TextureLoader, "/walltext.jfif");
     const window = useLoader(GLTFLoader, "/window.glb");
     const curtains = useLoader(GLTFLoader, "/CURTAINS.glb");
     const { camera, gl } = useThree();
@@ -31,13 +32,22 @@ export default function Room() {
     // Change bed material
     useEffect(() => {
         if (bed.scene) {
+            const whiteMaterial = new THREE.MeshStandardMaterial({
+                color: new THREE.Color('#FFFFFF'), // White
+                roughness: 0.3,
+                metalness: 0.1
+            });
+
             bed.scene.traverse((child) => {
-                if (child.name === "group 1" || child.name === "group1") {
-                    child.material = new THREE.MeshStandardMaterial({
-                        color: new THREE.Color('orange'),
-                        roughness: 0.5,
-                        metalness: 0.5
-                    });
+                if (child.isMesh) {
+                    console.log("Mesh name:", child.name);
+                    console.log("Current material:", child.material);
+                    console.log("------------------------");
+                    
+                    // Change all bed-related meshes
+                    if (child.name.toLowerCase().includes('bed')) {
+                        child.material = whiteMaterial;
+                    }
                 }
             });
         }
@@ -53,6 +63,19 @@ export default function Room() {
             woodTexture.generateMipmaps = true;
         }
     }, [woodTexture]);
+
+    useEffect(() => {
+        if (wallTexture) {
+            wallTexture.wrapS = wallTexture.wrapT = THREE.RepeatWrapping;
+            wallTexture.repeat.set(8, 6);
+            wallTexture.encoding = THREE.sRGBEncoding;
+            wallTexture.rotation = Math.random() * Math.PI;
+            wallTexture.offset.set(Math.random(), Math.random());
+            wallTexture.magFilter = THREE.NearestFilter;
+            wallTexture.minFilter = THREE.LinearMipmapLinearFilter;
+            wallTexture.generateMipmaps = true;
+        }
+    }, [wallTexture]);
 
     // Add this function at the top of your Room component to create a reusable box
     const IkeaBox = ({ position }) => {
@@ -80,20 +103,48 @@ export default function Room() {
         );
     };
 
+    // Add this effect after your other useEffects
+    useEffect(() => {
+        if (curtains.scene) {
+            const whiteMaterial = new THREE.MeshStandardMaterial({
+                color: new THREE.Color('white'),
+                roughness: 0.5,
+                metalness: 0.1,
+                transparent: true,
+                opacity: 0.8
+            });
+
+            // Apply to original curtains
+            curtains.scene.traverse((child) => {
+                if (child.isMesh) {
+                    child.material = whiteMaterial.clone();
+                }
+            });
+
+            // Apply to cloned curtains
+            const clonedCurtains = curtains.scene.clone();
+            clonedCurtains.traverse((child) => {
+                if (child.isMesh) {
+                    child.material = whiteMaterial.clone();
+                }
+            });
+        }
+    }, [curtains]);
+
     return (
         <>
             {/* Lighting */}
             <pointLight 
                 position={[0, 90, 0]}
-                intensity={5} 
+                intensity={2} 
                 color="#ff9966" 
                 distance={300}
                 decay={2}
             />
-            <ambientLight intensity={0.1} color="#ffddcc" />
+            <ambientLight intensity={.5} color="#ffddcc" />
             <directionalLight 
-                position={[0, 20, 150]}
-                intensity={0.3} 
+                position={[0, 0, 120]}
+                intensity={.7} 
                 color="#fff5eb"
             />
             
@@ -110,17 +161,32 @@ export default function Room() {
 
             <mesh position={[0, 114, -225]}>
                 <planeGeometry args={[450, 300]} />
-                <meshStandardMaterial color="#EAD4B6" roughness={0.2} />
+                <meshStandardMaterial 
+                    map={wallTexture}
+                    roughness={0.5}
+                    metalness={0.1}
+                    rotation={Math.random() * Math.PI}
+                />
             </mesh>
 
             <mesh position={[-225, 114, 0]} rotation-y={Math.PI / 2}>
                 <planeGeometry args={[450, 300]} />
-                <meshStandardMaterial color="#EAD4B6" roughness={0.2} />
+                <meshStandardMaterial 
+                    map={wallTexture.clone()}
+                    roughness={0.5}
+                    metalness={0.1}
+                    rotation={Math.random() * Math.PI}
+                />
             </mesh>
 
             <mesh position={[225, 114, 0]} rotation-y={-Math.PI / 2}>
                 <planeGeometry args={[450, 300]} />
-                <meshStandardMaterial color="#EAD4B6" roughness={0.2} />
+                <meshStandardMaterial 
+                    map={wallTexture.clone()}
+                    roughness={0.5}
+                    metalness={0.1}
+                    rotation={Math.random() * Math.PI}
+                />
             </mesh>
 
             {/* 3D Models - All scaled up */}
@@ -160,35 +226,102 @@ export default function Room() {
                     rotation-x={0}
                     rotation-y={-1.55}
                     rotation-z={0}
-                    distanceFactor={.7}
+                    distanceFactor={.3}
                     occlude
                 >
                     <div className="screen-content"
                         style={{
-                            width: '42px',
-                            height: '1px',
-                            background: 'white',
-                            color: 'black',
-                            padding: '20px',
+                            width: '180px',
+                            height: '80px',
+                            background: '#1a1a1a',
+                            color: 'white',
+                            padding: '8px',
                             fontFamily: 'Arial, sans-serif',
-                            overflow: 'hidden',
-                            transform: 'scale(-1, 1)'
+                            overflow: 'auto',
+                            transform: 'scale(-1, 1)',
+                            scrollbarWidth: 'thin',
+                            scrollbarColor: '#0084FF #1a1a1a',
+                            msOverflowStyle: 'none',
                         }}
                     >
-                        <h2 style={{ 
-                            fontSize: '0.4px',
-                            marginBottom: '0.2px',
-                            fontWeight: 'bold'
-                        }}>
-                            About Me
-                        </h2>
-                        <p style={{ 
-                            fontSize: '10px',
-                            lineHeight: '0.35px',
-                            marginBottom: '0.2px'
-                        }}>
-                            Hi! 
-                        </p>
+                        <div className="chat-container"
+                            style={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                gap: '6px',
+                                fontSize: '12px'
+                            }}
+                        >
+                            <div className="message-bubble"
+                                style={{
+                                    background: '#0084FF',
+                                    padding: '6px 10px',
+                                    borderRadius: '6px',
+                                    maxWidth: '120px',
+                                    marginBottom: '6px',
+                                    alignSelf: 'flex-end',
+                                    animation: 'fadeIn 0.5s ease-in',
+                                    fontSize: '12px',
+                                    fontWeight: 'bold'
+                                }}
+                            >
+                                Hi! I'm Ava 👋
+                            </div>
+
+                            <div className="message-bubble"
+                                style={{
+                                    background: '#0084FF',
+                                    padding: '6px 10px',
+                                    borderRadius: '6px',
+                                    maxWidth: '120px',
+                                    marginBottom: '6px',
+                                    alignSelf: 'flex-end',
+                                    animation: 'fadeIn 0.5s ease-in 0.5s',
+                                    opacity: 0,
+                                    animationFillMode: 'forwards',
+                                    fontSize: '12px',
+                                    fontWeight: 'bold'
+                                }}
+                            >
+                                Full Stack Developer specializing in React & Three.js 💻
+                            </div>
+
+                            <div className="message-bubble"
+                                style={{
+                                    background: '#0084FF',
+                                    padding: '6px 10px',
+                                    borderRadius: '6px',
+                                    maxWidth: '120px',
+                                    marginBottom: '6px',
+                                    alignSelf: 'flex-end',
+                                    animation: 'fadeIn 0.5s ease-in 1s',
+                                    opacity: 0,
+                                    animationFillMode: 'forwards',
+                                    fontSize: '12px',
+                                    fontWeight: 'bold'
+                                }}
+                            >
+                                Always exploring new technologies 🚀
+                            </div>
+
+                            <div className="message-bubble"
+                                style={{
+                                    background: '#0084FF',
+                                    padding: '6px 10px',
+                                    borderRadius: '6px',
+                                    maxWidth: '120px',
+                                    marginBottom: '6px',
+                                    alignSelf: 'flex-end',
+                                    animation: 'fadeIn 0.5s ease-in 1.5s',
+                                    opacity: 0,
+                                    animationFillMode: 'forwards',
+                                    fontSize: '12px',
+                                    fontWeight: 'bold'
+                                }}
+                            >
+                                Check out my projects! 🏠
+                            </div>
+                        </div>
                     </div>
                 </Html>
             </primitive>
@@ -233,7 +366,7 @@ export default function Room() {
             {/* Laptop */}
             <primitive 
                 object={laptop.scene} 
-                position={[150, 1.5, -90]}
+                position={[150, 8, -90]}
                 scale={1.5}
                 rotation-y={-.5}
             />
@@ -293,21 +426,18 @@ export default function Room() {
                 <planeGeometry args={[120, 150]} />
                 <meshStandardMaterial 
                     color="#55B3E1" 
-                    emissive="#44C1FE"
-                    emissiveIntensity={0.1}
                     side={THREE.DoubleSide}
                 />
             </mesh>
 
             <mesh 
-                position={[213, 160, 80]} // Slightly behind second window
+                position={[223, 160, 80]} // Slightly behind second window
                 rotation-y={Math.PI/2}
             >
                 <planeGeometry args={[120, 150]} />
                 <meshStandardMaterial 
                     color="#55B3E1"
-                    emissive="#44C1FE"
-                    emissiveIntensity={0.1}
+                    
                     side={THREE.DoubleSide}
                 />
             </mesh>
@@ -322,8 +452,23 @@ export default function Room() {
 
             <primitive 
                 object={window.scene.clone()} 
-                position={[200, 160, 80]}
+                position={[212, 160, 80]}
                 scale={.7}
+                rotation-y={Math.PI/2}
+            />
+
+            {/* Curtains */}
+            <primitive 
+                object={curtains.scene} 
+                position={[-90, 100, -210]}
+                scale={2}
+                rotation-y={Math.PI}
+            />
+
+            <primitive 
+                object={curtains.scene.clone()} 
+                position={[212, 100, 80]}
+                scale={2}
                 rotation-y={Math.PI/2}
             />
 

@@ -88,4 +88,38 @@ canvas {
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(0.5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.message-bubble {
+    word-wrap: break-word;
+    box-shadow: 0 0.1px 0.2px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom scrollbar styles */
+.screen-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.screen-content::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+.screen-content::-webkit-scrollbar-thumb {
+    background: #0084FF;
+    border-radius: 3px;
+}
+
+.screen-content::-webkit-scrollbar-thumb:hover {
+    background: #0073e6;
+}
+
 
