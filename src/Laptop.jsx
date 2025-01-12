@@ -134,18 +134,37 @@ export default function Room() {
     return (
         <>
             {/* Lighting */}
+            {/* Main ceiling light - warmer and brighter */}
             <pointLight 
                 position={[0, 90, 0]}
-                intensity={2} 
-                color="#ff9966" 
-                distance={300}
+                intensity={.5} 
+                color="#ffd4a3" // Warmer color
+                distance={400}
                 decay={2}
             />
-            <ambientLight intensity={.5} color="#ffddcc" />
+            
+            {/* Increased ambient light for better overall illumination */}
+            <ambientLight intensity={0.3} color="#fff5eb" />
+            
+            {/* Window light simulation */}
             <directionalLight 
-                position={[0, 0, 120]}
-                intensity={.7} 
-                color="#fff5eb"
+                position={[-90, 160, -210]}  // Position matching first window
+                intensity={1.2} 
+                color="#ffecd9"
+            />
+            
+            {/* Second window light */}
+            <directionalLight 
+                position={[212, 160, 80]}    // Position matching second window
+                intensity={.3} 
+                color="#ffecd9"
+            />
+            
+            {/* Soft fill light */}
+            <hemisphereLight 
+                intensity={0.5}
+                color="#ffd4a3"
+                groundColor="#334"
             />
             
             {/* Room Structure - Made larger */}
@@ -326,7 +345,7 @@ export default function Room() {
                 </Html>
             </primitive>
 
-            {/* Second Monitor */}
+            {/* Second Monitor - Instagram Feed */}
             <primitive 
                 object={monitor.scene.clone()}
                 position={[57, 30, 210]}
@@ -340,24 +359,180 @@ export default function Room() {
                     rotation-x={0}
                     rotation-y={-1.55}
                     rotation-z={0}
-                    distanceFactor={.7}
+                    distanceFactor={.3}
                     occlude
                 >
                     <div className="screen-content"
                         style={{
-                            width: '42px',
-                            height: '1px',
-                            background: 'white',
-                            color: 'black',
-                            padding: '20px',
-                            fontFamily: 'Arial, sans-serif',
-                            overflow: 'hidden',
-                            transform: 'scale(-1, 1)'
+                            width: '200px',
+                            height: '95px',
+                            background: '#000000',
+                            color: 'white',
+                            padding: '0',
+                            fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
+                            overflow: 'auto',
+                            transform: 'scale(-1, 1)',
+                            scrollbarWidth: 'thin',
+                            scrollbarColor: '#8e8e8e #000000',
                         }}
                     >
-                        <h1>Projects</h1>
-                        <div className="project-showcase">
-                            {/* Add different content for second monitor */}
+                    
+
+                        {/* Posts Feed */}
+                        <div style={{ padding: '0' }}>
+                            {/* Post 1 */}
+                            <div style={{ marginBottom: '12px' }}>
+                                {/* Post Header */}
+                                <div style={{
+                                    padding: '8px',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    gap: '8px'
+                                }}>
+                                    <div style={{
+                                        width: '24px',
+                                        height: '24px',
+                                        borderRadius: '50%',
+                                        background: '#0095f6',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        fontSize: '12px'
+                                    }}>A</div>
+                                    <span style={{ fontSize: '13px', fontWeight: 'bold' }}>ava.codes</span>
+                                </div>
+                                {/* Post Image */}
+                                <div style={{
+                                    width: '100%',
+                                    height: '180px',
+                                    background: '#1a1a1a',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    fontSize: '24px'
+                                }}>
+                                    🎮
+                                </div>
+                                {/* Post Actions */}
+                                <div style={{ padding: '8px' }}>
+                                    <div style={{ 
+                                        display: 'flex', 
+                                        gap: '12px', 
+                                        fontSize: '14px',
+                                        marginBottom: '6px'
+                                    }}>
+                                        ❤️ 💬 📤
+                                    </div>
+                                    <div style={{ fontSize: '12px', fontWeight: 'bold' }}>
+                                        42 likes
+                                    </div>
+                                    <div style={{ fontSize: '12px' }}>
+                                        <span style={{ fontWeight: 'bold' }}>ava.codes</span>
+                                        {' '}Built a custom game engine using Three.js and React 🚀
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Post 2 */}
+                            <div style={{ marginBottom: '12px' }}>
+                                <div style={{
+                                    padding: '8px',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    gap: '8px'
+                                }}>
+                                    <div style={{
+                                        width: '24px',
+                                        height: '24px',
+                                        borderRadius: '50%',
+                                        background: '#0095f6',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        fontSize: '12px'
+                                    }}>A</div>
+                                    <span style={{ fontSize: '13px', fontWeight: 'bold' }}>ava.codes</span>
+                                </div>
+                                <div style={{
+                                    width: '100%',
+                                    height: '180px',
+                                    background: '#1a1a1a',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    fontSize: '24px'
+                                }}>
+                                    🤖
+                                </div>
+                                <div style={{ padding: '8px' }}>
+                                    <div style={{ 
+                                        display: 'flex', 
+                                        gap: '12px', 
+                                        fontSize: '14px',
+                                        marginBottom: '6px'
+                                    }}>
+                                        ❤️ 💬 📤
+                                    </div>
+                                    <div style={{ fontSize: '12px', fontWeight: 'bold' }}>
+                                        89 likes
+                                    </div>
+                                    <div style={{ fontSize: '12px' }}>
+                                        <span style={{ fontWeight: 'bold' }}>ava.codes</span>
+                                        {' '}Launched my AI-powered chat application! #AI #WebDev
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Post 3 */}
+                            <div style={{ marginBottom: '12px' }}>
+                                {/* Similar structure as above posts */}
+                                <div style={{
+                                    padding: '8px',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    gap: '8px'
+                                }}>
+                                    <div style={{
+                                        width: '24px',
+                                        height: '24px',
+                                        borderRadius: '50%',
+                                        background: '#0095f6',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        fontSize: '12px'
+                                    }}>A</div>
+                                    <span style={{ fontSize: '13px', fontWeight: 'bold' }}>ava.codes</span>
+                                </div>
+                                <div style={{
+                                    width: '100%',
+                                    height: '180px',
+                                    background: '#1a1a1a',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    fontSize: '24px'
+                                }}>
+                                    🌐
+                                </div>
+                                <div style={{ padding: '8px' }}>
+                                    <div style={{ 
+                                        display: 'flex', 
+                                        gap: '12px', 
+                                        fontSize: '14px',
+                                        marginBottom: '6px'
+                                    }}>
+                                        ❤️ 💬 📤
+                                    </div>
+                                    <div style={{ fontSize: '12px', fontWeight: 'bold' }}>
+                                        156 likes
+                                    </div>
+                                    <div style={{ fontSize: '12px' }}>
+                                        <span style={{ fontWeight: 'bold' }}>ava.codes</span>
+                                        {' '}Web3 DApp now live on mainnet! Check it out 🎉
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </Html>
@@ -410,13 +585,13 @@ export default function Room() {
                 rotation-y={Math.PI / 1}
             />
 
-            {/* Chair */}
-            <primitive 
+            {/* Chair - temporarily removed */}
+            {/* <primitive 
                 object={chair.scene} 
                 position={[0, 30, 120]}
                 scale={4}
                 rotation-y={Math.PI/4}
-            />
+            /> */}
 
             {/* Sky planes behind windows */}
             <mesh 
