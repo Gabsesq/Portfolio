@@ -544,7 +544,35 @@ export default function Room() {
                 position={[150, 8, -90]}
                 scale={1.5}
                 rotation-y={-.5}
-            />
+            >
+                {/* Laptop Screen */}
+                <Html
+                    transform
+                    wrapperClass="laptop-screen"
+                    position={[0, 60, -10]}     // Adjusted position for larger screen
+                    rotation-x={-0.4}
+                    rotation-y={0}
+                    rotation-z={0}
+                    distanceFactor={0.5}        // Reduced to compensate for larger size
+                    occlude
+                >
+                    <div style={{
+                        width: '15000px',        // 50x larger
+                        height: '10000px',       // 50x larger
+                        background: 'yellow',
+                        padding: '10px',
+                        transform: 'scale(-1, 1)',
+                        border: '20px solid red', // Thicker border for visibility
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        fontSize: '200px',        // Larger text
+                        fontWeight: 'bold'
+                    }}>
+                        Laptop Screen Content
+                    </div>
+                </Html>
+            </primitive>
 
             {/* Dresser */}
             <primitive 

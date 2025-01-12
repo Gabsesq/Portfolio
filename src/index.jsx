@@ -99,6 +99,13 @@ function App() {
             >
                 <Room />
                 <CameraAnimation activeView={activeView} />
+                <OrbitControls 
+                    enableZoom={true}
+                    enablePan={true}
+                    enableRotate={true}
+                    minDistance={100}
+                    maxDistance={1000}
+                />
             </Canvas>
         </>
     );
