@@ -11,25 +11,49 @@ import gsap from "gsap";
 
 export default function CameraAnimation({ activeView }) {
     const { camera } = useThree();
+    
+    // Calculate base values relative to screen size
+    const baseZ = window.innerWidth * 0.4; // 40% of screen width
+    const projectZ = window.innerWidth * .075; // 11.5% of screen width
+    const blogZ = window.innerWidth * -.033; // -5% of screen width
+    const aboutZ = window.innerWidth * .075; // -1% of screen width
 
     const viewPositions = {
         default: {
-            position: { x: -200, y: 100, z: 400 },
+            position: { x: -200, y: 100, z: baseZ },
             rotation: { x: -0.2, y: -5, z: 0 }
         },
         about: {
-            position: { x: -20, y: 40, z: -10 },
-            rotation: { x: 200, y: 0, z: -20 }
+            position: { x: -20, y: 55, z: projectZ },
+            rotation: { x: 0, y: -Math.PI / .96, z: 0 }
         },
         projects: {
-            position: { x: 90, y: 40, z: -10 },
-            rotation: { x: 0, y: -Math.PI / -1.05, z: 0 }
+            position: { x: 45, y: 55, z: projectZ },
+            rotation: { x: 0, y: -Math.PI / 1.05, z: 0 }
         },
-        contact: {
-            position: { x: 122, y: 20, z: -50 },
-            rotation: { x: 0, y: -Math.PI / 5.5, z: 0 }
+        blog: {
+            position: { x: 130, y: 20, z: blogZ },
+            rotation: { x: 0, y: -Math.PI / 6, z: 0 }
         }
     };
+
+    // Add window resize listener
+    useEffect(() => {
+        const handleResize = () => {
+            const newBaseZ = window.innerWidth * 0.4;
+            const newProjectZ = window.innerWidth * 0.115;
+            const newBlogZ = window.innerWidth * -0.05;
+            const newAboutZ = window.innerWidth * -0.01;
+
+            viewPositions.default.position.z = newBaseZ;
+            viewPositions.projects.position.z = newProjectZ;
+            viewPositions.blog.position.z = newBlogZ;
+            viewPositions.about.position.z = newAboutZ;
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     useEffect(() => {
         if (activeView === 'default') return;
@@ -80,10 +104,10 @@ function App() {
                     Projects
                 </button>
                 <button 
-                    className={`nav-item ${activeView === 'contact' ? 'active' : ''}`}
-                    onClick={() => handleViewChange('contact')}
+                    className={`nav-item ${activeView === 'blog' ? 'active' : ''}`}
+                    onClick={() => handleViewChange('blog')}
                 >
-                    Contact
+                    Blog
                 </button>
             </div>
 
@@ -100,11 +124,10 @@ function App() {
                 <Room />
                 <CameraAnimation activeView={activeView} />
                 <OrbitControls 
-                    enableZoom={true}
-                    enablePan={true}
-                    enableRotate={true}
-                    minDistance={100}
-                    maxDistance={1000}
+                    enabled={false}
+                    enableZoom={false}
+                    enablePan={false}
+                    enableRotate={false}
                 />
             </Canvas>
         </>
