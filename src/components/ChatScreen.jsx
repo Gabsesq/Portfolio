@@ -18,7 +18,7 @@ export default function ChatScreen() {
             rotation-x={0}
             rotation-y={-1.55}
             rotation-z={0}
-            distanceFactor={.3}
+            distanceFactor={0.3}
             occlude
         >
             <div 
