@@ -65,43 +65,15 @@ export default function BlogScreen() {
                         color: '#FF8FAB',
                         lineHeight: '1.6'
                     }}>
-                        It is an odd time to be alive in America..... Some of my side passions include deep diving into history and politics. 
-                        Today is the day after Trump's inauguration, and I'm feeling extra overwhelmed, helpless, and fearful that 
-                        history will repeat itself once again. My take on this presidency is that it is a reflection of so many 
-                        dark parts of our history and underlying culture. I'm going to talk about the perfect tsunami that started 
-                        and is not stopping, at least my take on what is happening. What do all terrifying genocides and extremist 
-                        movements have in common? Fear mongering. If you demonize a group of people, tensions are bound to rise. I 
-                        am young at 25 years old, up for debate, and I feel that from my perspective, I watched Obama inspire hope 
-                        in me, an 8 year old girl. Obama was able to elicit emotion, and me being young, I knew he is the man I 
-                        wanted as my president. Here's the catch. I didn't know a single policy. What is a democrat? Republiwho? And 
-                        as an adult who indulges in history a little bit too much, I am watching a group of adults feel that same 
-                        intensity of emotion that I felt at 8 years old. The democratic party has fallen short on inspiring hope since 
-                        Obama. As a grown, mathematically and pattern inclined woman, I do not care as much about the underlying 
-                        emotion the politician is trying to evoke. What I do care about is the policy and PLAN being put forward. 
-                        Unfortunately, I'm watching a wave of people who are overtaken by emotion, by fear of niche crowds and exaggerated 
-                        fears. I remember dating someone who supported Trump around 2016, and I remember claims of 'democrats are 
-                        aborting babies after they're born!' on a large news station... This was the first time I became worried 
-                        about the future of our country. I feel like historically, when fascist regimes rise, they feed as much 
-                        misinformation as possible to make citizens question their own reality. To the point you can't trust any source 
-                        of media or information. I personally, as someone who is critical of all of my media, I feel that finding credible 
-                        information becomes harder and harder. Everything feels extremely biased and intense, and sometimes I don't 
-                        even trust my government. Things I think influenced this era the most: Covid and global inflation, redpill 
-                        blackpill social media content, fear mongering and eliciting emotion, and social media influence with addictive algorithms that 
-                        radicalize people, demonizing groups of people. Some of those tie together. By the way, if anyone is reading this 
-                        and is a Trump supporter, I'm always open to discussion. One thing I've learned is that there is always more 
-                        to learn. I'm saying I'm open to being contradicted and adopting a new viewpoint. Everything I've said here 
-                        is only my opinion. My only credibility is that I find joy in learning about history, politics, and I'm an 
-                        American citizen who is passionate about the future of my country. Now I want to end this with predictions. 
-                        I think our country is very up in the air right now. This could be a fresh wound of the election that is making me so dramatic, but 
-                        I am truly feeling fearful. I am fearful for my friends who where brought to this country at 5 years old. I am 
-                        fearful for the lower and middle class. I am fearful for the change in my pockets. I am fearful for the extent 
-                        the oligarchy will go to make another dime. I am fearful to be homeless and have no backup net. I am fearful 
-                        for extremist verbiage about revoking women's rights. I am fearful extremists will be emboldened, now more 
-                        than ever. I remember the first election felt dystopian, but this election just feels dark. This election feels 
-                        like there are two potential outcomes: Citizens will revolt once corruption touches every area of their lives, OR 
-                        everything will continue to get worse until we reach a revolution. I feel like we're at the end of the road, 
-                        based on pattern recognition, but there is a great possibility that I am completely off base and misinformed, 
-                        which hopefully is the answer in this case.
+                    It’s an odd time to be alive in America. Some of my side passions include diving deep into history and politics. Today, the day after Trump’s inauguration, I find myself overwhelmed, helpless, and fearful that history might repeat itself once again. From my perspective, this presidencial election reflects some of the darkest corners of our history and culture. What do all terrifying genocides and extremist movements have in common? Fearmongering. Demonizing a group of people inevitably raises tensions.
+                    At 25, I’ve developed an appreciation for patterns, both historical and mathematical, and I can’t help but see parallels between now and many troubling times in history. I still vividly remember the hope Obama inspired in me as an 8-year-old. He wasn’t just a politician. He was a symbol of something bigger. But back then, I didn’t know a single policy. Words like "Democrat" or "Republican" were abstract concepts to me. All I knew was the raw emotion he evoked.
+                    Now, as an adult, I find myself less swayed by emotion and more interested in plans, policies, and solutions. Yet, I’m watching an entire wave of people overtaken by the same intensity of emotion I once felt as a child. It’s unsettling. The Democratic Party, in my view, hasn’t inspired the kind of hope I once felt. And many on the other side are gripped by fear. A fear stoked by misinformation and sensationalism.
+                    I still remember dating someone who supported Trump in 2016. They’d parrot claims like, “Democrats are aborting babies after they’re born!”—a narrative echoed by prominent media outlets. That was the first time I truly worried about the direction our country was headed. Historically, when fascist regimes rise, they thrive on a steady diet of misinformation. They create an environment where citizens question reality itself, leaving people unable to trust any source of information.
+                    Today, I feel that struggle more than ever. I try to be critical of the media I consume, but finding credible information feels more and more difficult. Everything feels extreme. Distrust in government, combined with the erosion of a shared reality, makes this era feel uniquely fragile.
+                    I believe several factors have shaped this moment: the pandemic, global inflation, the rise of divisive social media algorithms, redpill and blackpill content, and a culture of demonization. Many of these forces feed into each other, creating a feedback loop of division and radicalization.
+                    To anyone reading this who supports Trump: I welcome discussion. One of the few certainties I hold is that there’s always more to learn. My opinions here are only opinions. I’m an American citizen passionate about the future of this country, not an authority on politics or history.
+                    But I can’t shake the fear that the country is at a crossroads. Maybe it’s the rawness of the election aftermath, but it feels like we’re standing on the edge of something big. I worry for my friends who were brought to this country as children, for the middle and lower classes, for the erosion of women’s rights, for the growing class divide,and for the emboldenment of extremists.
+                    This election doesn’t just feel dystopian—it feels dark. It feels like there are two paths ahead: either citizens will revolt once corruption invades every corner of their lives, or things will continue to deteriorate until a breaking point is reached. Based on patterns I’ve seen in history, the end of a great nation feels near. Of course, there’s a great chance I’m completely wrong... I hope I am.
                     </p>
                     <div style={{ 
                         fontSize: '12px', 
@@ -134,22 +106,15 @@ export default function BlogScreen() {
                         color: '#FF8FAB',
                         lineHeight: '1.6'
                     }}>
-                        Making this website has taught me the importance of pre-planning my ideas...
-                        I've been exploring 3D graphics and creating immersive experience which has been very exciting,
-                        but too exciting. A common theme of my projects is that I get too excited and start working on them before I have a plan.
-                        This is a lesson I will take with me into the future. The issue with this approach is that it ends up taking me double the time to complete a project.
-                        I love the artistic aspect of bringing ideas to life, and usually I lean toward a creative process (digital art, sewing, working in Blender) but when it comes to 
-                        programming, I have a tendency to lean toward the functionality side which is telling. At the same time, the functionality side
-                        requires planning too. The more projects I make and the more I study system design, the more I learn that I don't know. This is what attracted
-                        me to software development in the first place. The endless rabbit holes of knowledge continue to move the goal post and allow me more autonomy over my
-                        ideas. So in some ways, messing up from the beginning probably teaches me more. At the same time, I am someone who is constantly watching the calendar and stressing
-                        that I am wasting time. This is another life lesson I have been working on. Balancing technical progress and burnout, my endless project ideas and the 
-                        inevitable stress of time management. Some steps I've taken to take back control of my life: Deleting video games, limiting my social media. If I have an urge to use 
-                        social media, I read a book instead. I also find that changing my environment helps me avoid burnout for some reason. I have a passion for creation, and losing that 
-                        passion would be devastating for me. That is why as much as I advocate for consistent learning, I also advocate for consistent rest and balance. Getting more sleep has 
-                        actually helped my productivity and has made me a significantly more efficient developer. Without my sleep, I may as well do nothing. I lived my college with so little
-                        sleep, and I wish I had prioritized it more as there is a significant difference in what I can and can't learn when tired. I think these lessons I've learned are pretty
-                        easy conclusions to come to, but it took me living through them to understand their importance.
+                        Building this website has taught me an invaluable lesson about the importance of pre-planning. Over the past few months, I’ve been diving into 3D graphics and creating immersive experiences. It’s been thrilling. Maybe a little too thrilling. A recurring theme in my projects is that I get so excited about an idea that I dive in headfirst without a clear plan. While this excitement fuels my creativity, it often comes at a cost: projects take twice as long to complete because I end up backtracking and reworking parts I didn’t think through.
+                        This has been a hard but valuable lesson to learn. I’ve always loved the artistic process, whether it’s digital art, sewing, or working in Blender, but when it comes to programming, I lean heavily on functionality. And that’s telling because functionality demands planning. The more projects I work on, and the more I study system design, the more I realize how much there is still to learn. But that’s exactly what drew me to software development in the first place. The endless rabbit holes of knowledge keep me motivated, constantly moving the goalposts and giving me more control over how I bring ideas to life.
+                        Ironically, those early missteps are often my greatest teachers. Still, I can’t help but stress about time. I’m always hyperaware of the calendar, worried I’m wasting precious hours. Balancing technical growth with burnout, my endless stream of ideas with the reality of time management. These are challenges I’m actively working to overcome.
+                        I’ve already taken steps to reclaim control of my time and energy. I deleted video games and set strict limits on social media use. Whenever I feel the urge to scroll, I pick up a book instead. I’ve also found that simply changing my environment, whether it’s rearranging my workspace or taking a walk, helps me avoid burnout.
+                        As much as I love learning and creating, I’ve come to realize the importance of balance. Losing my passion for creation would feel devastating, so I make sure to prioritize rest just as much as progress. Sleep, in particular, has been a game-changer. In college, I constantly sacrificed sleep, and while I survived, I now see how much I was limiting my potential. There’s a night-and-day difference in how much I can learn and accomplish when I’m rested versus when I’m exhausted.
+                        These lessons may seem obvious, even cliché, but they didn’t truly click for me until I lived through them. Progress isn’t just about grinding away, it’s also about knowing when to pause, reflect, and recharge. Progress is about knowing when to take your time to do the boring part, planning. Accepting boredom is the best way
+                        to pull out your creativity and complex solutions. Something about laying awake at night brings out the best of my work!
+
+
                     </p>
                     <div style={{ 
                         fontSize: '12px', 
