@@ -57,6 +57,83 @@ export default function BlogScreen() {
                         fontSize: '20px',
                         color: '#FF69B4'
                     }}>
+                    Misinformation
+                    </h3>
+                    <p style={{ 
+                        margin: '0 0 10px 0', 
+                        fontSize: '14px', 
+                        color: '#FF8FAB',
+                        lineHeight: '1.6'
+                    }}>
+                        I'm feeling particularly worried about journalism in this country. At the same time, I'm also worried about fabricated truths. It feels very apparent that the United States 
+                        is leaning toward an oligarchial government structure. The top of this hierarchy consists of CEO's of the world's largest social media platforms, which is a 
+                        new challenge we have never faced to this extent. In my previous blog post, I discussed prominent platforms spewing misinformation. There has been a stark shift 
+                        over my lifetime from primary journalism coming from our television networks, and now the new media consumption is social media which can be quite dangerous.
+                        It is telling to me that the week of Trump's inauguration, Mark Zuckerberg, the CEO of Facebook, is now rolling back the fact checking features of Facebook. 
+                        I have grandparents. I have younger cousins. I have people my age and middle age adults in my life who I watch absorb propaganda and misinformation. As someone 
+                        who is college educated and dedicated to desciphering information (by my own standard), I'm conflicted on whether information is harder to descipher from fact or
+                        fiction, or if I used to be more susceptible to misinformation. I'm not sure. I will say misinformation feels more divisive than ever. The fact that the world's 
+                        wealthiest individuals officially control our main media platforms brings be fear that fully transparent information won't exist. If the ceo of google has 
+                        governmental power, who is to stop them from shaping search results? I feel like this is such an obvious argument and an obvious threat to our democracy, but I 
+                        am going to talk about it anyway. I think that is why my generation felt so comfortable with tiktok. There is a sense of vulnerability with American owned social 
+                        media apps. Something inexplainable but untrusting. I will say, now more than ever, question everything you read. Question your algorithm, question the point of 
+                        every post, who it may be benefiting, and who is the source. There is power in community and that is what I will take forward with me.
+                    </p>
+                    <div style={{ 
+                        fontSize: '12px', 
+                        color: '#FFB6C1',
+                        fontStyle: 'italic'
+                    }}>
+                        Posted on January 22, 2025 • 4 min read ✨
+                    </div>
+                </div>
+            
+            </div>
+            <div style={{
+                width: '735px',
+                height: '440px',
+                background: '#FFF0F6', // Light pink background
+                padding: '20px',
+                border: '1px solid #FFB0D9', // Pink border
+                borderRadius: '20px',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '15px',
+                fontFamily: 'Arial, sans-serif',
+                color: '#FF69B4', // Pink text
+                overflow: 'auto',
+                fontSize: '14px',
+                boxShadow: 'inset 0 0 20px rgba(255, 182, 193, 0.3)' // Soft pink inner glow
+            }}>
+                <div style={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    marginBottom: '20px'
+                }}>
+                    <h2 style={{ 
+                        margin: 0, 
+                        fontSize: '36px',
+                        color: '#FF69B4',
+                        textShadow: '2px 2px 4px rgba(255, 105, 180, 0.2)'
+                    }}>
+                        ✨ My Blog ✨
+                    </h2>
+                </div>
+                {/* Blog Posts */}
+                <div style={{
+                    background: '#FFF',
+                    padding: '20px',
+                    borderRadius: '12px',
+                    marginBottom: '15px',
+                    boxShadow: '0 4px 8px rgba(255, 182, 193, 0.2)',
+                    border: '1px solid #FFE4E1'
+                }}>
+                    <h3 style={{ 
+                        margin: '0 0 10px 0', 
+                        fontSize: '20px',
+                        color: '#FF69B4'
+                    }}>
                         Trump Inauguration
                     </h3>
                     <p style={{ 
