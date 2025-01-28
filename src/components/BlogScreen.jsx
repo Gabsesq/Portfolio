@@ -57,6 +57,52 @@ export default function BlogScreen() {
                         fontSize: '20px',
                         color: '#FF69B4'
                     }}>
+                        Future with Automation
+                    </h3>
+                    <p style={{ 
+                        margin: '0 0 10px 0', 
+                        fontSize: '14px', 
+                        color: '#FF8FAB',
+                        lineHeight: '1.6'
+                    }}>
+                        There is a lot of excitement surround automation and AI right now. Personally, I am gatekeeping the softwares I have found as a new grad and someone who would love 
+                        to have a job! Being a software developer as a living is all I have ever wanted, but with the current state of tech, everything seems a little bit up in the air. It 
+                        scares me and inspires me at the same time. I also feel like I'm in an American bubble that celebrates capitalism, but almost is built against innovation in my opinion.
+                        When we look at China's deepseek, I can only think that China is having this kind of success because they fund those willing to take a risk. I feel like the United 
+                        States stunts it's own growth by funding the wrong people, aka large corporations. These large corporations and established software companies accept subsidies while 
+                        making little to no progress or innovation. This is just my interpretation as someone who is not completely educated on the relationship between government, subsisidies,
+                         tax credits, etc. I feel that our top company owners are comfortable - as the richest people in the world. I see Elon Musk focus on the space sector, contemplating making 
+                         a difference on Mars, while China is focused on inspiring earth. In a career aspect, I have always wanted to work for pinterest or another ethical software company while 
+                         creating my own business or at least independent applications on the side. Now, it feels like business owners are the group that will survive this age of automation. 
+                         Right now I'm reading a book, "Futureproof 9 Rules for surviving the Age of AI" by Kevin Roose. One of his realizations was eye opening to me - Roose believes that the 
+                         industrial revolution was such a large jump in technology that it was able to create jobs. While the industrial revolution rid of millions of jobs, it created even more 
+                         jobs than it destroyed. In our generation, we have not made a significant jump in technology to this level. While we have improved, we aren't opening more sectors. 
+                         Instead, we see a lot of pop up businesses automating mundane human jobs. When you think about it, if you get rid of someone's mundane work, you're leaving them with 
+                         room for more productivity. Lets look at software, with AI and various tools that ~I am gatekeeping~~, if a software developer is 800x more productive, then you need 
+                         800x less software developers. I think we're feeling the brunt of this, but there is an attempt to automate many fields we have relied on for the last 100+ years.
+                    </p>
+                    <div style={{ 
+                        fontSize: '12px', 
+                        color: '#FFB6C1',
+                        fontStyle: 'italic'
+                    }}>
+                        Posted on January 22, 2025 • 4 min read ✨
+                    </div>
+                </div>
+                {/* Blog Posts */}
+                <div style={{
+                    background: '#FFF',
+                    padding: '20px',
+                    borderRadius: '12px',
+                    marginBottom: '15px',
+                    boxShadow: '0 4px 8px rgba(255, 182, 193, 0.2)',
+                    border: '1px solid #FFE4E1'
+                }}>
+                    <h3 style={{ 
+                        margin: '0 0 10px 0', 
+                        fontSize: '20px',
+                        color: '#FF69B4'
+                    }}>
                         Misinformation
                     </h3>
                     <p style={{ 
