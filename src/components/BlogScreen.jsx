@@ -86,7 +86,7 @@ export default function BlogScreen() {
                         color: '#FFB6C1',
                         fontStyle: 'italic'
                     }}>
-                        Posted on January 22, 2025 • 4 min read ✨
+                        Posted on January 28, 2025 • 4 min read ✨
                     </div>
                 </div>
                 {/* Blog Posts */}
