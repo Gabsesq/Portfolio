@@ -57,6 +57,52 @@ export default function BlogScreen() {
                         fontSize: '20px',
                         color: '#FF69B4'
                     }}>
+                        Creative Calling
+                    </h3>
+                    <p style={{ 
+                        margin: '0 0 10px 0', 
+                        fontSize: '14px', 
+                        color: '#FF8FAB',
+                        lineHeight: '1.6'
+                    }}>
+                        Reflecting on current society and the way forward, I've come to the conclusion that building community and fostering creativity is the best way to stay afloat, stay alive, and stay content.
+                        I've always been drawn to creative endeavors, but my family has always pushed me toward stem. I picked computer science because of the creative path that the field promised. In a sense, I 
+                        don't regret it because of how much I have learned and been able to create. At the same time, I did intend on making a good living for myself and my family. Now, I feel like those that will 
+                        thrive are those that are creative. Building community, interpersonal communication, and creativity are the new stem. This is a hard pill to swallow as STEM has been indoctrinated into 
+                        almost every high school student, the ticket to the middle class. Unfortunately with Automation and technological advances, a lot of these jobs will be slashed (from my predictions and what 
+                        I've seen so far). A 70 inch tv used to be the status symbol, the new status symbol is a handmade yellow couch one of a kind. I'm not sure if this is a postiive or negative for society, but 
+                        I do know I am sort of excited to be a part of it. I feel like now is the time to foster my creativity through sewing, coding, and creating in general. I have a few inspirations that I've 
+                        looked up to for years but I've been scared to make the jump. My biggest flaw is that I want to do everything, I want to create everything, and this gives me major time anxiety. I want to 
+                        talk a little bit more about community and how community is also the new path forward. I feel like Tiktok was so powerful because it opened doors for community and discussion. This seems like 
+                        a given, but please remember I am gen z. I lived some of my formative years through a global pandemic scrolling on a phone. I feel that our government is no longer and has not been for a long 
+                        time feeding back into it's citizens. With that, having a group of local support will mean everything going into the future. I don't want to talk about any doomsday events quite yet, but I 
+                        am very nervous for the state of the US. Having others to rely on could very well be a way to survive. Here's a less extreme example: My grandparents have lived in our home for over 30 years. 
+                        They know the entire neighborhood and they all rely on each other. Gossip keeps us aware, like nextdoorneighbor.com but in real life. This is a survival mechanism, and I'm starting to 
+                        understand older generations more and more. Every human on this planet is succeptible to large scale change, and the best safeguard is community. If I do start my creative endeavors, aka 
+                        business, I will make sure to do it responsibly and use that platform to inspire community. I have a few ideas in mind, and I will be sure to share them with you all. Thank you for reading!
+                    </p>
+                    <div style={{ 
+                        fontSize: '12px', 
+                        color: '#FFB6C1',
+                        fontStyle: 'italic'
+                    }}>
+                        Posted on January 29, 2025 • 4 min read ✨
+                    </div>
+                </div>
+                {/* Blog Posts */}
+                <div style={{
+                    background: '#FFF',
+                    padding: '20px',
+                    borderRadius: '12px',
+                    marginBottom: '15px',
+                    boxShadow: '0 4px 8px rgba(255, 182, 193, 0.2)',
+                    border: '1px solid #FFE4E1'
+                }}>
+                    <h3 style={{ 
+                        margin: '0 0 10px 0', 
+                        fontSize: '20px',
+                        color: '#FF69B4'
+                    }}>
                         Future with Automation
                     </h3>
                     <p style={{ 
@@ -68,7 +114,7 @@ export default function BlogScreen() {
                         There is a lot of excitement surround automation and AI right now. Personally, I am gatekeeping the softwares I have found as a new grad and someone who would love 
                         to have a job! Being a software developer as a living is all I have ever wanted, but with the current state of tech, everything seems a little bit up in the air. It 
                         scares me and inspires me at the same time. I also feel like I'm in an American bubble that celebrates capitalism, but almost is built against innovation in my opinion.
-                        When we look at China's deepseek, I can only think that China is having this kind of success because they fund those willing to take a risk. I feel like the United 
+                        When we look at China's open source deepseek, I can only think that China is having this kind of success because they fund those willing to take a risk. I feel like the United 
                         States stunts it's own growth by funding the wrong people, aka large corporations. These large corporations and established software companies accept subsidies while 
                         making little to no progress or innovation. This is just my interpretation as someone who is not completely educated on the relationship between government, subsisidies,
                          tax credits, etc. I feel that our top company owners are comfortable - as the richest people in the world. I see Elon Musk focus on the space sector, contemplating making 
@@ -79,7 +125,9 @@ export default function BlogScreen() {
                          jobs than it destroyed. In our generation, we have not made a significant jump in technology to this level. While we have improved, we aren't opening more sectors. 
                          Instead, we see a lot of pop up businesses automating mundane human jobs. When you think about it, if you get rid of someone's mundane work, you're leaving them with 
                          room for more productivity. Lets look at software, with AI and various tools that ~I am gatekeeping~~, if a software developer is 800x more productive, then you need 
-                         800x less software developers. I think we're feeling the brunt of this, but there is an attempt to automate many fields we have relied on for the last 100+ years.
+                         800x less software developers. I think software developers are feeling the brunt of this, but there is an attempt to automate many fields we have relied on for the last 
+                         100+ years without creating more jobs. What future does this leave for the average American? The average person on this planet? Thank you for reading, check out the book 
+                         I mentioned above as it has a lot of great insights!
                     </p>
                     <div style={{ 
                         fontSize: '12px', 
