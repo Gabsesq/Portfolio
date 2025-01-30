@@ -65,7 +65,7 @@ export default function BlogScreen() {
                         color: '#FF8FAB',
                         lineHeight: '1.6'
                     }}>
-                        Hi Reflecting on current society and the way forward, I've come to the conclusion that building community and fostering creativity is the best way to stay afloat, stay alive, and stay content.
+                        Reflecting on current society and the way forward, I've come to the conclusion that building community and fostering creativity is the best way to stay afloat, stay alive, and stay content.
                         I've always been drawn to creative endeavors, but my family has always pushed me toward stem. I picked computer science because of the creative path that the field promised. In a sense, I 
                         don't regret it because of how much I have learned and been able to create. At the same time, I did intend on making a good living for myself and my family. Now, I feel like those that will 
                         thrive are those that are creative. Building community, interpersonal communication, and creativity are the new stem. This is a hard pill to swallow as STEM has been indoctrinated into 
