@@ -142,7 +142,7 @@ export default function ChatScreen() {
                             background: '#0084FF',
                             padding: '4px 8px',
                             borderRadius: '6px',
-                            maxWidth: '300px',
+                            maxWidth: '200px',
                             marginBottom: '2px',
                             alignSelf: 'flex-end',
                             animation: 'fadeIn 0.5s ease-in 2.5s',

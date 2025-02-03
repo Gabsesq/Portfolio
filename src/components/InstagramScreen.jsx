@@ -132,7 +132,7 @@ export default function InstagramScreen() {
                         <div style={{
                             width: '100%',
                             height: '100%',
-                            background: '#1a1a1a',
+                            background: '#000000',
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
@@ -142,8 +142,8 @@ export default function InstagramScreen() {
                                 src="/Portfolio.png" 
                                 alt="Portfolio Preview"
                                 style={{
-                                    width: '100%',
-                                    height: '100%',
+                                    width: '80%',
+                                    height: '80%',
                                     objectFit: 'contain',
                                     borderRadius: '2px',
                                     imageRendering: 'high-quality',
@@ -176,7 +176,7 @@ export default function InstagramScreen() {
                                     fontWeight: '600',
                                     letterSpacing: '0.3px'
                                 }}>gabs_esq</span>
-                                {' '}Portfolio built with Three.js and React! 🚀
+                                {' '}Portfolio built with Three.js and React
                             </div>
                         </div>
                     </div>

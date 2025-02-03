@@ -45,7 +45,7 @@ export default function ContactScreen() {
             occlude={false}
         >
             <div style={{
-                width: '508px',
+                width: '512px',
                 height: '695px',
                 background: 'linear-gradient(145deg, #f0f0f0, #e6e6e6)',
                 padding: '20px',
@@ -104,7 +104,10 @@ export default function ContactScreen() {
                             border: '4px solid #ddd',
                             height: '100px',
                             resize: 'none',
-                            fontSize: '16px'
+                            fontSize: '16px',
+                            fontFamily: 'Arial, sans-serif',
+                            lineHeight: '1.4',
+                            backgroundColor: 'white'
                         }}
                         required
                     />

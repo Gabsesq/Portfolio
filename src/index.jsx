@@ -5,8 +5,10 @@ import ReactDOM from "react-dom/client";
 import { Canvas, useThree } from "@react-three/fiber";
 import Room from "./Laptop.jsx";
 import { OrbitControls } from "@react-three/drei";
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import gsap from "gsap";
+import { useProgress } from "@react-three/drei";
+import LoadingScreen from "./components/LoadingScreen";
 
 
 export default function CameraAnimation({ activeView }) {
@@ -86,6 +88,18 @@ export default function CameraAnimation({ activeView }) {
 
 function App() {
     const [activeView, setActiveView] = useState('default');
+    const { progress } = useProgress();
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        if (progress === 100) {
+            // Add a small delay before hiding loading screen
+            const timeout = setTimeout(() => {
+                setIsLoading(false);
+            }, 500);
+            return () => clearTimeout(timeout);
+        }
+    }, [progress]);
 
     const handleViewChange = (view) => {
         setActiveView(view);
@@ -93,8 +107,16 @@ function App() {
 
     return (
         <>
-            {/* Navigation Menu */}
-            <div className="nav-menu">
+            {isLoading && <LoadingScreen progress={progress} />}
+            
+            <div className="nav-menu" style={{ 
+                opacity: isLoading ? 0 : 1,
+                transition: 'opacity 0.5s ease-in, top 0.5s ease-in-out',
+                top: (activeView === 'about' || activeView === 'projects') ? '2rem' : '50%',
+                transform: (activeView === 'about' || activeView === 'projects') 
+                    ? 'translateY(0)' 
+                    : 'translateY(-50%)'
+            }}>
                 <button 
                     className={`nav-item ${activeView === 'about' ? 'active' : ''}`}
                     onClick={() => handleViewChange('about')}
@@ -131,14 +153,16 @@ function App() {
                 }}
                 gl={{ alpha: false }}
             >
-                <Room />
-                <CameraAnimation activeView={activeView} />
-                <OrbitControls 
-                    enabled={false}
-                    enableZoom={false}
-                    enablePan={false}
-                    enableRotate={false}
-                />
+                <Suspense fallback={null}>
+                    <Room />
+                    <CameraAnimation activeView={activeView} />
+                    <OrbitControls 
+                        enabled={false}
+                        enableZoom={false}
+                        enablePan={false}
+                        enableRotate={false}
+                    />
+                </Suspense>
             </Canvas>
         </>
     );
