@@ -74,7 +74,7 @@ export default function ContactScreen() {
                         style={{
                             padding: '12px',
                             borderRadius: '8px',
-                            border: '1px solid #ddd',
+                            border: '4px solid #ddd',
                             fontSize: '16px'
                         }}
                         required
@@ -88,7 +88,7 @@ export default function ContactScreen() {
                         style={{
                             padding: '12px',
                             borderRadius: '8px',
-                            border: '1px solid #ddd',
+                            border: '4px solid #ddd',
                             fontSize: '16px'
                         }}
                         required
@@ -101,7 +101,7 @@ export default function ContactScreen() {
                         style={{
                             padding: '12px',
                             borderRadius: '8px',
-                            border: '1px solid #ddd',
+                            border: '4px solid #ddd',
                             height: '100px',
                             resize: 'none',
                             fontSize: '16px'

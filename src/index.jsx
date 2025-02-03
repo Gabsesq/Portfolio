@@ -34,6 +34,10 @@ export default function CameraAnimation({ activeView }) {
         blog: {
             position: { x: 130, y: 20, z: blogZ },
             rotation: { x: 0, y: -Math.PI / 6, z: 0 }
+        },
+        contact: {
+            position: { x: -130, y: 60, z: -60},
+            rotation: { x: 0, y: Math.PI / 2, z: 0 }
         }
     };
 
@@ -109,6 +113,12 @@ function App() {
                 >
                     Blog
                 </button>
+                <button 
+                    className={`nav-item ${activeView === 'contact' ? 'active' : ''}`}
+                    onClick={() => handleViewChange('contact')}
+                >
+                    Contact
+                </button>
             </div>
 
             <Canvas
@@ -124,12 +134,10 @@ function App() {
                 <Room />
                 <CameraAnimation activeView={activeView} />
                 <OrbitControls 
-                    enabled={true}
-                    enableZoom={true}
-                    enablePan={true}
-                    enableRotate={true}
-                    minDistance={50}
-                    maxDistance={1000}
+                    enabled={false}
+                    enableZoom={false}
+                    enablePan={false}
+                    enableRotate={false}
                 />
             </Canvas>
         </>
