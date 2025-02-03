@@ -353,9 +353,9 @@ export default function Room() {
             {/* Add iPad */}
             <primitive 
                 object={ipad.scene} 
-                position={[-150, 8, -90]}  // Adjust position as needed
-                scale={1}                // Adjust scale as needed
-                rotation-y={0.5}           // Adjust rotation as needed
+                position={[-200, 40, -67]}  // Adjust position as needed
+                scale={.5}                // Adjust scale as needed
+                rotation-y={1.6}           // Adjust rotation as needed
             />
 
         </>
