@@ -14,47 +14,61 @@ import LoadingScreen from "./components/LoadingScreen";
 export default function CameraAnimation({ activeView }) {
     const { camera } = useThree();
     
-    // Calculate base values relative to screen size
-    const baseZ = window.innerWidth * 0.4; // 40% of screen width
-    const projectZ = window.innerWidth * .075; // 11.5% of screen width
-    const blogZ = window.innerWidth * -.033; // -5% of screen width
-    const aboutZ = window.innerWidth * .075; // -1% of screen width
+    // Define breakpoints
+    const isSmallScreen = window.innerWidth < 768;
+    const isMediumScreen = window.innerWidth >= 768 && window.innerWidth < 1024;
+    
+    // Base positions based on screen size
+    const positions = {
+        small: {
+            blog: { x: 126, y: 23, z: -45 },
+            contact: { x: -130, y: 60, z: -65 }
+        },
+        medium: {
+            blog: { x: 120, y: 23, z: -55 },
+            contact: { x: -100, y: 60, z: -70 }
+        },
+        large: {
+            blog: { x: 135, y: 23, z: -65 },
+            contact: { x: -130, y: 60, z: -60 }
+        }
+    };
+
+    // Select position based on screen size
+    const currentSize = isSmallScreen ? 'small' : (isMediumScreen ? 'medium' : 'large');
 
     const viewPositions = {
         default: {
-            position: { x: -200, y: 100, z: baseZ },
+            position: { x: -200, y: 100, z: 400 },
             rotation: { x: -0.2, y: -5, z: 0 }
         },
         about: {
-            position: { x: -20, y: 55, z: projectZ },
+            position: { x: -20, y: 55, z: 100 },
             rotation: { x: 0, y: -Math.PI / .96, z: 0 }
         },
         projects: {
-            position: { x: 45, y: 55, z: projectZ },
+            position: { x: 45, y: 55, z: 100 },
             rotation: { x: 0, y: -Math.PI / 1.05, z: 0 }
         },
         blog: {
-            position: { x: 135, y: 23, z: blogZ },
+            position: positions[currentSize].blog,
             rotation: { x: 0, y: -Math.PI / 6.3, z: 0 }
         },
         contact: {
-            position: { x: -130, y: 60, z: -60},
+            position: positions[currentSize].contact,
             rotation: { x: 0, y: Math.PI / 2, z: 0 }
         }
     };
 
-    // Add window resize listener
     useEffect(() => {
         const handleResize = () => {
-            const newBaseZ = window.innerWidth * 0.4;
-            const newProjectZ = window.innerWidth * 0.115;
-            const newBlogZ = window.innerWidth * -0.05;
-            const newAboutZ = window.innerWidth * -0.01;
-
-            viewPositions.default.position.z = newBaseZ;
-            viewPositions.projects.position.z = newProjectZ;
-            viewPositions.blog.position.z = newBlogZ;
-            viewPositions.about.position.z = newAboutZ;
+            const newIsSmallScreen = window.innerWidth < 768;
+            const newIsMediumScreen = window.innerWidth >= 768 && window.innerWidth < 1024;
+            const newSize = newIsSmallScreen ? 'small' : (newIsMediumScreen ? 'medium' : 'large');
+            
+            // Update blog and contact positions
+            viewPositions.blog.position = positions[newSize].blog;
+            viewPositions.contact.position = positions[newSize].contact;
         };
 
         window.addEventListener('resize', handleResize);
