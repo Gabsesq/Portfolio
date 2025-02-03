@@ -18,14 +18,14 @@ export default function ChatScreen() {
             rotation-x={0}
             rotation-y={-1.55}
             rotation-z={0}
-            distanceFactor={0.2}
+            distanceFactor={.1}
             occlude
         >
             <div 
                 className="screen-content"
                 style={{
-                    width: '280px',
-                    height: '135px',
+                    width: '590px',
+                    height: '270px',
                     background: '#1a1a1a',
                     color: 'white',
                     padding: '8px',
@@ -41,7 +41,7 @@ export default function ChatScreen() {
                         display: 'flex',
                         flexDirection: 'column',
                         gap: '4px',
-                        fontSize: '12px',
+                        fontSize: '20px',
                         height: '100%',
                         overflowY: 'auto',
                         scrollbarWidth: 'thin',
@@ -54,11 +54,11 @@ export default function ChatScreen() {
                             background: '#0084FF',
                             padding: '4px 8px',
                             borderRadius: '6px',
-                            maxWidth: '160px',
+                            maxWidth: '300px',
                             marginBottom: '2px',
                             alignSelf: 'flex-end',
                             animation: 'fadeIn 0.5s ease-in',
-                            fontSize: '11px',
+                            fontSize: '20px',
                             fontWeight: 'bold'
                         }}
                     >
@@ -70,13 +70,13 @@ export default function ChatScreen() {
                             background: '#0084FF',
                             padding: '4px 8px',
                             borderRadius: '6px',
-                            maxWidth: '160px',
+                            maxWidth: '300px',
                             marginBottom: '2px',
                             alignSelf: 'flex-end',
                             animation: 'fadeIn 0.5s ease-in 0.5s',
                             opacity: 0,
                             animationFillMode: 'forwards',
-                            fontSize: '11px',
+                            fontSize: '20px',
                             fontWeight: 'bold'
                         }}
                     >
@@ -88,13 +88,13 @@ export default function ChatScreen() {
                             background: '#0084FF',
                             padding: '4px 8px',
                             borderRadius: '6px',
-                            maxWidth: '160px',
+                            maxWidth: '300px',
                             marginBottom: '2px',
                             alignSelf: 'flex-end',
                             animation: 'fadeIn 0.5s ease-in 1s',
                             opacity: 0,
                             animationFillMode: 'forwards',
-                            fontSize: '11px',
+                            fontSize: '20px',
                             fontWeight: 'bold'
                         }}
                     >
@@ -106,13 +106,13 @@ export default function ChatScreen() {
                             background: '#0084FF',
                             padding: '4px 8px',
                             borderRadius: '6px',
-                            maxWidth: '160px',
+                            maxWidth: '300px',
                             marginBottom: '2px',
                             alignSelf: 'flex-end',
                             animation: 'fadeIn 0.5s ease-in 1.5s',
                             opacity: 0,
                             animationFillMode: 'forwards',
-                            fontSize: '11px',
+                            fontSize: '20px',
                             fontWeight: 'bold'
                         }}
                     >
@@ -124,13 +124,13 @@ export default function ChatScreen() {
                             background: '#0084FF',
                             padding: '4px 8px',
                             borderRadius: '6px',
-                            maxWidth: '160px',
+                            maxWidth: '300px',
                             marginBottom: '2px',
                             alignSelf: 'flex-end',
                             animation: 'fadeIn 0.5s ease-in 2s',
                             opacity: 0,
                             animationFillMode: 'forwards',
-                            fontSize: '11px',
+                            fontSize: '20px',
                             fontWeight: 'bold'
                         }}
                     >
@@ -142,13 +142,13 @@ export default function ChatScreen() {
                             background: '#0084FF',
                             padding: '4px 8px',
                             borderRadius: '6px',
-                            maxWidth: '160px',
+                            maxWidth: '300px',
                             marginBottom: '2px',
                             alignSelf: 'flex-end',
                             animation: 'fadeIn 0.5s ease-in 2.5s',
                             opacity: 0,
                             animationFillMode: 'forwards',
-                            fontSize: '11px',
+                            fontSize: '20px',
                             fontWeight: 'bold'
                         }}
                     >
