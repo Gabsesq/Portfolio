@@ -9,6 +9,7 @@ import { Html } from "@react-three/drei";
 import BlogScreen from './components/BlogScreen';
 import ChatScreen from './components/ChatScreen';
 import InstagramScreen from './components/InstagramScreen';
+import ContactScreen from './components/ContactScreen';
 
 export default function Room() {
     // Load all 3D models
@@ -353,10 +354,12 @@ export default function Room() {
             {/* Add iPad */}
             <primitive 
                 object={ipad.scene} 
-                position={[-200, 40, -67]}  // Adjust position as needed
-                scale={.5}                // Adjust scale as needed
-                rotation-y={1.6}           // Adjust rotation as needed
-            />
+                position={[-200, 40, -67]}
+                scale={.5}
+                rotation-y={1.6}
+            >
+                <ContactScreen />
+            </primitive>
 
         </>
     );
