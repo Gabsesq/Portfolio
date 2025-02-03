@@ -60,11 +60,13 @@ export default function Room() {
     useEffect(() => {
         if (woodTexture) {
             woodTexture.wrapS = woodTexture.wrapT = THREE.RepeatWrapping;
-            woodTexture.repeat.set(8, 8);
+            woodTexture.repeat.set(4, 4);        // Reduced from 8,8 for larger planks
             woodTexture.encoding = THREE.sRGBEncoding;
-            woodTexture.magFilter = THREE.NearestFilter;
+            woodTexture.magFilter = THREE.LinearFilter;  // Changed from NearestFilter
             woodTexture.minFilter = THREE.LinearMipmapLinearFilter;
             woodTexture.generateMipmaps = true;
+            woodTexture.anisotropy = 16;         // Added for sharper texture at angles
+            woodTexture.needsUpdate = true;      // Added to ensure updates
         }
     }, [woodTexture]);
 
@@ -164,9 +166,8 @@ export default function Room() {
                 <planeGeometry args={[450, 450]} />
                 <meshStandardMaterial 
                     map={woodTexture}
-                    roughness={0.7}
-                    metalness={0.1}
-                    side={THREE.DoubleSide}
+                    roughness={0.8}      // Added for more realistic wood
+                    metalness={0.2}      // Added for more realistic wood
                 />
             </mesh>
 
