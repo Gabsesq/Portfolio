@@ -77,13 +77,13 @@ export default function InstagramScreen() {
             rotation-x={0}
             rotation-y={-1.55}
             rotation-z={0}
-            distanceFactor={.3}
+            distanceFactor={.1}
             occlude
         >
             <div className="screen-content"
                 style={{
-                    width: '200px',
-                    height: '95px',
+                    width: '600px',
+                    height: '300px',
                     background: '#000000',
                     color: 'white',
                     padding: '0',

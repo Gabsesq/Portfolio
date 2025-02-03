@@ -18,14 +18,14 @@ export default function ChatScreen() {
             rotation-x={0}
             rotation-y={-1.55}
             rotation-z={0}
-            distanceFactor={0.3}
+            distanceFactor={0.2}
             occlude
         >
             <div 
                 className="screen-content"
                 style={{
-                    width: '180px',
-                    height: '80px',
+                    width: '280px',
+                    height: '135px',
                     background: '#1a1a1a',
                     color: 'white',
                     padding: '8px',
