@@ -34,8 +34,8 @@ export default function CameraAnimation({ activeView }) {
             rotation: { x: 0, y: -Math.PI / 1.05, z: 0 }
         },
         blog: {
-            position: { x: 130, y: 20, z: blogZ },
-            rotation: { x: 0, y: -Math.PI / 6, z: 0 }
+            position: { x: 135, y: 23, z: blogZ },
+            rotation: { x: 0, y: -Math.PI / 6.3, z: 0 }
         },
         contact: {
             position: { x: -130, y: 60, z: -60},
@@ -111,11 +111,15 @@ function App() {
             
             <div className="nav-menu" style={{ 
                 opacity: isLoading ? 0 : 1,
-                transition: 'opacity 0.5s ease-in, top 0.5s ease-in-out',
-                top: (activeView === 'about' || activeView === 'projects') ? '2rem' : '50%',
-                transform: (activeView === 'about' || activeView === 'projects') 
-                    ? 'translateY(0)' 
-                    : 'translateY(-50%)'
+                transition: 'opacity 0.5s ease-in',
+                position: 'fixed',
+                top: '2rem',
+                left: '50%',
+                transform: 'translateX(-50%)',
+                display: 'flex',
+                flexDirection: 'row',
+                gap: '1rem',
+                width: 'fit-content'
             }}>
                 <button 
                     className={`nav-item ${activeView === 'about' ? 'active' : ''}`}
@@ -152,6 +156,7 @@ function App() {
                     rotation: [-.2, -.6, -.1]
                 }}
                 gl={{ alpha: false }}
+                style={{ background: 'black' }}
             >
                 <Suspense fallback={null}>
                     <Room />
@@ -168,6 +173,7 @@ function App() {
     );
 }
 
+// Add back the root rendering
 const rootElement = document.querySelector("#root");
 
 if (rootElement) {

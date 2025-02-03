@@ -21,17 +21,18 @@ body, html {
     padding: 0;
     height: 100%;
     width: 100%;
-    background-color: white;
+    background-color: black;
 }
 
 #root {
     height: 100%;
     width: 100%;
+    background-color: black;
 }
 
 canvas {
-    display: block; /* Remove the default margin and padding */
-    background-color: white;
+    display: block;
+    background-color: black !important;
 }
 
 .monitor-screen {
@@ -50,23 +51,18 @@ canvas {
 /* Add any additional styles for your screen content */
 
 .nav-menu {
-    position: fixed;
-    right: 2rem;
-    top: 50%;
-    transform: translateY(-50%);
     z-index: 1000;
     display: flex;
-    flex-direction: column;
     gap: 1rem;
     animation: fadeIn 0.5s ease-in;
 }
 
 .nav-item {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(19, 17, 17, 0.1);
     border: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(5px);
-    padding: 0.8rem 1.5rem;
+    backdrop-filter: blur(2px);
+    padding: 0.6rem 1.2rem;    /* Slightly reduced padding */
     border-radius: 2rem;
     color: rgb(255, 255, 255);
     text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
@@ -75,6 +71,8 @@ canvas {
     font-family: Arial, sans-serif;
     text-transform: uppercase;
     letter-spacing: 1px;
+    font-size: 0.9rem;         /* Slightly reduced font size */
+    white-space: nowrap;       /* Prevent text wrapping */
 }
 
 .nav-item:hover {
