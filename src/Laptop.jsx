@@ -16,6 +16,7 @@ export default function Room() {
     const table = useLoader(GLTFLoader, "/table.glb");
     const monitor = useLoader(GLTFLoader, "/monitor.glb");
     const laptop = useLoader(GLTFLoader, "/laptop.glb");
+    const ipad = useLoader(GLTFLoader, "/ipad.glb");
     const dresser = useLoader(GLTFLoader, "/dresser.glb");
     const lamp = useLoader(GLTFLoader, "/lamp.glb");
     const deskLamp = useLoader(GLTFLoader, "/deskLamp.glb");
@@ -347,6 +348,14 @@ export default function Room() {
                 position={[212, 100, 80]}
                 scale={2}
                 rotation-y={Math.PI/2}
+            />
+
+            {/* Add iPad */}
+            <primitive 
+                object={ipad.scene} 
+                position={[-150, 8, -90]}  // Adjust position as needed
+                scale={1}                // Adjust scale as needed
+                rotation-y={0.5}           // Adjust rotation as needed
             />
 
         </>
