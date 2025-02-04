@@ -125,6 +125,12 @@ export default function InstagramScreen() {
             caption: "Pinterest Clone ***UNDER CONSTRUCTION***📌 Creating a pinterest board randomizer for extreme pinterest people like me! Choose a board and shuffle ~~Frontend still under construction~~",
             likes: "910",
             link: "https://github.com/Gabsesq/Pinny-"
+        },
+        {
+            image: "ASN.jpg",
+            caption: "ASN - Automated Shipping Notice System 📦 Streamlined shipping processes using Python, Flask, and Excel automation. Simplifying workflows and boosting efficiency in logistics.",
+            likes: "945",
+            link: "https://github.com/Gabsesq/ASN"
         }
     ];
 
