@@ -215,4 +215,46 @@ canvas {
     }
 }
 
+/* Mobile scroll indicator */
+.scroll-indicator-mobile {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(-1, 1);
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+    border-radius: 20px;
+    z-index: 1000;
+    text-align: center;
+    animation: fadeOut 3s forwards;
+    pointer-events: none;
+}
+
+.scroll-arrow {
+    font-size: 24px;
+    margin-top: 5px;
+    animation: bounce 1s infinite;
+}
+
+@keyframes fadeOut {
+    0%, 80% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Ensure smooth scrolling on mobile */
+.chat-container {
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 768px) {
+    .chat-container {
+        padding-bottom: 20px !important; /* Extra space for scrolling */
+    }
+    
+    .message-bubble {
+        margin-bottom: 8px !important; /* More space between messages on mobile */
+    }
+}
+
 

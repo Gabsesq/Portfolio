@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 export default function ChatScreen() {
     const chatContainerRef = useRef(null);
     const [isMobile, setIsMobile] = useState(false);
+    const [showScrollIndicator, setShowScrollIndicator] = useState(true);
 
     useEffect(() => {
         // Check if device is mobile
@@ -11,6 +12,13 @@ export default function ChatScreen() {
         
         if (chatContainerRef.current) {
             chatContainerRef.current.scrollTop = 0;
+            
+            // Hide scroll indicator after 3 seconds
+            const timer = setTimeout(() => {
+                setShowScrollIndicator(false);
+            }, 3000);
+
+            return () => clearTimeout(timer);
         }
     }, []);
 
@@ -47,6 +55,12 @@ export default function ChatScreen() {
                     position: 'relative'
                 }}
             >
+                {isMobile && showScrollIndicator && (
+                    <div className="scroll-indicator-mobile">
+                        Scroll to read more
+                        <div className="scroll-arrow">↕️</div>
+                    </div>
+                )}
                 <div 
                     ref={chatContainerRef}
                     className="chat-container"
@@ -59,7 +73,8 @@ export default function ChatScreen() {
                         padding: '10px',
                         boxSizing: 'border-box',
                         width: '100%',
-                        transform: 'scale(-1, 1)'
+                        transform: 'scale(-1, 1)',
+                        scrollBehavior: 'smooth'
                     }}
                 >
                     {messages.map((message, index) => (
