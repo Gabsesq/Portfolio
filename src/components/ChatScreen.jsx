@@ -1,14 +1,28 @@
 import { Html } from "@react-three/drei";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function ChatScreen() {
     const chatContainerRef = useRef(null);
+    const [messagesVisible, setMessagesVisible] = useState(false);
 
     useEffect(() => {
         if (chatContainerRef.current) {
             chatContainerRef.current.scrollTop = 0;
+            // Small delay to ensure component is mounted
+            setTimeout(() => {
+                setMessagesVisible(true);
+            }, 100);
         }
     }, []);
+
+    const messages = [
+        { text: "Hi! I'm Gabby 👋", delay: 0 },
+        { text: "I am a Full Stack Developer always looking to expand my knowledge", delay: 0.5 },
+        { text: "My various hobbies have come together to make me a better developer 🚀", delay: 1 },
+        { text: "Digital art, animation, 3d (blender), golf, kickboxing, sewing, sports, obviously coding, and more! 🏠", delay: 1.5 },
+        { text: "My tech stack includes React, Three.js, Node.js, SQL, PostgreSQL, ROR, Python, Java, C++, and I am familiar with many more!", delay: 2 },
+        { text: "Check out my projects & my blog, thank you!", delay: 2.5, maxWidth: '200px' }
+    ];
 
     return (
         <Html
@@ -49,111 +63,26 @@ export default function ChatScreen() {
                         transform: 'scale(-1, 1)'
                     }}
                 >
-                    <div className="message-bubble"
-                        style={{
-                            background: '#0084FF',
-                            padding: '4px 8px',
-                            borderRadius: '6px',
-                            maxWidth: '300px',
-                            marginBottom: '2px',
-                            alignSelf: 'flex-end',
-                            animation: 'fadeIn 0.5s ease-in',
-                            fontSize: '20px',
-                            fontWeight: 'bold'
-                        }}
-                    >
-                        Hi! I'm Gabby 👋
-                    </div>
-
-                    <div className="message-bubble"
-                        style={{
-                            background: '#0084FF',
-                            padding: '4px 8px',
-                            borderRadius: '6px',
-                            maxWidth: '300px',
-                            marginBottom: '2px',
-                            alignSelf: 'flex-end',
-                            animation: 'fadeIn 0.5s ease-in 0.5s',
-                            opacity: 0,
-                            animationFillMode: 'forwards',
-                            fontSize: '20px',
-                            fontWeight: 'bold'
-                        }}
-                    >
-                        I am a Full Stack Developer always looking to expand my knowledge
-                    </div>
-
-                    <div className="message-bubble"
-                        style={{
-                            background: '#0084FF',
-                            padding: '4px 8px',
-                            borderRadius: '6px',
-                            maxWidth: '300px',
-                            marginBottom: '2px',
-                            alignSelf: 'flex-end',
-                            animation: 'fadeIn 0.5s ease-in 1s',
-                            opacity: 0,
-                            animationFillMode: 'forwards',
-                            fontSize: '20px',
-                            fontWeight: 'bold'
-                        }}
-                    >
-                        My various hobbies have come together to make me a better developer 🚀
-                    </div>
-
-                    <div className="message-bubble"
-                        style={{
-                            background: '#0084FF',
-                            padding: '4px 8px',
-                            borderRadius: '6px',
-                            maxWidth: '300px',
-                            marginBottom: '2px',
-                            alignSelf: 'flex-end',
-                            animation: 'fadeIn 0.5s ease-in 1.5s',
-                            opacity: 0,
-                            animationFillMode: 'forwards',
-                            fontSize: '20px',
-                            fontWeight: 'bold'
-                        }}
-                    >
-                        Digital art, animation, 3d (blender), golf, kickboxing, sewing, sports, obviously coding, and more! 🏠
-                    </div>
-
-                    <div className="message-bubble"
-                        style={{
-                            background: '#0084FF',
-                            padding: '4px 8px',
-                            borderRadius: '6px',
-                            maxWidth: '300px',
-                            marginBottom: '2px',
-                            alignSelf: 'flex-end',
-                            animation: 'fadeIn 0.5s ease-in 2s',
-                            opacity: 0,
-                            animationFillMode: 'forwards',
-                            fontSize: '20px',
-                            fontWeight: 'bold'
-                        }}
-                    >
-                        My tech stack includes React, Three.js, Node.js, SQL, PostgreSQL, ROR, Python, Java, C++, and I am familiar with many more!
-                    </div>
-
-                    <div className="message-bubble"
-                        style={{
-                            background: '#0084FF',
-                            padding: '4px 8px',
-                            borderRadius: '6px',
-                            maxWidth: '200px',
-                            marginBottom: '2px',
-                            alignSelf: 'flex-end',
-                            animation: 'fadeIn 0.5s ease-in 2.5s',
-                            opacity: 0,
-                            animationFillMode: 'forwards',
-                            fontSize: '20px',
-                            fontWeight: 'bold'
-                        }}
-                    >
-                        Check out my projects & my blog, thank you!
-                    </div>
+                    {messages.map((message, index) => (
+                        <div 
+                            key={index}
+                            className="message-bubble"
+                            style={{
+                                background: '#0084FF',
+                                padding: '4px 8px',
+                                borderRadius: '6px',
+                                maxWidth: message.maxWidth || '300px',
+                                marginBottom: '2px',
+                                alignSelf: 'flex-end',
+                                animation: messagesVisible ? `fadeIn 0.5s ease-in ${message.delay}s forwards` : 'none',
+                                opacity: messagesVisible ? 0 : 1,
+                                fontSize: '20px',
+                                fontWeight: 'bold'
+                            }}
+                        >
+                            {message.text}
+                        </div>
+                    ))}
                 </div>
             </div>
         </Html>
