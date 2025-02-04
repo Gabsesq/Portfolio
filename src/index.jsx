@@ -22,15 +22,21 @@ export default function CameraAnimation({ activeView }) {
     const positions = {
         small: {
             blog: { x: 115, y: 23, z: -25 },
-            contact: { x: -130, y: 60, z: -65 }
+            contact: { x: -130, y: 60, z: -70 },
+            about: { x: -20, y: 55, z: 100 },
+            projects: { x: 45, y: 55, z: 100 }
         },
         medium: {
             blog: { x: 120, y: 23, z: -55 },
-            contact: { x: -100, y: 60, z: -70 }
+            contact: { x: -100, y: 60, z: -70 },
+            about: { x: -20, y: 55, z: 100 },
+            projects: { x: 45, y: 55, z: 100 }
         },
         large: {
             blog: { x: 135, y: 23, z: -65 },
-            contact: { x: -130, y: 60, z: -60 }
+            contact: { x: -130, y: 60, z: -60 },
+            about: { x: -20, y: 55, z: 100 },
+            projects: { x: 45, y: 55, z: 100 }
         }
     };
 
@@ -43,11 +49,11 @@ export default function CameraAnimation({ activeView }) {
             rotation: { x: -0.2, y: -5, z: 0 }
         },
         about: {
-            position: { x: -20, y: 55, z: 100 },
+            position: positions[currentSize].about,
             rotation: { x: 0, y: -Math.PI / .96, z: 0 }
         },
         projects: {
-            position: { x: 45, y: 55, z: 100 },
+            position: positions[currentSize].projects,
             rotation: { x: 0, y: -Math.PI / 1.05, z: 0 }
         },
         blog: {
