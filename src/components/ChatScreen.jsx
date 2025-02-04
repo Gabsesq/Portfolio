@@ -31,7 +31,7 @@ export default function ChatScreen() {
                     padding: '8px',
                     fontFamily: 'Arial, sans-serif',
                     overflow: 'hidden',
-                    transform: 'scale(-1, 1)',
+                    position: 'relative'
                 }}
             >
                 <div 
@@ -40,13 +40,13 @@ export default function ChatScreen() {
                     style={{
                         display: 'flex',
                         flexDirection: 'column',
-                        gap: '4px',
-                        fontSize: '20px',
                         height: '100%',
                         overflowY: 'auto',
-                        scrollbarWidth: 'thin',
-                        scrollbarColor: '#0084FF #1a1a1a',
-                        paddingRight: '4px',
+                        WebkitOverflowScrolling: 'touch',
+                        padding: '10px',
+                        boxSizing: 'border-box',
+                        width: '100%',
+                        transform: 'scale(-1, 1)'
                     }}
                 >
                     <div className="message-bubble"

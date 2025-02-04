@@ -197,4 +197,22 @@ canvas {
     animation: bounce 2s infinite;
 }
 
+.chat-container {
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 600px) {
+    .chat-container {
+        width: 100% !important;
+        height: 100% !important;
+        padding: 5px !important;
+    }
+
+    .message-bubble {
+        max-width: 80% !important; /* Ensure bubbles don't get too wide on mobile */
+        margin: 2px 0 !important;
+    }
+}
+
 
