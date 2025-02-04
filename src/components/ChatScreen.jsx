@@ -59,7 +59,9 @@ export default function ChatScreen() {
                         padding: '10px',
                         boxSizing: 'border-box',
                         width: '100%',
-                        transform: 'scale(-1, 1)'
+                        transform: 'scale(-1, 1)',
+                        scrollbarWidth: 'thin',
+                        scrollbarColor: '#0084FF #1a1a1a'
                     }}
                 >
                     {messages.map((message, index) => (

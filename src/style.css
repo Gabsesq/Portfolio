@@ -198,8 +198,39 @@ canvas {
 }
 
 .chat-container {
-    -webkit-overflow-scrolling: touch;
-    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    -ms-overflow-style: none;
+    scrollbar-color: #0084FF #1a1a1a;
+}
+
+.chat-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chat-container::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+.chat-container::-webkit-scrollbar-thumb {
+    background: #0084FF;
+    border-radius: 3px;
+}
+
+.chat-container::-webkit-scrollbar-thumb:hover {
+    background: #0073e6;
+}
+
+.chat-container::-webkit-scrollbar-button:single-button {
+    background-color: transparent;
+    display: none;
+    height: 0px;
+    width: 0px;
+}
+
+/* Hide both up and down buttons specifically */
+.chat-container::-webkit-scrollbar-button:vertical:start:decrement,
+.chat-container::-webkit-scrollbar-button:vertical:end:increment {
+    display: none;
 }
 
 @media screen and (max-width: 600px) {
