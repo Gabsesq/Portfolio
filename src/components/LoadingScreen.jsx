@@ -1,15 +1,23 @@
 import { useState, useEffect } from 'react';
 
-export default function LoadingScreen({ progress }) {
-    const [dots, setDots] = useState('');
+export default function LoadingScreen({ progress: actualProgress }) {
+    const [displayProgress, setDisplayProgress] = useState(0);
 
     useEffect(() => {
-        const interval = setInterval(() => {
-            setDots(prev => prev.length >= 3 ? '' : prev + '.');
-        }, 500);
+        // Smoothly animate to the new progress value
+        const animateProgress = () => {
+            if (displayProgress < actualProgress) {
+                setDisplayProgress(prev => {
+                    const increment = Math.min(1, actualProgress - prev);
+                    return prev + increment;
+                });
+            }
+        };
 
-        return () => clearInterval(interval);
-    }, []);
+        const timer = setInterval(animateProgress, 20); // Update every 20ms
+
+        return () => clearInterval(timer);
+    }, [actualProgress, displayProgress]);
 
     return (
         <div style={{
@@ -18,41 +26,47 @@ export default function LoadingScreen({ progress }) {
             left: 0,
             width: '100%',
             height: '100%',
-            background: 'linear-gradient(145deg, #1a1a1a, #2c3e50)',
+            background: 'linear-gradient(135deg, #FFF0F5 0%, #FFE4E1 100%)',
             display: 'flex',
             flexDirection: 'column',
-            justifyContent: 'center',
             alignItems: 'center',
+            justifyContent: 'center',
+            color: '#FF69B4',
             zIndex: 1000,
-            color: 'white',
-            fontFamily: 'Arial, sans-serif'
+            fontFamily: 'Inter, sans-serif'
         }}>
-            <div style={{
+            <div style={{ 
+                marginBottom: '25px', 
                 fontSize: '24px',
-                marginBottom: '20px',
-                fontWeight: 'bold'
+                fontWeight: '500',
+                letterSpacing: '0.5px'
             }}>
-                Loading{dots}
+                Loading...
             </div>
-            <div style={{
-                width: '200px',
-                height: '4px',
-                background: '#444',
-                borderRadius: '2px',
-                overflow: 'hidden'
+            <div style={{ 
+                width: '200px', 
+                height: '3px', 
+                background: 'rgba(255, 182, 193, 0.3)',
+                borderRadius: '6px',
+                overflow: 'hidden',
+                boxShadow: '0 2px 4px rgba(255, 105, 180, 0.1)'
             }}>
                 <div style={{
-                    width: `${progress}%`,
+                    width: `${displayProgress}%`,
                     height: '100%',
-                    background: '#0084ff',
-                    transition: 'width 0.3s ease-out'
-                }}/>
+                    background: 'linear-gradient(90deg, #FF69B4, #FFB6C1)',
+                    transition: 'width 0.2s ease-out',
+                    borderRadius: '6px'
+                }} />
             </div>
-            <div style={{
-                marginTop: '10px',
-                fontSize: '16px'
+            <div style={{ 
+                marginTop: '12px', 
+                fontSize: '14px',
+                opacity: 0.8,
+                color: '#FF69B4',
+                fontWeight: '400'
             }}>
-                {Math.round(progress)}%
+                {Math.round(displayProgress)}%
             </div>
         </div>
     );
