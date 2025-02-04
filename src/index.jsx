@@ -23,8 +23,8 @@ export default function CameraAnimation({ activeView }) {
         small: {
             blog: { x: 115, y: 23, z: -25 },
             contact: { x: -130, y: 60, z: -70 },
-            about: { x: -20, y: 55, z: 100 },
-            projects: { x: 45, y: 55, z: 100 }
+            about: { x: -20, y: 55, z: 75},
+            projects: { x: 45, y: 55, z: 75 }
         },
         medium: {
             blog: { x: 120, y: 23, z: -55 },
