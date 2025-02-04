@@ -3,25 +3,24 @@ import { useEffect, useRef, useState } from "react";
 
 export default function ChatScreen() {
     const chatContainerRef = useRef(null);
-    const [messagesVisible, setMessagesVisible] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
+        // Check if device is mobile
+        setIsMobile(window.innerWidth < 768);
+        
         if (chatContainerRef.current) {
             chatContainerRef.current.scrollTop = 0;
-            // Small delay to ensure component is mounted
-            setTimeout(() => {
-                setMessagesVisible(true);
-            }, 100);
         }
     }, []);
 
     const messages = [
-        { text: "Hi! I'm Gabby 👋", delay: 0 },
-        { text: "I am a Full Stack Developer always looking to expand my knowledge", delay: 0.5 },
-        { text: "My various hobbies have come together to make me a better developer 🚀", delay: 1 },
-        { text: "Digital art, animation, 3d (blender), golf, kickboxing, sewing, sports, obviously coding, and more! 🏠", delay: 1.5 },
-        { text: "My tech stack includes React, Three.js, Node.js, SQL, PostgreSQL, ROR, Python, Java, C++, and I am familiar with many more!", delay: 2 },
-        { text: "Check out my projects & my blog, thank you!", delay: 2.5, maxWidth: '200px' }
+        "Hi! I'm Gabby 👋",
+        "I am a Full Stack Developer always looking to expand my knowledge",
+        "My various hobbies have come together to make me a better developer 🚀",
+        "Digital art, animation, 3d (blender), golf, kickboxing, sewing, sports, obviously coding, and more! 🏠",
+        "My tech stack includes React, Three.js, Node.js, SQL, PostgreSQL, ROR, Python, Java, C++, and I am familiar with many more!",
+        "Check out my projects & my blog, thank you!"
     ];
 
     return (
@@ -71,16 +70,16 @@ export default function ChatScreen() {
                                 background: '#0084FF',
                                 padding: '4px 8px',
                                 borderRadius: '6px',
-                                maxWidth: message.maxWidth || '300px',
+                                maxWidth: index === messages.length - 1 ? '200px' : '300px',
                                 marginBottom: '2px',
                                 alignSelf: 'flex-end',
-                                animation: messagesVisible ? `fadeIn 0.5s ease-in ${message.delay}s forwards` : 'none',
-                                opacity: messagesVisible ? 0 : 1,
+                                animation: isMobile ? 'none' : `fadeIn 0.5s ease-in ${index * 0.5}s forwards`,
+                                opacity: isMobile ? 1 : 0,
                                 fontSize: '20px',
                                 fontWeight: 'bold'
                             }}
                         >
-                            {message.text}
+                            {message}
                         </div>
                     ))}
                 </div>
