@@ -128,7 +128,7 @@ export default function InstagramScreen() {
         },
         {
             image: "ASN.jpg",
-            caption: "ASN - Automated Shipping Notice System 📦 Streamlined shipping processes using Python, Flask, and Excel automation. Simplifying workflows and boosting efficiency in logistics.",
+            caption: "ASN - Automated Shipping Notice System 📦 Streamlined shipping processes using Python, Flask, pyinstaller,and Excel automation. Simplifying workflows and boosting efficiency in logistics. This application is an executable file.",
             likes: "945",
             link: "https://github.com/Gabsesq/ASN"
         }
