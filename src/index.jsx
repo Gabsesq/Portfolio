@@ -21,7 +21,7 @@ export default function CameraAnimation({ activeView }) {
     // Base positions based on screen size
     const positions = {
         small: {
-            blog: { x: 126, y: 23, z: -45 },
+            blog: { x: 120, y: 23, z: -30 },
             contact: { x: -130, y: 60, z: -65 }
         },
         medium: {

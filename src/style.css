@@ -46,6 +46,8 @@ canvas {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
 }
 
 /* Add any additional styles for your screen content */
@@ -124,6 +126,75 @@ canvas {
     0% { opacity: 0.2; }
     20% { opacity: 1; }
     100% { opacity: 0.2; }
+}
+
+/* Add these media queries at the bottom of your CSS file */
+
+@media screen and (max-width: 600px) {
+    .nav-menu {
+        gap: 0.4rem;     /* Reduce gap between buttons */
+        top: 1rem;       /* Keep menu at top */
+        width: 98%;      /* Allow menu to use most of screen width */
+    }
+
+    .nav-item {
+        padding: 0.4rem 0.6rem;  /* Reduce horizontal padding */
+        font-size: 0.75rem;      /* Make font smaller */
+        letter-spacing: 0.5px;   /* Reduce letter spacing */
+        min-width: auto;         /* Remove fixed width */
+    }
+}
+
+/* For even smaller screens */
+@media screen and (max-width: 380px) {
+    .nav-menu {
+        gap: 0.3rem;
+    }
+
+    .nav-item {
+        padding: 0.3rem 0.5rem;
+        font-size: 0.7rem;
+        letter-spacing: 0.3px;
+    }
+}
+
+/* Optional: Add a scroll indicator */
+.scroll-indicator {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 20px;
+    animation: bounce 2s infinite;
+    pointer-events: none;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Add this class when content is scrollable */
+.is-scrollable {
+    position: relative;
+}
+
+.is-scrollable::after {
+    content: '↕️';
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 16px;
+    opacity: 0.7;
+    animation: bounce 2s infinite;
 }
 
 

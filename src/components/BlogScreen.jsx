@@ -1,6 +1,38 @@
 import { Html } from "@react-three/drei";
+import { useState, useEffect } from "react";
 
 export default function BlogScreen() {
+    const [canScroll, setCanScroll] = useState(false);
+    const [startY, setStartY] = useState(0);
+    const [scrollTop, setScrollTop] = useState(0);
+
+    // Enable scrolling when this view is active
+    useEffect(() => {
+        const handleTouchStart = (e) => {
+            setStartY(e.touches[0].clientY);
+        };
+
+        const handleTouchMove = (e) => {
+            if (!canScroll) return;
+            e.preventDefault();
+            const deltaY = startY - e.touches[0].clientY;
+            const container = e.currentTarget;
+            container.scrollTop = scrollTop + deltaY;
+            setScrollTop(container.scrollTop);
+        };
+
+        const container = document.querySelector('.blog-content');
+        if (container) {
+            container.addEventListener('touchstart', handleTouchStart);
+            container.addEventListener('touchmove', handleTouchMove, { passive: false });
+            
+            return () => {
+                container.removeEventListener('touchstart', handleTouchStart);
+                container.removeEventListener('touchmove', handleTouchMove);
+            };
+        }
+    }, [canScroll, startY, scrollTop]);
+
     return (
         <Html
             transform
