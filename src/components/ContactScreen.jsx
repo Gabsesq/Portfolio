@@ -8,9 +8,11 @@ export default function ContactScreen() {
         message: ''
     });
     const [status, setStatus] = useState('');
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setIsSubmitting(true);
         setStatus('Sending...');
         
         try {
@@ -22,14 +24,18 @@ export default function ContactScreen() {
                 body: JSON.stringify(formData)
             });
             
+            const data = await response.json();
+            
             if (response.ok) {
-                setStatus('Message sent successfully!');
+                setStatus('Message sent successfully! ✅');
                 setFormData({ name: '', email: '', message: '' });
             } else {
-                setStatus('Failed to send message. Please try again.');
+                setStatus(`Failed to send message: ${data.message}`);
             }
         } catch (error) {
-            setStatus('Failed to send message. Please try again.');
+            setStatus('Failed to send message. Please try again later.');
+        } finally {
+            setIsSubmitting(false);
         }
     };
 
@@ -114,26 +120,30 @@ export default function ContactScreen() {
                     
                     <button
                         type="submit"
+                        disabled={isSubmitting}
                         style={{
                             padding: '12px',
                             borderRadius: '8px',
                             border: 'none',
-                            background: '#0084ff',
+                            background: isSubmitting ? '#cccccc' : '#0084ff',
                             color: 'white',
                             fontSize: '16px',
-                            cursor: 'pointer',
+                            cursor: isSubmitting ? 'not-allowed' : 'pointer',
                             transition: 'background 0.3s',
                             fontWeight: 'bold'
                         }}
                     >
-                        Send Message
+                        {isSubmitting ? 'Sending...' : 'Send Message'}
                     </button>
                     
                     {status && (
                         <div style={{
                             textAlign: 'center',
                             fontSize: '16px',
-                            color: status.includes('success') ? '#2ecc71' : '#e74c3c'
+                            color: status.includes('success') ? '#2ecc71' : '#e74c3c',
+                            padding: '10px',
+                            borderRadius: '5px',
+                            backgroundColor: status.includes('success') ? '#e8f8f5' : '#fdecea'
                         }}>
                             {status}
                         </div>
