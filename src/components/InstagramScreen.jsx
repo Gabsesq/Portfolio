@@ -41,7 +41,8 @@ const InstagramPost = ({ image, likes, caption, link }) => (
                 style={{
                     width: '100%',
                     height: '100%',
-                    objectFit: 'cover'
+                    objectFit: 'cover',
+                    objectPosition: 'top'
                 }}
             />
         </div>
@@ -98,31 +99,32 @@ export default function InstagramScreen() {
     const posts = [
         {
             image: "Portfolio.png",
-            caption: "My Portfolio Website 🌐 Built with React, Three.js, and Blender",
+            caption: "My Portfolio Website, replica of my room, Built with React-Three.js, vercel, and Blender",
             likes: "1,234"
         },
         {
             image: "retail.png",
-            caption: "Retail Management System 🛍️ Full-stack app with React & Node.js",
+            caption: "Created an auto-scanning system for my company via python, flask, heroku, and opencv. This saves an average of 20 minutes per day per employee.",
             likes: "982",
             link: "https://retailpr-f15aaf777d4b.herokuapp.com/"
         },
         {
             image: "hablame.png",
-            caption: "Háblame 💬 Language learning chat app with real-time translation",
+            caption: "Háblame 💬 Language learning verbal based app utilizing reactjs, flask, heroku, openai and google API",
             likes: "893",
             link: "https://immense-harbor-33068-c51d1d2f7257.herokuapp.com/"
         },
         {
             image: "eatsafe.png",
-            caption: "EatSafe App 🍽️ Food safety tracking with real-time updates",
+            caption: "EatSafe App 🍽️ Food safety scanning created via scrum/agile methodology, utilizes tesseract OCR, Web API, github hosting, local storage, and ReactJS",
             likes: "876",
-            link: "https://eat- safe.github.io/smart-scan/"
+            link: "https://eat-safe.github.io/smart-scan/"
         },
         {
             image: "Pinterest.png",
-            caption: "Pinterest Clone 📌 Built with React and Ruby on Rails",
-            likes: "754"
+            caption: "Pinterest Clone ***UNDER CONSTRUCTION***📌 Creating a pinterest board randomizer for extreme pinterest people like me! Choose a board and shuffle ~~Frontend still under construction~~",
+            likes: "910",
+            link: "https://github.com/Gabsesq/Pinny-"
         }
     ];
 
