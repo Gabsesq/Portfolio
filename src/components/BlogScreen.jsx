@@ -89,6 +89,53 @@ export default function BlogScreen() {
                         fontSize: '20px',
                         color: '#FF69B4'
                     }}>
+                        Dopamine Overload
+                    </h3>
+                    <p style={{ 
+                        margin: '0 0 10px 0', 
+                        fontSize: '14px', 
+                        color: '#FF8FAB',
+                        lineHeight: '1.6'
+                    }}>
+                      2019, I refused to download tiktok after my cousins begged. I did not have a PC. I had a very old iphone, a laptop for programming, and a tablet for digital art. 
+                      I remember downloading tiktok in 2021, a life altering decision, honestly. I felt disconnected from the world and I will say, tiktok helped me feel some normalcy 
+                      and connection, even after the 'end' of covid. But reflecting on who I am now, and who I was in 2020, I have excelled in some areas and declined in others. New 
+                      technology has been my wake up call that I am someone who gets addicted to dopamine hits, and it's time to take back control of my life. I need constant stimulation, 
+                      work and TV show at the same time with a coconut water (my healthy binge). I have noticed how much harder it is to do mundane tasks like laundry, dishes, cleaning, 
+                      general motivation and survival. Dopamine is meant for human survival to have the will to survive, but I have been over-doing it, along with the rest of the world. 
+                      Why am I overstimulated around a group of people, but I'm understimulated whenever I'm alone? I fall asleep to podcasts, I am addicted to learning, addicted to 
+                      the current state of our world, and fortunately a bit addicted to coding (my personal favorite addiction that I don't intend on quitting). As a software developer, 
+                      I have a sense of guilt and a sense of duty to avoid making addictive software. At the same time, that is usually the end goal. I am conflicted, but I am making an 
+                      intentional effort to take back control of my life and regain some will power. So far, I deleted tiktok which is unavailable to download on my phone. I still use it, 
+                      but I use it a lot less because of the small added steps to access the app which has been a big help in itself. I also deleted valorant. I've been going to social 
+                      meetups and meeting amazing people. I joined a kickboxing gym. I drive to work without music sometimes. I try to wake up without checking my phone.I have been reading and 
+                      studying Spanish when I feel the urge to check social media. Unfortunately, I have forgotten the art of relaxation, and I am working on that. How to be 100% bored and 
+                      unoccupied is a lost art. The art of processing emotions and sitting alone with your thoughts is a rarity and I intend on bringing it back. I truly think our brains 
+                      are not wired to consume this much stimuli, so I am plunging forward but also into my old life- a life of discipline, energy, and healthy productivity. I will say that I love 
+                      trends and inside jokes, which I will miss, but maybe I can settle for a spark notes instead!
+                    </p>
+                    <div style={{ 
+                        fontSize: '12px', 
+                        color: '#FFB6C1',
+                        fontStyle: 'italic'
+                    }}>
+                        Posted on February 3rd, 2025 • 4 min read ✨
+                    </div>
+                </div>
+                {/* Blog Posts */}
+                <div style={{
+                    background: '#FFF',
+                    padding: '20px',
+                    borderRadius: '12px',
+                    marginBottom: '15px',
+                    boxShadow: '0 4px 8px rgba(255, 182, 193, 0.2)',
+                    border: '1px solid #FFE4E1'
+                }}>
+                    <h3 style={{ 
+                        margin: '0 0 10px 0', 
+                        fontSize: '20px',
+                        color: '#FF69B4'
+                    }}>
                         Creative Calling
                     </h3>
                     <p style={{ 
