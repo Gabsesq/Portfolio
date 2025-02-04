@@ -112,7 +112,7 @@ export default function InstagramScreen() {
             image: "emporder.jpg",
             caption: "Employee Order System, Streamlined employee ordering process using Python, Flask, PostgreSQL, nodemailer and Heroku. This application has reduced employee order time by 60%.",
             likes: "934",
-            link: "https://emporder-1de262506afa.herokuapp.com/"
+            link: "http://www.emporder.store/"
         },
         {
             image: "hablame.png",
