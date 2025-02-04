@@ -1,7 +1,7 @@
 import { Html } from "@react-three/drei";
 
 // First create a reusable Post component to keep the code DRY
-const InstagramPost = ({ emoji, likes, description }) => (
+const InstagramPost = ({ image, likes, caption, link }) => (
     <div style={{ marginBottom: '12px' }}>
         <div style={{
             padding: '4px 4px 8px 4px',
@@ -28,15 +28,22 @@ const InstagramPost = ({ emoji, likes, description }) => (
         </div>
         <div style={{
             width: '100%',
-            height: '100px',
+            height: '215px',
             background: '#1a1a1a',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            padding: '2px',
-            fontSize: '40px'
+            padding: '2px'
         }}>
-            {emoji}
+            <img 
+                src={image} 
+                alt="Project"
+                style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover'
+                }}
+            />
         </div>
         <div style={{ padding: '4px' }}>
             <div style={{ 
@@ -62,13 +69,63 @@ const InstagramPost = ({ emoji, likes, description }) => (
                     fontWeight: '600',
                     letterSpacing: '0.3px'
                 }}>gabs_esq</span>
-                {' '}{description}
+                {' '}{caption}
             </div>
+            {link && (
+                <div style={{
+                    fontSize: '14px',
+                    marginTop: '4px',
+                    color: '#0095f6'
+                }}>
+                    <a 
+                        href={link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                            color: '#0095f6',
+                            textDecoration: 'none'
+                        }}
+                    >
+                        View Project →
+                    </a>
+                </div>
+            )}
         </div>
     </div>
 );
 
 export default function InstagramScreen() {
+    const posts = [
+        {
+            image: "Portfolio.png",
+            caption: "My Portfolio Website 🌐 Built with React, Three.js, and Blender",
+            likes: "1,234"
+        },
+        {
+            image: "retail.png",
+            caption: "Retail Management System 🛍️ Full-stack app with React & Node.js",
+            likes: "982",
+            link: "https://retailpr-f15aaf777d4b.herokuapp.com/"
+        },
+        {
+            image: "hablame.png",
+            caption: "Háblame 💬 Language learning chat app with real-time translation",
+            likes: "893",
+            link: "https://immense-harbor-33068-c51d1d2f7257.herokuapp.com/"
+        },
+        {
+            image: "eatsafe.png",
+            caption: "EatSafe App 🍽️ Food safety tracking with real-time updates",
+            likes: "876",
+            link: "https://eat- safe.github.io/smart-scan/"
+        },
+        {
+            image: "Pinterest.png",
+            caption: "Pinterest Clone 📌 Built with React and Ruby on Rails",
+            likes: "754"
+        }
+    ];
+
     return (
         <Html
             transform
@@ -80,143 +137,23 @@ export default function InstagramScreen() {
             distanceFactor={.1}
             occlude
         >
-            <div className="screen-content"
-                style={{
-                    width: '600px',
-                    height: '300px',
-                    background: '#000000',
-                    color: 'white',
-                    padding: '0',
-                    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
-                    overflowY: 'auto',
-                    overflowX: 'hidden',
-                    transform: 'scale(-1, 1)',
-                    scrollbarWidth: 'thin',
-                    scrollbarColor: '#8e8e8e #000000',
-                    WebkitFontSmoothing: 'antialiased',
-                    MozOsxFontSmoothing: 'grayscale',
-                    textRendering: 'optimizeLegibility',
-                    imageRendering: 'high-quality',
-                    backdropFilter: 'blur(0)',
-                    filter: 'none'
-                }}
-            >
-                <div style={{ 
-                    padding: '8px 0',
-                    minHeight: '120%'
+            <div className="screen-content" style={{
+                width: '590px',
+                height: '270px',
+                background: '#1a1a1a',
+                color: 'white',
+                padding: '8px',
+                overflowY: 'auto',
+                transform: 'scale(-1, 1)'
+            }}>
+                <div style={{
+                    minHeight: '1200px',
+                    paddingTop: '1000px',
+                    paddingBottom: '20px'
                 }}>
-                    <div style={{ marginBottom: '12px' }}>
-                        <div style={{
-                            padding: '4px 4px 8px 4px',
-                            display: 'flex',
-                            alignItems: 'center',
-                            gap: '8px'
-                        }}>
-                            <div style={{
-                                width: '24px',
-                                height: '24px',
-                                borderRadius: '50%',
-                                background: '#0095f6',
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                fontSize: '14px',
-                                fontWeight: '600'
-                            }}>G</div>
-                            <span style={{ 
-                                fontSize: '14px',
-                                fontWeight: '600',
-                                letterSpacing: '0.3px'
-                            }}>gabs_esq</span>
-                        </div>
-                        <div style={{
-                            width: '100%',
-                            height: '100%',
-                            background: '#000000',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            padding: '2px'
-                        }}>
-                            <img 
-                                src="/Portfolio.png" 
-                                alt="Portfolio Preview"
-                                style={{
-                                    width: '80%',
-                                    height: '80%',
-                                    objectFit: 'contain',
-                                    borderRadius: '2px',
-                                    imageRendering: 'high-quality',
-                                    WebkitFontSmoothing: 'antialiased',
-                                    MozOsxFontSmoothing: 'grayscale'
-                                }}
-                            />
-                        </div>
-                        <div style={{ padding: '4px' }}>
-                            <div style={{ 
-                                display: 'flex', 
-                                gap: '8px', 
-                                fontSize: '16px',
-                                marginBottom: '4px'
-                            }}>
-                                ❤️ 💬 📤
-                            </div>
-                            <div style={{ 
-                                fontSize: '14px',
-                                fontWeight: '600',
-                                marginBottom: '2px'
-                            }}>
-                                110 likes
-                            </div>
-                            <div style={{ 
-                                fontSize: '14px',
-                                lineHeight: '1.4'
-                            }}>
-                                <span style={{ 
-                                    fontWeight: '600',
-                                    letterSpacing: '0.3px'
-                                }}>gabs_esq</span>
-                                {' '}Portfolio built with Three.js and React
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Additional Posts */}
-                    <InstagramPost 
-                        emoji="🎨"
-                        likes={95}
-                        description="Just finished a new digital art piece! Check out my latest work #digitalart #creativity"
-                    />
-
-                    <InstagramPost 
-                        emoji="💻"
-                        likes={88}
-                        description="Deep diving into system design today. Learning never stops! #coding #systemdesign"
-                    />
-
-                    <InstagramPost 
-                        emoji="🥋"
-                        likes={120}
-                        description="Balance is key - from coding to kickboxing, keeping the mind and body sharp! #kickboxing #developerlife"
-                    />
-
-                    <InstagramPost 
-                        emoji="🎮"
-                        likes={105}
-                        description="Working on a new game engine project using Three.js! #gamedev #webgl"
-                    />
-
-                    <InstagramPost 
-                        emoji="✨"
-                        likes={92}
-                        description="Just deployed my latest React project! Link in bio #webdev #react"
-                    />
-
-                    <InstagramPost 
-                        emoji="🧵"
-                        likes={86}
-                        description="When I'm not coding, I'm creating in other ways! Latest sewing project complete #creativity #maker"
-                    />
+                    {posts.map((post, index) => (
+                        <InstagramPost key={index} {...post} />
+                    ))}
                 </div>
             </div>
         </Html>
