@@ -261,7 +261,7 @@ export default function BlogScreen() {
                     </div>
                 </div>
             
-                {/* Trump Inauguration Blog Post */}
+                {/* Temporarily Hidden Trump Inauguration Blog Post 
                 <div style={{
                     background: '#FFF',
                     padding: '20px',
@@ -301,6 +301,7 @@ export default function BlogScreen() {
                         Posted on January 21, 2025 • 5 min read ✨
                     </div>
                 </div>
+                */}
 
                 {/* Making this website Blog Post */}
                 <div style={{
