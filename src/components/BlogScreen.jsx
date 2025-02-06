@@ -47,18 +47,19 @@ export default function BlogScreen() {
             <div style={{
                 width: '735px',
                 height: '440px',
-                background: '#FFF0F6', // Light pink background
+                background: '#1a1a1a',
                 padding: '20px',
-                border: '1px solid #FFB0D9', // Pink border
                 borderRadius: '20px',
                 display: 'flex',
                 flexDirection: 'column',
                 gap: '15px',
                 fontFamily: 'Arial, sans-serif',
-                color: '#FF69B4', // Pink text
+                color: '#ffffff',
                 overflow: 'auto',
                 fontSize: '14px',
-                boxShadow: 'inset 0 0 20px rgba(255, 182, 193, 0.3)' // Soft pink inner glow
+                boxShadow: 'inset 0 0 20px rgba(0, 132, 255, 0.3)',
+                scrollbarWidth: 'thin',
+                scrollbarColor: '#0084FF #1a1a1a'
             }}>
                 <div style={{
                     display: 'flex',
@@ -69,32 +70,32 @@ export default function BlogScreen() {
                     <h2 style={{ 
                         margin: 0, 
                         fontSize: '36px',
-                        color: '#FF69B4',
-                        textShadow: '2px 2px 4px rgba(255, 105, 180, 0.2)'
+                        color: '#0084FF',
+                        textShadow: '2px 2px 4px rgba(0, 132, 255, 0.2)'
                     }}>
                         ✨ My Blog ✨
                     </h2>
                 </div>
                 {/* Blog Posts */}
                 <div style={{
-                    background: '#FFF',
+                    background: '#2a2a2a',
                     padding: '20px',
                     borderRadius: '12px',
                     marginBottom: '15px',
-                    boxShadow: '0 4px 8px rgba(255, 182, 193, 0.2)',
-                    border: '1px solid #FFE4E1'
+                    boxShadow: '0 4px 8px rgba(0, 132, 255, 0.1)',
+                    border: '1px solid #3a3a3a'
                 }}>
                     <h3 style={{ 
                         margin: '0 0 10px 0', 
                         fontSize: '20px',
-                        color: '#FF69B4'
+                        color: '#0084FF'
                     }}>
                         Dopamine Overload
                     </h3>
                     <p style={{ 
                         margin: '0 0 10px 0', 
                         fontSize: '14px', 
-                        color: '#FF8FAB',
+                        color: '#ffffff',
                         lineHeight: '1.6'
                     }}>
                       2019, I refused to download tiktok after my cousins begged. I did not have a PC. I had a very old iphone, a laptop for programming, and a tablet for digital art. 
@@ -116,7 +117,7 @@ export default function BlogScreen() {
                     </p>
                     <div style={{ 
                         fontSize: '12px', 
-                        color: '#FFB6C1',
+                        color: '#0084FF',
                         fontStyle: 'italic'
                     }}>
                         Posted on February 3rd, 2025 • 4 min read ✨
@@ -124,24 +125,24 @@ export default function BlogScreen() {
                 </div>
                 {/* Blog Posts */}
                 <div style={{
-                    background: '#FFF',
+                    background: '#2a2a2a',
                     padding: '20px',
                     borderRadius: '12px',
                     marginBottom: '15px',
-                    boxShadow: '0 4px 8px rgba(255, 182, 193, 0.2)',
-                    border: '1px solid #FFE4E1'
+                    boxShadow: '0 4px 8px rgba(0, 132, 255, 0.1)',
+                    border: '1px solid #3a3a3a'
                 }}>
                     <h3 style={{ 
                         margin: '0 0 10px 0', 
                         fontSize: '20px',
-                        color: '#FF69B4'
+                        color: '#0084FF'
                     }}>
                         Creative Calling
                     </h3>
                     <p style={{ 
                         margin: '0 0 10px 0', 
                         fontSize: '14px', 
-                        color: '#FF8FAB',
+                        color: '#ffffff',
                         lineHeight: '1.6'
                     }}>
                         Reflecting on current society and the way forward, I've come to the conclusion that building community and fostering creativity is the best way to stay afloat, stay alive, and stay content.
@@ -162,7 +163,7 @@ export default function BlogScreen() {
                     </p>
                     <div style={{ 
                         fontSize: '12px', 
-                        color: '#FFB6C1',
+                        color: '#0084FF',
                         fontStyle: 'italic'
                     }}>
                         Posted on January 29, 2025 • 4 min read ✨
@@ -170,24 +171,24 @@ export default function BlogScreen() {
                 </div>
                 {/* Blog Posts */}
                 <div style={{
-                    background: '#FFF',
+                    background: '#2a2a2a',
                     padding: '20px',
                     borderRadius: '12px',
                     marginBottom: '15px',
-                    boxShadow: '0 4px 8px rgba(255, 182, 193, 0.2)',
-                    border: '1px solid #FFE4E1'
+                    boxShadow: '0 4px 8px rgba(0, 132, 255, 0.1)',
+                    border: '1px solid #3a3a3a'
                 }}>
                     <h3 style={{ 
                         margin: '0 0 10px 0', 
                         fontSize: '20px',
-                        color: '#FF69B4'
+                        color: '#0084FF'
                     }}>
                         Future with Automation
                     </h3>
                     <p style={{ 
                         margin: '0 0 10px 0', 
                         fontSize: '14px', 
-                        color: '#FF8FAB',
+                        color: '#ffffff',
                         lineHeight: '1.6'
                     }}>
                         There is a lot of excitement surround automation and AI right now. Personally, I am gatekeeping the softwares I have found as a new grad and someone who would love 
@@ -210,7 +211,7 @@ export default function BlogScreen() {
                     </p>
                     <div style={{ 
                         fontSize: '12px', 
-                        color: '#FFB6C1',
+                        color: '#0084FF',
                         fontStyle: 'italic'
                     }}>
                         Posted on January 28, 2025 • 4 min read ✨
@@ -218,24 +219,24 @@ export default function BlogScreen() {
                 </div>
                 {/* Blog Posts */}
                 <div style={{
-                    background: '#FFF',
+                    background: '#2a2a2a',
                     padding: '20px',
                     borderRadius: '12px',
                     marginBottom: '15px',
-                    boxShadow: '0 4px 8px rgba(255, 182, 193, 0.2)',
-                    border: '1px solid #FFE4E1'
+                    boxShadow: '0 4px 8px rgba(0, 132, 255, 0.1)',
+                    border: '1px solid #3a3a3a'
                 }}>
                     <h3 style={{ 
                         margin: '0 0 10px 0', 
                         fontSize: '20px',
-                        color: '#FF69B4'
+                        color: '#0084FF'
                     }}>
                         Misinformation
                     </h3>
                     <p style={{ 
                         margin: '0 0 10px 0', 
                         fontSize: '14px', 
-                        color: '#FF8FAB',
+                        color: '#ffffff',
                         lineHeight: '1.6'
                     }}>
                         I'm feeling particularly worried about journalism in this country. At the same time, I'm also worried about fabricated truths. It feels very apparent that the United States 
@@ -254,7 +255,7 @@ export default function BlogScreen() {
                     </p>
                     <div style={{ 
                         fontSize: '12px', 
-                        color: '#FFB6C1',
+                        color: '#0084FF',
                         fontStyle: 'italic'
                     }}>
                         Posted on January 22, 2025 • 4 min read ✨
@@ -305,24 +306,24 @@ export default function BlogScreen() {
 
                 {/* Making this website Blog Post */}
                 <div style={{
-                    background: '#FFF',
+                    background: '#2a2a2a',
                     padding: '20px',
                     borderRadius: '12px',
                     marginBottom: '15px',
-                    boxShadow: '0 4px 8px rgba(255, 182, 193, 0.2)',
-                    border: '1px solid #FFE4E1'
+                    boxShadow: '0 4px 8px rgba(0, 132, 255, 0.1)',
+                    border: '1px solid #3a3a3a'
                 }}>
                     <h3 style={{ 
                         margin: '0 0 10px 0', 
                         fontSize: '20px',
-                        color: '#FF69B4'
+                        color: '#0084FF'
                     }}>
                         Making this website
                     </h3>
                     <p style={{ 
                         margin: '0 0 10px 0', 
                         fontSize: '14px', 
-                        color: '#FF8FAB',
+                        color: '#ffffff',
                         lineHeight: '1.6'
                     }}>
                         Building this website has taught me an invaluable lesson about the importance of pre-planning. Over the past few months, I've been diving into 3D graphics and creating immersive experiences. It's been thrilling. Maybe a little too thrilling. A recurring theme in my projects is that I get so excited about an idea that I dive in headfirst without a clear plan. While this excitement fuels my creativity, it often comes at a cost: projects take twice as long to complete because I end up backtracking and reworking parts I didn't think through.
@@ -335,7 +336,7 @@ export default function BlogScreen() {
                     </p>
                     <div style={{ 
                         fontSize: '12px', 
-                        color: '#FFB6C1',
+                        color: '#0084FF',
                         fontStyle: 'italic'
                     }}>
                         Posted on January 1, 2025 • 3 min read ✨
