@@ -4,6 +4,8 @@ import { useEffect, useRef, useState } from "react";
 export default function ChatScreen() {
     const chatContainerRef = useRef(null);
     const [isMobile, setIsMobile] = useState(false);
+    const [startY, setStartY] = useState(0);
+    const [scrollTop, setScrollTop] = useState(0);
 
     useEffect(() => {
         // Check if device is mobile
@@ -12,7 +14,31 @@ export default function ChatScreen() {
         if (chatContainerRef.current) {
             chatContainerRef.current.scrollTop = 0;
         }
-    }, []);
+
+        // Handle touch events for mobile scrolling
+        const handleTouchStart = (e) => {
+            setStartY(e.touches[0].clientY);
+        };
+
+        const handleTouchMove = (e) => {
+            e.preventDefault();
+            const deltaY = startY - e.touches[0].clientY;
+            const container = e.currentTarget;
+            container.scrollTop = scrollTop + deltaY;
+            setScrollTop(container.scrollTop);
+        };
+
+        const container = chatContainerRef.current;
+        if (container && isMobile) {
+            container.addEventListener('touchstart', handleTouchStart);
+            container.addEventListener('touchmove', handleTouchMove, { passive: false });
+            
+            return () => {
+                container.removeEventListener('touchstart', handleTouchStart);
+                container.removeEventListener('touchmove', handleTouchMove);
+            };
+        }
+    }, [isMobile, startY, scrollTop]);
 
     const messages = [
         "Hi! I'm Gabby 👋",
@@ -44,7 +70,8 @@ export default function ChatScreen() {
                     padding: '8px',
                     fontFamily: 'Arial, sans-serif',
                     overflow: 'hidden',
-                    position: 'relative'
+                    position: 'relative',
+                    WebkitOverflowScrolling: 'touch' // Add smooth scrolling for iOS
                 }}
             >
                 <div 
@@ -61,7 +88,9 @@ export default function ChatScreen() {
                         width: '100%',
                         transform: 'scale(-1, 1)',
                         scrollbarWidth: 'thin',
-                        scrollbarColor: '#0084FF #1a1a1a'
+                        scrollbarColor: '#0084FF #1a1a1a',
+                        msOverflowStyle: '-ms-autohiding-scrollbar', // Better scrolling for IE/Edge
+                        touchAction: 'pan-y' // Enable vertical touch scrolling
                     }}
                 >
                     {messages.map((message, index) => (
@@ -78,7 +107,8 @@ export default function ChatScreen() {
                                 animation: isMobile ? 'none' : `fadeIn 0.5s ease-in ${index * 0.5}s forwards`,
                                 opacity: isMobile ? 1 : 0,
                                 fontSize: '20px',
-                                fontWeight: 'bold'
+                                fontWeight: 'bold',
+                                wordBreak: 'break-word' // Prevent text overflow
                             }}
                         >
                             {message}
