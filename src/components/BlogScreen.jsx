@@ -73,8 +73,10 @@ export default function BlogScreen() {
                     overscrollBehavior: 'contain'
                 }}>
                 <div style={{
-                    minHeight: '100%',
-                    paddingBottom: '20px'
+                    minHeight: '1200px',
+                    paddingTop: '20px',
+                    paddingBottom: '20px',
+                    position: 'relative'
                 }}>
                     <div style={{
                         display: 'flex',
