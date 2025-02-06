@@ -73,7 +73,7 @@ export default function BlogScreen() {
                     overscrollBehavior: 'contain'
                 }}>
                 <div style={{
-                    minHeight: '1200px',
+                    minHeight: '15000px',
                     paddingTop: '20px',
                     paddingBottom: '20px',
                     position: 'relative'
