@@ -77,11 +77,16 @@ export default function BlogScreen() {
                         scrollbarWidth: 'thin',
                         scrollbarColor: '#0084FF #1a1a1a',
                         msOverflowStyle: '-ms-autohiding-scrollbar',
-                        touchAction: 'pan-y'
+                        touchAction: 'pan-y',
+                        transform: 'translateZ(0)',
+                        height: '100%',
+                        willChange: 'transform'
                     }}
                 >
                     <div style={{
-                        paddingBottom: '40px'  // Add some padding at the bottom
+                        minHeight: '200%',
+                        paddingBottom: '100px',
+                        transform: 'translateZ(0)'
                     }}>
                         <div style={{
                             display: 'flex',
