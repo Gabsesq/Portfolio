@@ -51,8 +51,8 @@ export default function ContactScreen() {
             occlude={false}
         >
             <div style={{
-                width: '512px',
-                height: '695px',
+                width: '514px',
+                height: '697px',
                 background: 'linear-gradient(145deg, #f0f0f0, #e6e6e6)',
                 padding: '20px',
                 borderRadius: '20px',

@@ -44,7 +44,7 @@ export default function BlogScreen() {
         <Html
             transform
             wrapperClass="laptop-screen"
-            position={[0, 10.8, -10]}
+            position={[-.1, 10.8, -10]}
             rotation-x={0}
             rotation-y={0}
             rotation-z={0}
@@ -59,10 +59,12 @@ export default function BlogScreen() {
                     padding: '20px',
                     fontFamily: 'Arial, sans-serif',
                     overflow: 'hidden',
-                    position: 'relative'
+                    position: 'relative',
+                    borderRadius: '10px'
                 }}
             >
                 <div 
+
                     ref={blogContainerRef}
                     style={{
                         position: 'absolute',

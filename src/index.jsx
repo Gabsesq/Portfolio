@@ -22,7 +22,7 @@ export default function CameraAnimation({ activeView }) {
     const positions = {
         small: {
             blog: { x: 115, y: 23, z: -25 },
-            contact: { x: -130, y: 60, z: -70 },
+            contact: { x: -130, y: 60, z: -65 },
             about: { x: -10, y: 55, z: 60},
             projects: { x: 35, y: 55, z: 60 }
         },

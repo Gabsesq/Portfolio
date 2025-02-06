@@ -4,20 +4,40 @@ export default function LoadingScreen({ progress: actualProgress }) {
     const [displayProgress, setDisplayProgress] = useState(0);
 
     useEffect(() => {
-        // Smoothly animate to the new progress value
+        // Start with a minimum progress of 5%
+        const startingProgress = Math.max(5, actualProgress);
+        
+        // Create a smooth animation to target progress
         const animateProgress = () => {
-            if (displayProgress < actualProgress) {
-                setDisplayProgress(prev => {
-                    const increment = Math.min(1, actualProgress - prev);
-                    return prev + increment;
-                });
-            }
+            setDisplayProgress(prev => {
+                // Calculate the next progress value
+                const target = startingProgress;
+                const increment = (target - prev) * 0.1; // Smooth easing
+                
+                // If we're very close to target, just set it
+                if (Math.abs(target - prev) < 0.1) return target;
+                
+                return prev + increment;
+            });
         };
 
-        const timer = setInterval(animateProgress, 20); // Update every 20ms
+        // Run animation every 30ms
+        const timer = setInterval(animateProgress, 30);
+
+        // When actualProgress hits 100, ensure we complete loading
+        if (actualProgress >= 100) {
+            const completeLoading = setTimeout(() => {
+                setDisplayProgress(100);
+            }, 500); // Half second delay before completing
+
+            return () => {
+                clearInterval(timer);
+                clearTimeout(completeLoading);
+            };
+        }
 
         return () => clearInterval(timer);
-    }, [actualProgress, displayProgress]);
+    }, [actualProgress]);
 
     return (
         <div style={{
@@ -55,7 +75,7 @@ export default function LoadingScreen({ progress: actualProgress }) {
                     width: `${displayProgress}%`,
                     height: '100%',
                     background: 'linear-gradient(90deg, #FF69B4, #FFB6C1)',
-                    transition: 'width 0.2s ease-out',
+                    transition: 'width 0.3s ease-out',
                     borderRadius: '6px'
                 }} />
             </div>
