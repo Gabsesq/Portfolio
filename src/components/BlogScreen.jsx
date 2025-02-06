@@ -59,9 +59,6 @@ export default function BlogScreen() {
                     background: '#1a1a1a',
                     padding: '20px',
                     borderRadius: '20px',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    gap: '15px',
                     fontFamily: 'Arial, sans-serif',
                     color: '#ffffff',
                     overflow: 'auto',
@@ -73,14 +70,11 @@ export default function BlogScreen() {
                     msOverflowStyle: '-ms-autohiding-scrollbar',
                     touchAction: 'pan-y',
                     position: 'relative',
-                    overscrollBehavior: 'contain',
-                    WebkitOverflowScrolling: 'touch'
+                    overscrollBehavior: 'contain'
                 }}>
                 <div style={{
                     minHeight: '100%',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    gap: '15px'
+                    paddingBottom: '20px'
                 }}>
                     <div style={{
                         display: 'flex',
