@@ -1,19 +1,26 @@
 import { Html } from "@react-three/drei";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export default function BlogScreen() {
-    const [canScroll, setCanScroll] = useState(false);
+    const blogContainerRef = useRef(null);
+    const [isMobile, setIsMobile] = useState(false);
     const [startY, setStartY] = useState(0);
     const [scrollTop, setScrollTop] = useState(0);
 
-    // Enable scrolling when this view is active
     useEffect(() => {
+        // Check if device is mobile
+        setIsMobile(window.innerWidth < 768);
+        
+        if (blogContainerRef.current) {
+            blogContainerRef.current.scrollTop = 0;
+        }
+
+        // Handle touch events for mobile scrolling
         const handleTouchStart = (e) => {
             setStartY(e.touches[0].clientY);
         };
 
         const handleTouchMove = (e) => {
-            if (!canScroll) return;
             e.preventDefault();
             const deltaY = startY - e.touches[0].clientY;
             const container = e.currentTarget;
@@ -21,8 +28,8 @@ export default function BlogScreen() {
             setScrollTop(container.scrollTop);
         };
 
-        const container = document.querySelector('.blog-content');
-        if (container) {
+        const container = blogContainerRef.current;
+        if (container && isMobile) {
             container.addEventListener('touchstart', handleTouchStart);
             container.addEventListener('touchmove', handleTouchMove, { passive: false });
             
@@ -31,7 +38,7 @@ export default function BlogScreen() {
                 container.removeEventListener('touchmove', handleTouchMove);
             };
         }
-    }, [canScroll, startY, scrollTop]);
+    }, [isMobile, startY, scrollTop]);
 
     return (
         <Html
@@ -44,23 +51,28 @@ export default function BlogScreen() {
             distanceFactor={15}
             occlude
         >
-            <div style={{
-                width: '735px',
-                height: '440px',
-                background: '#1a1a1a',
-                padding: '20px',
-                borderRadius: '20px',
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '15px',
-                fontFamily: 'Arial, sans-serif',
-                color: '#ffffff',
-                overflow: 'auto',
-                fontSize: '14px',
-                boxShadow: 'inset 0 0 20px rgba(0, 132, 255, 0.3)',
-                scrollbarWidth: 'thin',
-                scrollbarColor: '#0084FF #1a1a1a'
-            }}>
+            <div 
+                ref={blogContainerRef}
+                style={{
+                    width: '735px',
+                    height: '440px',
+                    background: '#1a1a1a',
+                    padding: '20px',
+                    borderRadius: '20px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '15px',
+                    fontFamily: 'Arial, sans-serif',
+                    color: '#ffffff',
+                    overflow: 'auto',
+                    fontSize: '14px',
+                    boxShadow: 'inset 0 0 20px rgba(0, 132, 255, 0.3)',
+                    scrollbarWidth: 'thin',
+                    scrollbarColor: '#0084FF #1a1a1a',
+                    WebkitOverflowScrolling: 'touch',
+                    msOverflowStyle: '-ms-autohiding-scrollbar',
+                    touchAction: 'pan-y'
+                }}>
                 <div style={{
                     display: 'flex',
                     justifyContent: 'center',

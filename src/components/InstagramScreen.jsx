@@ -1,4 +1,5 @@
 import { Html } from "@react-three/drei";
+import { useEffect, useRef, useState } from "react";
 
 // First create a reusable Post component to keep the code DRY
 const InstagramPost = ({ image, likes, caption, link }) => (
@@ -96,6 +97,44 @@ const InstagramPost = ({ image, likes, caption, link }) => (
 );
 
 export default function InstagramScreen() {
+    const instaContainerRef = useRef(null);
+    const [isMobile, setIsMobile] = useState(false);
+    const [startY, setStartY] = useState(0);
+    const [scrollTop, setScrollTop] = useState(0);
+
+    useEffect(() => {
+        // Check if device is mobile
+        setIsMobile(window.innerWidth < 768);
+        
+        if (instaContainerRef.current) {
+            instaContainerRef.current.scrollTop = 0;
+        }
+
+        // Handle touch events for mobile scrolling
+        const handleTouchStart = (e) => {
+            setStartY(e.touches[0].clientY);
+        };
+
+        const handleTouchMove = (e) => {
+            e.preventDefault();
+            const deltaY = startY - e.touches[0].clientY;
+            const container = e.currentTarget;
+            container.scrollTop = scrollTop + deltaY;
+            setScrollTop(container.scrollTop);
+        };
+
+        const container = instaContainerRef.current;
+        if (container && isMobile) {
+            container.addEventListener('touchstart', handleTouchStart);
+            container.addEventListener('touchmove', handleTouchMove, { passive: false });
+            
+            return () => {
+                container.removeEventListener('touchstart', handleTouchStart);
+                container.removeEventListener('touchmove', handleTouchMove);
+            };
+        }
+    }, [isMobile, startY, scrollTop]);
+
     const posts = [
         {
             image: "Portfolio.png",
@@ -151,15 +190,21 @@ export default function InstagramScreen() {
             distanceFactor={.1}
             occlude
         >
-            <div className="screen-content" style={{
-                width: '590px',
-                height: '270px',
-                background: '#1a1a1a',
-                color: 'white',
-                padding: '8px',
-                overflowY: 'auto',
-                transform: 'scale(-1, 1)'
-            }}>
+            <div 
+                ref={instaContainerRef}
+                className="screen-content" 
+                style={{
+                    width: '590px',
+                    height: '270px',
+                    background: '#1a1a1a',
+                    color: 'white',
+                    padding: '8px',
+                    overflowY: 'auto',
+                    transform: 'scale(-1, 1)',
+                    WebkitOverflowScrolling: 'touch',
+                    msOverflowStyle: '-ms-autohiding-scrollbar',
+                    touchAction: 'pan-y'
+                }}>
                 <div style={{
                     minHeight: '1200px',
                     paddingTop: '1000px',
