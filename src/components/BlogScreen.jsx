@@ -65,14 +65,15 @@ export default function BlogScreen() {
                 <div 
                     ref={blogContainerRef}
                     style={{
-                        display: 'flex',
-                        flexDirection: 'column',
-                        height: '100%',
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        right: 0,
+                        bottom: 0,
                         overflowY: 'auto',
                         WebkitOverflowScrolling: 'touch',
-                        padding: '10px',
+                        padding: '20px',
                         boxSizing: 'border-box',
-                        width: '100%',
                         scrollbarWidth: 'thin',
                         scrollbarColor: '#0084FF #1a1a1a',
                         msOverflowStyle: '-ms-autohiding-scrollbar',
@@ -80,9 +81,7 @@ export default function BlogScreen() {
                     }}
                 >
                     <div style={{
-                        minHeight: '1200px',
-                        paddingTop: '20px',
-                        paddingBottom: '20px'
+                        paddingBottom: '40px'  // Add some padding at the bottom
                     }}>
                         <div style={{
                             display: 'flex',
