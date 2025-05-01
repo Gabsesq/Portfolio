@@ -107,26 +107,152 @@ export default function BlogScreen() {
                         </div>
 
 
-
                         <div style={{
-                            background: '#FFF',
+                            background: '#2a2a2a',
                             padding: '20px',
                             borderRadius: '12px',
                             marginBottom: '15px',
-                            boxShadow: '0 4px 8px rgba(255, 182, 193, 0.2)',
-                            border: '1px solid #FFE4E1'
+                            boxShadow: '0 4px 8px rgba(0, 132, 255, 0.1)',
+                            border: '1px solid #3a3a3a'
                         }}>
                             <h3 style={{ 
                                 margin: '0 0 10px 0', 
                                 fontSize: '20px',
-                                color: '#FF69B4'
+                                color: '#0084FF'
                             }}>
-                            Relationship Dynamics
+                            Yearly Goal Check In
                             </h3>
                             <p style={{ 
                                 margin: '0 0 10px 0', 
                                 fontSize: '14px', 
-                                color: '#FF8FAB',
+                                color: '#ffffff',
+                                lineHeight: '1.6'
+                            }}>
+                            I wanted to take a moment to reflect on the intentions I set for 2025 and how things are going so far. It's been a mix of progress, reflection, 
+                            and ongoing work. Honestly, I'm proud of that. One of my biggest goals this year has been committing to a dopamine detox. I've written 
+                            about this before, and while it's going fairly well, it's still one of the most difficult things I've taken on. I catch myself constantly 
+                            craving videos while I work, music in the shower, scrolling between tasks. I know I'm not alone. I wonder how many others from 
+                            my generation feel that same urge to fill the silence just to avoid being alone with our thoughts.
+                            I've realized I have an addictive personality, and this detox has forced me to confront that. It's challenged the way I self-soothe and the way 
+                            I seek distraction. But that challenge has been valuable.
+                            Another focus of mine this year has been my ability to articulate myself, especially verbally. I grew up timid, hesitant to speak, always 
+                            afraid of saying the wrong thing. That carried into adulthood. But now, I'm lucky to work for a women-owned company with leaders who push me 
+                            in the best ways. They've helped me find my voice, encouraging me to share my ideas and reminding me that I do have something valuable to say. 
+                            Their support has genuinely improved my self-image, and I'm slowly rebuilding confidence when I speak. It's a process, but I feel the shift happening.
+                            Language has been a huge part of this personal growth journey too. I've been practicing Spanish daily, and I can finally say I feel fluent. My 
+                            vocabulary might not be perfect, but I can hold conversations about almost anything, and that's a milestone I'm really proud of.
+                            One of my daily goals this year has been simple: live more. And I've been doing just that. I've joined sports leagues, political groups, and started 
+                            dancing salsa, bachata, norteñas, cumbia. I've launched websites, explored new hobbies, and made it a priority to have fun again. The friendships 
+                            I've formed lately feel so genuine and fulfilling. For the first time in a long time, I feel truly connected.
+                            Romantically, I've started attracting people who are kind, intelligent, emotionally available, and fun—men who mirror the energy I've been working 
+                            to cultivate in myself. That said, I'm still navigating my avoidant attachment style and learning to improve how I communicate. Texting and social 
+                            media aren't always my strong suits, but in-person, I've felt real, grounded connections.
+                            Physically, I feel more at peace in my body. My skin is glowing again, my health is stable, and I've stopped obsessing over every detail of how I 
+                            look. I've let go of punishing routines and started honoring how I feel instead.
+                            One of the most important shifts I've made is around boundaries. I've learned to distance myself from people who don't have my best interest at 
+                            heart. This hasn't been easy. Sometimes I question myself. Am I being avoidant, or am I honoring my growth? I try to lean on my intuition and my 
+                            therapist instead of looking for validation from others. It's still a learning curve, but I'm getting better at trusting myself.
+                            To anyone out there working on their goals this year,I hope you're seeing traction, too. Progress isn't always linear, but every step forward counts.
+                            </p>
+                            <div style={{ 
+                                fontSize: '12px', 
+                                color: '#0084FF',
+                                fontStyle: 'italic'
+                            }}>
+                                Posted on April 30th, 2025 • 6 min read ✨
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+                        <div style={{
+                            background: '#2a2a2a',
+                            padding: '20px',
+                            borderRadius: '12px',
+                            marginBottom: '15px',
+                            boxShadow: '0 4px 8px rgba(0, 132, 255, 0.1)',
+                            border: '1px solid #3a3a3a'
+                        }}>
+                            <h3 style={{ 
+                                margin: '0 0 10px 0', 
+                                fontSize: '20px',
+                                color: '#0084FF'
+                            }}>
+                            Break Down to Break Through
+                            </h3>
+                            <p style={{ 
+                                margin: '0 0 10px 0', 
+                                fontSize: '14px', 
+                                color: '#ffffff',
+                                lineHeight: '1.6'
+                            }}>
+                            There's power in being honest. And for a long time, I wasn't.
+                            Between 2021 and 2022, my life unraveled. At the time, I looked like I had it all together. College athlete, straight-A student, abs, 
+                            boyfriend, solid friend group. Underneath the surface, though, I was cracking. I was fueled by egotistical beliefs and lack of self-esteem.
+                            I was in a deeply toxic relationship. By the end, I had absorbed that toxicity, too. I was cheated on, manipulated, and guilted into staying. 
+                            And when I finally left, my ex put real effort into humiliating me online and finding ways to hurt me from a distance. By this point, I had turned 
+                            into someone evil, unrecognizable, and terrible.Right before we split, 
+                            we were robbed at gunpoint. At the same time, my family life was in chaos. One relative was in and out of psychiatric care. Another was in jail. 
+                            I was trying to keep their world from falling apart—driving their kids around, attending attorney meetings, patching up marriages. 
+                            I was emotionally maxed out, but I buried it all just to survive.
+                            Isolation hit hard. I lost friendships. I lost energy. I lost myself.
+                            That's when my body started tapping out. I developed full-blown autoimmune symptoms. I couldn't get out of bed without feeling like 
+                            I'd run a marathon. I broke out in hives. My joints were so swollen I could barely move. I was barely eating, but sure was gaining weight. I 
+                            began failing my classes for the first time in my life. I wasn't depressed in the traditional sense—I was depleted. My body was screaming
+                             what I refused to say out loud: I couldn't keep going like this. I physically could not get out of bed...
+                            Stress broke me. Literally. And I'll never downplay its power again. It can destroy your health, your mind, and your spirit.
+                            But here's the beautiful part! I rebuilt. Slowly. Painfully. And completely.
+                            I learned that I had no boundaries, and I paid the price for it. I learned that being a people-pleaser doesn't make you kind, it
+                             makes you easy to exploit. I had been ignoring my own needs to chase success, to meet impossible standards, to prove my worth. That 
+                             life broke me open—and it made room for something better.
+                            Today, I'm a different person.
+                            I eat for nourishment, not aesthetics. I prioritize sun, movement, and rest. I no longer attract people who prey on low self-esteem, 
+                            because I'm not that person anymore. The men and friends who are attracted to me are kind and good. Even better~~ I am finally turned OFF by terrible 
+                            behavior instead of leeching on to the addictive ups and downs. I've worked hard to stabilize my health and bring my body back to a baseline. A body that doesn't 
+                            live in constant fight or flight.
+                            I've also had to face hard truths about myself. I picked up unhealthy behaviors during that relationship. My jealousy turned outward. I let my own 
+                            insecurities project onto other women. That's hard to admit, especially because I'm so passionate about women's rights. But I've learned how trauma 
+                            rewires us. I've also learned how to rewire back.
+                            Emotional intelligence didn't come naturally to me, but I've worked and am working on it. I used to be obsessed with money and image. Now, I'm obsessed with peace. 
+                            I'm surrounded by the right people, I enjoy my work, and I find meaning in the small things.
+                            This chapter of my life taught me everything I needed to learn and then some. I'm still healing. Still unlearning. But I'm proud of how far I've come.
+                            If you're going through something that feels like the end of your world, I promise, it's also the beginning of a new one. 
+                            </p>
+                            <div style={{ 
+                                fontSize: '12px', 
+                                color: '#0084FF',
+                                fontStyle: 'italic'
+                            }}>
+                                Posted on April 8th, 2025 • 6 min read ✨
+                            </div>
+                        </div>
+
+
+
+
+                        <div style={{
+                            background: '#2a2a2a',
+                            padding: '20px',
+                            borderRadius: '12px',
+                            marginBottom: '15px',
+                            boxShadow: '0 4px 8px rgba(0, 132, 255, 0.1)',
+                            border: '1px solid #3a3a3a'
+                        }}>
+                            <h3 style={{ 
+                                margin: '0 0 10px 0', 
+                                fontSize: '20px',
+                                color: '#0084FF'
+                            }}>
+                            Building Community
+                            </h3>
+                            <p style={{ 
+                                margin: '0 0 10px 0', 
+                                fontSize: '14px', 
+                                color: '#ffffff',
                                 lineHeight: '1.6'
                             }}>
                             Hello! I'm going to talk about some actionable steps to build community. I am also opening this up to advice and if I receive anything significant, I will add it to this post.
@@ -134,7 +260,7 @@ export default function BlogScreen() {
                             It is so important to have a community that you can rely on. When I say rely on, I also mean a community that fosters open dialogue, proper sources (scientific, educational,
                             medical, not opinion based). A community that allows questioning and group reliance is the goal for 2025, at least for me. I joined a group that meets weekly to discuss goals
                             and actionable items toward change. Something I want to bring up is a community garden, or even purchasing a cow with some of the people from my group. The further we can stray from
-                            coorporation owned groceries, the more reliable our food source will be, and the quicker coorporations will be forced to apply affordable prices. For now, we are shopping locally
+                            corporation owned groceries, the more reliable our food source will be, and the quicker coorporations will be forced to apply affordable prices. For now, we are shopping locally
                             but more self reliance may also be a good idea. I am also learning how to properly organize. Another way to contribute to community is to protect everyone in the community, whether
                             or not they are someone you like or know. Allowing injustice toward one allows injustice toward all. Becoming creative in your protest, remaining peaceful and also productive, is
                             what creates change. Remind people of their rights. Learn trends and learn how to use them to your advantage, especially financial. Here is where it gets tricky: cult culture.
@@ -147,13 +273,13 @@ export default function BlogScreen() {
                             discord communities, local restaurants that offer community events, government websites. Please contact me on this website if I am missing anything! Some means in which I am
                             preparing for our future world include~~ food supply, defense items, an indoor hydroponic garden, books on edible plants, buying seeds, buying a book of maps, and water filtration straws.
                             This seems dramatic, but I am a lover of history and this only feels appropriate with the uncertainty of the direction of the United States.
-                        </p>
+                            </p>
                             <div style={{ 
                                 fontSize: '12px', 
-                                color: '#FFB6C1',
+                                color: '#0084FF',
                                 fontStyle: 'italic'
                             }}>
-                                Posted on February 24, 2025 • 6 min read ✨
+                                Posted on March 20th, 2025 • 6 min read ✨
                             </div>
                         </div>
 
@@ -161,24 +287,24 @@ export default function BlogScreen() {
 
 
                         <div style={{
-                            background: '#FFF',
+                            background: '#2a2a2a',
                             padding: '20px',
                             borderRadius: '12px',
                             marginBottom: '15px',
-                            boxShadow: '0 4px 8px rgba(255, 182, 193, 0.2)',
-                            border: '1px solid #FFE4E1'
+                            boxShadow: '0 4px 8px rgba(0, 132, 255, 0.1)',
+                            border: '1px solid #3a3a3a'
                         }}>
                             <h3 style={{ 
                                 margin: '0 0 10px 0', 
                                 fontSize: '20px',
-                                color: '#FF69B4'
+                                color: '#0084FF'
                             }}>
                             Relationship Dynamics
                             </h3>
                             <p style={{ 
                                 margin: '0 0 10px 0', 
                                 fontSize: '14px', 
-                                color: '#FF8FAB',
+                                color: '#ffffff',
                                 lineHeight: '1.6'
                             }}>
                             I would like to talk about relationship dynamics in the gen z community. I have been in two long term relationships, and I have had a few short term relationships. I have experienced
@@ -200,35 +326,35 @@ export default function BlogScreen() {
                             outside of limerance, chasing, addiction, toxicity, I have met some of the best people I have ever met. I truly feel a caring, safe love that I've never felt and I'm not sure I could have
                             achieved this without resetting my dopamine receptors, circling back to my personal values, and being open to dating people I wouldn't have dated in the past. Lets all reset our dopamine
                             receptors, evaluate what is a preference and what is a requirement, and let's start humanizing people again!
-                        </p>
+                            </p>
                             <div style={{ 
                                 fontSize: '12px', 
-                                color: '#FFB6C1',
+                                color: '#0084FF',
                                 fontStyle: 'italic'
                             }}>
-                                Posted on February 24, 2025 • 6 min read ✨
+                                Posted on March 3rd, 2025 • 6 min read ✨
                             </div>
                         </div>
                                             
                         <div style={{
-                            background: '#FFF',
+                            background: '#2a2a2a',
                             padding: '20px',
                             borderRadius: '12px',
                             marginBottom: '15px',
-                            boxShadow: '0 4px 8px rgba(255, 182, 193, 0.2)',
-                            border: '1px solid #FFE4E1'
+                            boxShadow: '0 4px 8px rgba(0, 132, 255, 0.1)',
+                            border: '1px solid #3a3a3a'
                         }}>
                             <h3 style={{ 
                                 margin: '0 0 10px 0', 
                                 fontSize: '20px',
-                                color: '#FF69B4'
+                                color: '#0084FF'
                             }}>
                                 Gender Wars
                             </h3>
                             <p style={{ 
                                 margin: '0 0 10px 0', 
                                 fontSize: '14px', 
-                                color: '#FF8FAB',
+                                color: '#ffffff',
                                 lineHeight: '1.6'
                             }}>
                             I just watched the 4 part series adolecense on tiktok. I really want to talk about the radicalization of young men and young women alike. I say young, but it is older people
@@ -258,10 +384,10 @@ export default function BlogScreen() {
                             to dedicate their lives to being mother and family figures, and I want society to have space for them as well. I don't think it needs to be one or the other, and I'm unsure why
                             there can't be room for both. I guess where I'm going with this is that mysogny is a very doubly edged sword. Let me add, I believe many and if not most women also hold mysognistic
                             views which does not help this situation. How do we humanize women? How do we dismantle harmful retoric that inadvertantly hurts both men and women in the long run?
-                        </p>
+                            </p>
                             <div style={{ 
                                 fontSize: '12px', 
-                                color: '#FFB6C1',
+                                color: '#0084FF',
                                 fontStyle: 'italic'
                             }}>
                                 Posted on February 24, 2025 • 6 min read ✨
@@ -457,24 +583,24 @@ export default function BlogScreen() {
                     
                     
                         <div style={{
-                            background: '#FFF',
+                            background: '#2a2a2a',
                             padding: '20px',
                             borderRadius: '12px',
                             marginBottom: '15px',
-                            boxShadow: '0 4px 8px rgba(255, 182, 193, 0.2)',
-                            border: '1px solid #FFE4E1'
+                            boxShadow: '0 4px 8px rgba(0, 132, 255, 0.1)',
+                            border: '1px solid #3a3a3a'
                         }}>
                             <h3 style={{ 
                                 margin: '0 0 10px 0', 
                                 fontSize: '20px',
-                                color: '#FF69B4'
+                                color: '#0084FF'
                             }}>
                                 Trump Inauguration
                             </h3>
                             <p style={{ 
                                 margin: '0 0 10px 0', 
                                 fontSize: '14px', 
-                                color: '#FF8FAB',
+                                color: '#ffffff',
                                 lineHeight: '1.6'
                             }}>
                             It's an odd time to be alive in America. Some of my side passions include diving deep into history and politics. Today, the day after Trump's inauguration, I find myself overwhelmed, helpless, and fearful that history might repeat itself once again. From my perspective, this presidencial election reflects some of the darkest corners of our history and culture. What do all terrifying genocides and extremist movements have in common? Fearmongering. Demonizing a group of people inevitably raises tensions.
@@ -489,7 +615,7 @@ export default function BlogScreen() {
                             </p>
                             <div style={{ 
                                 fontSize: '12px', 
-                                color: '#FFB6C1',
+                                color: '#0084FF',
                                 fontStyle: 'italic'
                             }}>
                                 Posted on January 21, 2025 • 5 min read ✨
