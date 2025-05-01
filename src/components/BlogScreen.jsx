@@ -144,7 +144,7 @@ export default function BlogScreen() {
                             One of my daily goals this year has been simple: live more. And I've been doing just that. I've joined sports leagues, political groups, and started 
                             dancing salsa, bachata, norteñas, cumbia. I've launched websites, explored new hobbies, and made it a priority to have fun again. The friendships 
                             I've formed lately feel so genuine and fulfilling. For the first time in a long time, I feel truly connected.
-                            Romantically, I've started attracting people who are kind, intelligent, emotionally available, and fun—men who mirror the energy I've been working 
+                            Romantically, I've started attracting people who are kind, intelligent, emotionally available, and fun! Men who mirror the energy I've been working 
                             to cultivate in myself. That said, I'm still navigating my avoidant attachment style and learning to improve how I communicate. Texting and social 
                             media aren't always my strong suits, but in-person, I've felt real, grounded connections.
                             Physically, I feel more at peace in my body. My skin is glowing again, my health is stable, and I've stopped obsessing over every detail of how I 
@@ -197,18 +197,18 @@ export default function BlogScreen() {
                             And when I finally left, my ex put real effort into humiliating me online and finding ways to hurt me from a distance. By this point, I had turned 
                             into someone evil, unrecognizable, and terrible.Right before we split, 
                             we were robbed at gunpoint. At the same time, my family life was in chaos. One relative was in and out of psychiatric care. Another was in jail. 
-                            I was trying to keep their world from falling apart—driving their kids around, attending attorney meetings, patching up marriages. 
+                            I was trying to keep their world from falling apart. Driving their kids around, attending attorney meetings, patching up marriages. 
                             I was emotionally maxed out, but I buried it all just to survive.
                             Isolation hit hard. I lost friendships. I lost energy. I lost myself.
                             That's when my body started tapping out. I developed full-blown autoimmune symptoms. I couldn't get out of bed without feeling like 
                             I'd run a marathon. I broke out in hives. My joints were so swollen I could barely move. I was barely eating, but sure was gaining weight. I 
-                            began failing my classes for the first time in my life. I wasn't depressed in the traditional sense—I was depleted. My body was screaming
+                            began failing my classes for the first time in my life. I wasn't depressed in the traditional sense. I was depleted. My body was screaming
                              what I refused to say out loud: I couldn't keep going like this. I physically could not get out of bed...
                             Stress broke me. Literally. And I'll never downplay its power again. It can destroy your health, your mind, and your spirit.
                             But here's the beautiful part! I rebuilt. Slowly. Painfully. And completely.
                             I learned that I had no boundaries, and I paid the price for it. I learned that being a people-pleaser doesn't make you kind, it
                              makes you easy to exploit. I had been ignoring my own needs to chase success, to meet impossible standards, to prove my worth. That 
-                             life broke me open—and it made room for something better.
+                             life broke me open and it made room for something better.
                             Today, I'm a different person.
                             I eat for nourishment, not aesthetics. I prioritize sun, movement, and rest. I no longer attract people who prey on low self-esteem, 
                             because I'm not that person anymore. The men and friends who are attracted to me are kind and good. Even better~~ I am finally turned OFF by terrible 
@@ -357,7 +357,7 @@ export default function BlogScreen() {
                                 color: '#ffffff',
                                 lineHeight: '1.6'
                             }}>
-                            I just watched the 4 part series adolecense on tiktok. I really want to talk about the radicalization of young men and young women alike. I say young, but it is older people
+                            I just watched the 4 part series adolecense on netflix. I really want to talk about the radicalization of young men and young women alike. I say young, but it is older people
                             who are pioneering this behavior as well. I loved this mini series because it did not pin the blame on one singular aspect of society, but it shed light on how we collectively
                             play a role in raising our youth and shaping the future of society. Some areas in which the this series shed light in my opinion: School teachers seemed over extended and
                             desensitized to the radical behavior of their students. The father seemed to struggle with emotional regulation and the mother seemed to stuggle with asserting herself and soothing
