@@ -105,6 +105,170 @@ export default function BlogScreen() {
                                 ✨ My Blog ✨
                             </h2>
                         </div>
+
+
+
+                        <div style={{
+                            background: '#FFF',
+                            padding: '20px',
+                            borderRadius: '12px',
+                            marginBottom: '15px',
+                            boxShadow: '0 4px 8px rgba(255, 182, 193, 0.2)',
+                            border: '1px solid #FFE4E1'
+                        }}>
+                            <h3 style={{ 
+                                margin: '0 0 10px 0', 
+                                fontSize: '20px',
+                                color: '#FF69B4'
+                            }}>
+                            Relationship Dynamics
+                            </h3>
+                            <p style={{ 
+                                margin: '0 0 10px 0', 
+                                fontSize: '14px', 
+                                color: '#FF8FAB',
+                                lineHeight: '1.6'
+                            }}>
+                            Hello! I'm going to talk about some actionable steps to build community. I am also opening this up to advice and if I receive anything significant, I will add it to this post.
+                            If you have any comments, please leave them in my contact form. There is no better time to acquire the skill of discernment and discretion, especially when it comes to media.
+                            It is so important to have a community that you can rely on. When I say rely on, I also mean a community that fosters open dialogue, proper sources (scientific, educational,
+                            medical, not opinion based). A community that allows questioning and group reliance is the goal for 2025, at least for me. I joined a group that meets weekly to discuss goals
+                            and actionable items toward change. Something I want to bring up is a community garden, or even purchasing a cow with some of the people from my group. The further we can stray from
+                            coorporation owned groceries, the more reliable our food source will be, and the quicker coorporations will be forced to apply affordable prices. For now, we are shopping locally
+                            but more self reliance may also be a good idea. I am also learning how to properly organize. Another way to contribute to community is to protect everyone in the community, whether
+                            or not they are someone you like or know. Allowing injustice toward one allows injustice toward all. Becoming creative in your protest, remaining peaceful and also productive, is
+                            what creates change. Remind people of their rights. Learn trends and learn how to use them to your advantage, especially financial. Here is where it gets tricky: cult culture.
+                            Having a diverse media diet and potentially multiple communities with different values will help deter cult culture. If you are caught in an echo chamber, it is challenging to
+                            avoid radicalization and further understanding of the world. It is important to understand multiple perspectives to an argument or viewpoint in order to decipher which side is backed
+                            by logic and evidence, or at least which viewpoint makes more sense as a whole. Would I listen to a tattoo artist about the economy? Probably not. Finding a variety of economists to
+                            follow, variety in news sources, variety in social workers, and variety in artists is the best way to appreciate the full picture. Community wise, I found a group of women in Colorado
+                            who are focused on actionable items and concise messaging and directions toward news sources. We are organized, we participate in touchy conversations, and we are focused on continuously
+                            learning and digesting patterns. Some places where I recommend looking for community meetups are: facebook groups, meetup.com, eventbrite, local newspapers, tiktok and other social media,
+                            discord communities, local restaurants that offer community events, government websites. Please contact me on this website if I am missing anything! Some means in which I am
+                            preparing for our future world include~~ food supply, defense items, an indoor hydroponic garden, books on edible plants, buying seeds, buying a book of maps, and water filtration straws.
+                            This seems dramatic, but I am a lover of history and this only feels appropriate with the uncertainty of the direction of the United States.
+                        </p>
+                            <div style={{ 
+                                fontSize: '12px', 
+                                color: '#FFB6C1',
+                                fontStyle: 'italic'
+                            }}>
+                                Posted on February 24, 2025 • 6 min read ✨
+                            </div>
+                        </div>
+
+
+
+
+                        <div style={{
+                            background: '#FFF',
+                            padding: '20px',
+                            borderRadius: '12px',
+                            marginBottom: '15px',
+                            boxShadow: '0 4px 8px rgba(255, 182, 193, 0.2)',
+                            border: '1px solid #FFE4E1'
+                        }}>
+                            <h3 style={{ 
+                                margin: '0 0 10px 0', 
+                                fontSize: '20px',
+                                color: '#FF69B4'
+                            }}>
+                            Relationship Dynamics
+                            </h3>
+                            <p style={{ 
+                                margin: '0 0 10px 0', 
+                                fontSize: '14px', 
+                                color: '#FF8FAB',
+                                lineHeight: '1.6'
+                            }}>
+                            I would like to talk about relationship dynamics in the gen z community. I have been in two long term relationships, and I have had a few short term relationships. I have experienced
+                            unrequited love, and I have experienced love, and I've been on the receiving end of unreciprocated love. I am going to be speaking from my own flaws and the flaws I've noticed in others. I don't want to be a broken record, but social media is the issue.
+                            I'm not sure if it is the issue in friendships, but definitely in relationships. I think that our grandparents had 'access' aka came across very attractive people, maybe a handful of
+                            times in their life. They were usually secluded to their local communities, and didn't have as much access to travel. How many beautiful people do we see daily on social media? Hundreds,
+                            if not thousands. We have a creepy amount of access to beautiful people for the first time in history. My dating profiles within days have thousands of potential matches. This is not
+                            healthy. The constant swiping and swapping dehumanizes us to the fact that every person is unique, and chemistry can be challenging to find. Once you lose someone, you will never find
+                            them in someone else, and you may never find it in the same person either as people are also constantly evolving. We are so accustomed to 9 second dopamine hit videos that we have lost
+                            the ability to connect with people. We are dopamine overloaded, so guaranteed mundane tasks are less appealing. I had a short addiction with video games, where they were all I would
+                            think about. I would play for 14 hours a day into 4 AM. I had no interest in socializing, doing laundry, or really anything. I notice this in a lot of my peers. Not only are our dopamine
+                            receptors fried, but when we spend so much time missing life and community, we become awkward and anxious. I say we, but this is what happened to me and I've seen it with a few friends
+                            as well. This is the first generation to face this battle. Previous generations were thrust into social spaces becuase there was nothing else to do. Now, to achieve the true human
+                            experience, we have to intentionally seek out community and carve out the outside noise. '80/20' incel culture terms are an oversimplification of relationship dynamics, but I believe
+                            this term has a bit of truth to it. Men and women alike are so used to having a false sense of options, and a false sense of abundance of beautiful people, they often look for the full
+                            100% connection. This is extremely unrealistic. When I was younger, I dated someone who I found very attractive and we had a good connection, but they did not respect me or my boundaries.
+                            At that point in my life I valued physical attraction, fun, intensity. At this point in my life, I value someone with similar
+                            morals, respect, a personal connection, and overall a feeling of safety. Obviously I still would date someone I'm attracted to, but taking a step back and allowing connections to grow
+                            outside of limerance, chasing, addiction, toxicity, I have met some of the best people I have ever met. I truly feel a caring, safe love that I've never felt and I'm not sure I could have
+                            achieved this without resetting my dopamine receptors, circling back to my personal values, and being open to dating people I wouldn't have dated in the past. Lets all reset our dopamine
+                            receptors, evaluate what is a preference and what is a requirement, and let's start humanizing people again!
+                        </p>
+                            <div style={{ 
+                                fontSize: '12px', 
+                                color: '#FFB6C1',
+                                fontStyle: 'italic'
+                            }}>
+                                Posted on February 24, 2025 • 6 min read ✨
+                            </div>
+                        </div>
+                                            
+                        <div style={{
+                            background: '#FFF',
+                            padding: '20px',
+                            borderRadius: '12px',
+                            marginBottom: '15px',
+                            boxShadow: '0 4px 8px rgba(255, 182, 193, 0.2)',
+                            border: '1px solid #FFE4E1'
+                        }}>
+                            <h3 style={{ 
+                                margin: '0 0 10px 0', 
+                                fontSize: '20px',
+                                color: '#FF69B4'
+                            }}>
+                                Gender Wars
+                            </h3>
+                            <p style={{ 
+                                margin: '0 0 10px 0', 
+                                fontSize: '14px', 
+                                color: '#FF8FAB',
+                                lineHeight: '1.6'
+                            }}>
+                            I just watched the 4 part series adolecense on tiktok. I really want to talk about the radicalization of young men and young women alike. I say young, but it is older people
+                            who are pioneering this behavior as well. I loved this mini series because it did not pin the blame on one singular aspect of society, but it shed light on how we collectively
+                            play a role in raising our youth and shaping the future of society. Some areas in which the this series shed light in my opinion: School teachers seemed over extended and
+                            desensitized to the radical behavior of their students. The father seemed to struggle with emotional regulation and the mother seemed to stuggle with asserting herself and soothing
+                            her husband's outbursts. I will say, the outbursts were subtle but this was purposeful. This was meant to represent a normal family. Social media wise, the child was dabbling
+                            in explicit and harmful content that is not meant to be seen by children- or even adults in my opinion. There was also an aspect of dogpiling by peers and social media on the protagonist.
+                            There was a slight mention of 80/20, a famous incel sentiment that 80% of women want 20% of men. This is pushed by 'red-pillers' like Jordan Peterson, Andrew Tate, and others.
+                            We are in an odd time in history because women have always been subjugated to men throughout history. This is the first time in history that women are allowed their own means to
+                            survive. This creates a different relationship dynamic between men and women. Where before we needed a provider (due to our lack of rights to work, own land, own credit cards, etc),
+                            now as women we require something a lot different. I can only speak for myself, but I require an equal companion. I think the biggest requirements for a relationship for me, a
+                            'zillenial', are emotional intelligence, good communication, and equal respect. I truly think that men and young men were never taught these three skills because mysogny and
+                            patriarchal views are so engrained in our world. I think I offer a unique perspective given my hobbies and life path. I grew up playing golf, a notoriously male dominated sport.
+                            I received many low EQ comments from a lot of men, such as "You shot a 78? You mean on 9 holes?" or "You should be playing from the front tee, you're a girl", or unsolicited advice
+                            from golfers that are very obviously less experienced than me in the sport. I also joined a computer science program. I had been coding a few years prior so I had a bit of background
+                            knowledge. I will name a few examples out of the many: I had a classmate ask me if I had an onlyfans, aka an explicit video sharing platform. I did not know this person. I had
+                            someone say "no offense, but I wouldn't trust you to help with this project" on the first day of class. Him and his group of friends ended up requiring my helo for every assignment
+                            throughout that semester. I had a teacher who was very condescending and rude only to the women. I fear that these are a few examples that may demonstrate the larger picture,
+                            hopefully. Being looked down upon because of my gender is something I have experienced throughout my life, and I'm not sure how to tackle that head on. How does the programming of
+                            a woman being lesser than begin? I think it's important to be open to discussing the differences between men and women, but there are way too many misconceptions about what a
+                            woman can and cannot do in comparison to men. Behind a lot, if not most famous inventors and pioneers throughout history, there was a woman behind them doing a majority of the
+                            intellectual work. Dolores Huerta, Doctor Rosoland Franklin, Gabrielle Collette, and many more women throughout history were not given the credit for their discoveries or inventions,
+                            but instead their work was stolen or taken credit by their husbands. The Matilda effect is the term you should search if you would like to learn more about the forgotten women
+                            throughout history. This is where I am conflicted on how to move forward as a society. There is a growing sect of society who would like to make education less accessible to women
+                            and see women as mothers only. This is very limiting, and personally makes me feel a bit claustrophobic just thinking about it. At the same time, there are many women who do want
+                            to dedicate their lives to being mother and family figures, and I want society to have space for them as well. I don't think it needs to be one or the other, and I'm unsure why
+                            there can't be room for both. I guess where I'm going with this is that mysogny is a very doubly edged sword. Let me add, I believe many and if not most women also hold mysognistic
+                            views which does not help this situation. How do we humanize women? How do we dismantle harmful retoric that inadvertantly hurts both men and women in the long run?
+                        </p>
+                            <div style={{ 
+                                fontSize: '12px', 
+                                color: '#FFB6C1',
+                                fontStyle: 'italic'
+                            }}>
+                                Posted on February 24, 2025 • 6 min read ✨
+                            </div>
+                        </div>
+
+
                         {/* Blog Posts */}
                         <div style={{
                             background: '#2a2a2a',
@@ -291,7 +455,7 @@ export default function BlogScreen() {
                             </div>
                         </div>
                     
-                        {/* Temporarily Hidden Trump Inauguration Blog Post 
+                    
                         <div style={{
                             background: '#FFF',
                             padding: '20px',
@@ -331,7 +495,6 @@ export default function BlogScreen() {
                                 Posted on January 21, 2025 • 5 min read ✨
                             </div>
                         </div>
-                        */}
 
                         {/* Making this website Blog Post */}
                         <div style={{
