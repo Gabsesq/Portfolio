@@ -107,6 +107,117 @@ export default function BlogScreen() {
                         </div>
 
 
+
+
+                        <div style={{
+                            background: '#2a2a2a',
+                            padding: '20px',
+                            borderRadius: '12px',
+                            marginBottom: '15px',
+                            boxShadow: '0 4px 8px rgba(0, 132, 255, 0.1)',
+                            border: '1px solid #3a3a3a'
+                        }}>
+                            <h3 style={{ 
+                                margin: '0 0 10px 0', 
+                                fontSize: '20px',
+                                color: '#0084FF'
+                            }}>
+                            Piece and Peace
+                            </h3>
+                            <p style={{ 
+                                margin: '0 0 10px 0', 
+                                fontSize: '14px', 
+                                color: '#ffffff',
+                                lineHeight: '1.6'
+                            }}>
+                            Always been a lover girl, since I was 13 sifting through Omegle, a loveless land! I loved my first kiss, my first best friend, my first, second, third boyfriends and countless besties. I would 
+                            package my own puzzle pieces into a glass box and give it to anyone who would take the free gift. Some of these people gently handled the glass puzzle box, some cared for the glass right before 
+                            they discarded the complex parts of the puzzle, and some scattered the puzzle pieces in the garbage and asked me to step in the glass. I have remanufactured the box into different materials with 
+                            puzzle pieces of the 
+                            people that I love, loved, and lost. Every person on this planet I have ever met has some 
+                            intricate piece that I have never seen before. It may not have fit into my puzzle, and I tried to force it to, but misfit pieces just don't make sense to add. But I gathered the pieces 
+                            people left behind, some good, some bad, many medium, and I added them to my puzzle box. S taught me to harness more empathy, J taught me how far a wholesome laugh can reign a room, L taught me how 
+                            to detach when necessary, M taught me how to live in my truth, C taught me how to be a better friend, S taught me how to handle the weight of the world with grace, another S taught 
+                            me how to be more curious and interesting, N taught me how to live my life every day, J taught me how to make laughter out of thin air, A taught me how to carry light-hearted energy, L taught 
+                            me how to be authentic, K taught me how to truly practice self-care, G taught me how to stand up for myself, P taught me how to be a good listener, M taught me not to care about dumb Sh, 
+                            E taught me how to be selfless, M taught me to light up a room, G taught me how to let go, G taught me to work hard, C taught me how to be a good family member, G taught me how to get 
+                            over it, B taught me how to get excited over little things, K taught me how to chill out, J taught me how to aura farm lol, T taught me patience, C taught me that not everyone has good intentions, 
+                            A taught me how feel pain from laughing so much, B taught me to walk away from a situation, K taught me true friendship, Z taught me how to light up a room, Some lady at the bar taught me 
+                            how to love a stranger, I could 
+                            go on forever. Half of these people are still in my life. The other half live in my memory.
+                            Many taught me how to walk away when the time came, a skill I didn't acquire until the world demanded it. Every person I have ever loved, I will always love, because 
+                            they all had characteristics that I loved in some form, and I carry those traits with me in my cardboard beat up puzzle box. I am the custom puzzle woven with my admiration 
+                            for others, and anyone who has been immersed in my life is a part of my f'ed up little puzzle </p>
+                            <div style={{ 
+                                fontSize: '12px', 
+                                color: '#0084FF',
+                                fontStyle: 'italic'
+                            }}>
+                                Posted on June 5th, 2025 • 3 min read ✨
+                            </div>
+                        </div>
+
+
+
+
+
+                        <div style={{
+                            background: '#2a2a2a',
+                            padding: '20px',
+                            borderRadius: '12px',
+                            marginBottom: '15px',
+                            boxShadow: '0 4px 8px rgba(0, 132, 255, 0.1)',
+                            border: '1px solid #3a3a3a'
+                        }}>
+                            <h3 style={{ 
+                                margin: '0 0 10px 0', 
+                                fontSize: '20px',
+                                color: '#0084FF'
+                            }}>
+                            Ego and passion
+                            </h3>
+                            <p style={{ 
+                                margin: '0 0 10px 0', 
+                                fontSize: '14px', 
+                                color: '#ffffff',
+                                lineHeight: '1.6'
+                            }}>
+                            Social media drives ego and drains passion. When I was younger, ego was the driving factor behind all of my decisions. Why is ego dangerous and how is it correlated with motivation?
+                            The capitalistic cog devoured my brain from a young age. When I was 12, I bought an ipad. Unrestricted internet access at the age of 12 stunted my creativity and instead fed visions 
+                            of what a "proper" life looked like. Any money I made went into clothes, accessories, meaningless plastic, all to uphold a persona that did not reflect my true desires, but my 
+                            timeline manufactured opinions. Any burnout I experienced was rooted in being led by ego. How can you decipher between ego and passion? Are external forces, opinions, and pressures 
+                            the force behind your actions and life style? Or are you inspired to make a difference? Are you focused on the goal, or on the actual daily actionable items? Are you driven by the grade 
+                            you receive in the class, or by the learnings and how they fuel your personal growth? Unfortunately, for a long time, I was driven by the end goal, the ego. ~Unfortunately~ for me, I 
+                            grew up in straight up survival mode. With the fight or flight of a caveman evading a pack of wolves and a lion, I found so much success. The constant anxiety drove me to become a 
+                            grade A student, college athlete, materialistic, picture posting, 6 pack having image of perfection. I say this as someone who has lived through a crippling 'flop era' that was tied to 
+                            my ego. My body had anxiet-ied so hard that I accidentally achieved my perceived goals. Once I lost everything in my flop era, I was left with a choice. I could go back to waking up into an 
+                            anxiety attack every day over whether or not I would "make it", OR I could say... I'm working with a clean slate. I have nothing to lose. No image to uphold. No people to please. My 
+                            country has been on the decline into fascism. The job market is... my peers know. Food prices are inflated. Housing is a nightmare. I have the privilege of having a family that backs 
+                            me no matter what path I choose. I think that a lot of the ego driving my generation is a result of the fall of capitalism, and how we have to romanticize owning once borderline guaranteed assets. 
+                            Starting from a point of passion, I am extremely inclined to start my own business. I have been working on making some designs. I have been learning about marketing, looking into CAD 
+                            artists, manufacturing costs, and I feel like the best thing I can do is just jump in. I have made some 3d printed prototypes of my designs, and I think I can mainstream a major field 
+                            if I can market it correctly. This is something that, when I was driven by ego, I would have been too scared to fail. I would have went back to school to be a lawyer, or tried to 
+                            advance in the tech field. But I am still at the point that I have nothing to lose, and it is so empowering! I am Black Mirror episode Nosedive, end credits, and I cannot explain how 
+                            exhilarating it feels to not give a! My life, my actions, my weekends and weeknights feel like belting "I have nothing" by Whitney Houston and the girls that get it get it! 
+                            I've formed deeper relationships and attracted amazing people. I wake up with purpose fueled by this end goal without the pressure of family members, 
+                            profits, etc. I will say, I do think my generation dreams of starting businesses because it seems to be the only way to break through the societal monetary hierarchy. When these businesses are 
+                            driven by profit margins, by ego, I truly think higher powers will eventually intervene. My main focus, what I have always wanted deep down, is to improve lives and I'm so excited to 
+                            share my ideas in the future and hopefully make a life changing pivot. The beautiful part about letting go of ego is that if I fail, I have so many ideas that I will keep trying. 
+                            I'm officially retired from societal expectations, and ~10/10~ every hardship and trial has only turned me into the more elevated version of the person I have etched myself to be.
+                            </p>
+                            <div style={{ 
+                                fontSize: '12px', 
+                                color: '#0084FF',
+                                fontStyle: 'italic'
+                            }}>
+                                Posted on May 20th, 2025 • 3 min read ✨
+                            </div>
+                        </div>
+
+
+
+
+
                         <div style={{
                             background: '#2a2a2a',
                             padding: '20px',
