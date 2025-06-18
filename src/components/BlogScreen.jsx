@@ -122,6 +122,73 @@ export default function BlogScreen() {
                                 fontSize: '20px',
                                 color: '#0084FF'
                             }}>
+                            The Shoe Might Still and Sorta Used to Fit
+                            </h3>
+                            <p style={{ 
+                                margin: '0 0 10px 0', 
+                                fontSize: '14px', 
+                                color: '#ffffff',
+                                lineHeight: '1.6'
+                            }}>
+                            This is going to be a seriously unserious blog post about a reality TV gal that seriously stirs emotions inside me. I am going to be talking about 
+                            Huda from love island! Love island is one of my faves. Lets talk about it. I am going to admit, this is so bad, but I haven't even watched this season 
+                            yet, and still the Huda clips I am seeing circling on social media are so impactful to me and I'm going to unpack this. I see a younger version of 
+                            myself in Huda. I know the world is so upset with her, and I personally feel the second hand embarrassment of her actions, because her actions are so 
+                            closely aligned with Gabby 1.0 (I'm in my Gabby 2.0 era). Huda lacks emotional regulation skills, Huda is the ultimate anxiously attached lover girl, 
+                            she has a huge mouth on her. I feel like I'm watching my 21 year old Gabby 1.0 in horror every time I see a Huda clip. It actually triggers me and makes 
+                            me cringe. And yet I understand her SO MUCH. Her inability to self reflect makes me love her and hate her. Her inability to read the room and to make others 
+                            around her feel comfortable makes me sad for her. Her gullibility makes me yell at tiktok, a cluster of fricken pixels. I think a lot of us see true, raw, primal human flaws 
+                            in Huda that we have in ourselves, and it makes this show so hard to watch. What I love about reality TV is that you put people in a regulated situation, 
+                            turn up the heat, and watch them express the most extreme versions of themselves. This is sooooo embarrassing, and I definitely should keep this to myself, 
+                            but reality TV has taught me so much about societal norms and how carrying yourself effects others. I grew up in an odd household, something I will probably 
+                            never get into, but lets just say my growth was extremely stunted. From social skills to emotional regulation, I was a mess. Watching others get flamed for 
+                            behaviors I would exhibit actually helped me understand how my interactions with others may have been either harmful, and why. Some behaviors I thought were normal, 
+                            absolutely were NOT, and hearing groups collectively analyze and talk shit helped me get down to the WHY.
+                            I've had the great honor and privilege (also pain and shame) of having certain people in my life express certain toxic behaviors that I had. At the ripe age 
+                            of 25, it's been about 3 years since I've received a real brutal criticism sesh. My poor friends hear me beg for a yelp review on my personality, which is 
+                            probably so annoying in itself but they give me the validation I need. I used to struggle so much with 
+                            introspection that I had to BEG my friends to tell me I'm not an alien. And since no one will give me a true critique, I watch reality TV and try to align 
+                            myself with everyone I see on TV. This is actually slightly embarrassing to admit lol but here we are, and why not! Huda, I'm so sorry to bring you into my 
+                            mess, but just know I see you, I hear you, I wish the world wasn't so hard on you, and the harsh reality critiques really hurt me when I did receive them, and 
+                            I just hope they don't hurt you the way they hurt me. I truly cannot imagine the mass hatred she is going to feel when she checks her phone for the first time. 
+                            I had very close friends, at a time that I thought we were on amazing terms, every day I was thinking about how grateful I was to have them, hit me with a list of 
+                            things they didn't like about me. BRUTAL. I am not someone that really struggles with depression, but I was the most hated in the villa, borderline voted off the island!
+                            But it truly was a gift that changed my life. My therapist doesn't really agree and thought it was harsh (some of the critiques were straight up 
+                            nitpicks, you know the stage in a relationship where you just start hating the way someone breathes?) But there were definitely some pieces of gold in there! 
+                            I always tell my family that I have the gift of being a mirror for others, and I also have the curse of 
+                            seeing a blurry reflection of myself. How have I moved past this? I've been 1,000% honest with my therapist. I go over almost every situation that I am a little 
+                            bit anxious about, was I too mean? Was I too nice? Does this come across as aggressive? And he helps me break down perception from reality, basic DBT, a skill 
+                            most people learn through their childhood. I feel like I'm breaching Gabby 3.0 territory, but I still lack a little, so until I 
+                            can get past some of my bugs, no new patches. Anyways, to wrap this up, don't be too hard on yourself. And if you need an ear, if you need the honest truth from my 
+                            perspective in a ~hopefully~ painless way, I am here for you & my contact box is open. Huda, please message me :,(
+                             </p>
+                            <div style={{ 
+                                fontSize: '12px', 
+                                color: '#0084FF',
+                                fontStyle: 'italic'
+                            }}>
+                                Posted on June 17, 2025 • 3 min read ✨
+                            </div>
+                        </div>
+
+
+
+
+
+
+                        <div style={{
+                            background: '#2a2a2a',
+                            padding: '20px',
+                            borderRadius: '12px',
+                            marginBottom: '15px',
+                            boxShadow: '0 4px 8px rgba(0, 132, 255, 0.1)',
+                            border: '1px solid #3a3a3a'
+                        }}>
+                            <h3 style={{ 
+                                margin: '0 0 10px 0', 
+                                fontSize: '20px',
+                                color: '#0084FF'
+                            }}>
                             Piece and Peace
                             </h3>
                             <p style={{ 
@@ -153,7 +220,7 @@ export default function BlogScreen() {
                                 color: '#0084FF',
                                 fontStyle: 'italic'
                             }}>
-                                Posted on June 5th, 2025 • 3 min read ✨
+                                Posted on June 5th, 2025 • 2 in read ✨
                             </div>
                         </div>
 
