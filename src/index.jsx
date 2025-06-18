@@ -9,6 +9,7 @@ import { useEffect, useState, Suspense } from "react";
 import gsap from "gsap";
 import { useProgress } from "@react-three/drei";
 import LoadingScreen from "./components/LoadingScreen";
+import { Analytics } from '@vercel/analytics/react';
 
 
 export default function CameraAnimation({ activeView }) {
@@ -113,11 +114,7 @@ function App() {
 
     useEffect(() => {
         if (progress === 100) {
-            // Add a small delay before hiding loading screen
-            const timeout = setTimeout(() => {
-                setIsLoading(false);
-            }, 500);
-            return () => clearTimeout(timeout);
+            setTimeout(() => setIsLoading(false), 1000);
         }
     }, [progress]);
 
@@ -189,6 +186,8 @@ function App() {
                     />
                 </Suspense>
             </Canvas>
+            
+            <Analytics />
         </>
     );
 }
