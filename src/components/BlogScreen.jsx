@@ -109,6 +109,76 @@ export default function BlogScreen() {
 
 
 
+
+
+                        <div style={{
+                            background: '#2a2a2a',
+                            padding: '20px',
+                            borderRadius: '12px',
+                            marginBottom: '15px',
+                            boxShadow: '0 4px 8px rgba(0, 132, 255, 0.1)',
+                            border: '1px solid #3a3a3a'
+                        }}>
+                            <h3 style={{ 
+                                margin: '0 0 10px 0', 
+                                fontSize: '20px',
+                                color: '#0084FF'
+                            }}>
+                            I don't yell, I sprint
+                            </h3>
+                            <p style={{ 
+                                margin: '0 0 10px 0', 
+                                fontSize: '14px', 
+                                color: '#ffffff',
+                                lineHeight: '1.6'
+                            }}>
+                            Let's talk generational trauma. I'm going on strong of about 10 years of therapy, thank the LORD. Silence in my household growing up was not a good thing, but neither 
+                            was noise. I grew up in a household where hypervigilance was the norm, probably similar to a lot of people around me. I'm not hear to talk about my family, or my 
+                            upbringing, but I'm here to talk about the person it turned me into and how it stunted me in some areas and built me in others. I grew up in a "find the scariest 
+                            girl in the room and punch her like this, here, let me show you" household, and it took me a little bit too long to realize the absurdity of such a mindset. Coming 
+                            from generational widespread distrust bred a level of anxiety and mistrust of others that took way too long to deconstruct. The hard part about fighting your norm, 
+                            your environmental upbringing, is learning that there are other ways to exist than the only reality you've ever known. Once you pinpoint the toxic behaviors, then what? 
+                            Well, in my case, I swung to the opposing team. My aggression was on full display for a very long time, and at this point in time, I display a lot of overly tolerant, 
+                            overly 'kind' behaviors. When people say "I don't trust them, they're too nice" I fear they're speaking about people like me. Someone who saw how mentally destructive 
+                            anger was to the people around them, that they struggle to display anger, or even the slightest dissatisfaction. This has manifested in me struggling to stand up for 
+                            myself. Keep in mind, instead of saying something like "Please don't do x, I don't appreciate it because x", I was taught "wrap their hair around your hand and swing 
+                            as hard as you can". Did this make me resilient? In a way, yeah. Did this make me likable? Not at all! It's funny because it's contradictory. To survive, we have 
+                            needed groups throughout history. 'It takes a village' is not just a cute little quote, it's survival. This is where I admit, I still struggle. Hyper-independence, 
+                            scarcity mindset, over explaining, fear of anger in myself and others, guilt over boundaries, a series of behaviors that are self harming on both sides of the spectrum. 
+                            I avoid intimacy due to not being 'perfect', loud emotions feel like an attack, it is all so overwhelming sometimes, especially around people who have 'power' over me. 
+                            I grew up in a space where second place was not an option. I grew up in a space where the garage door opened and I already felt a sense of guilt for something I probably 
+                            didn't do but would still absorb the blame. I grew up in a space where there was no such thing as a neutral emotion. Neutrality in my day to day life carries an air of 
+                            shame and guilt. If it's not positive, it must be negative! Right?! 
+                            </p>
+
+                            <p style={{ 
+                                margin: '0 0 10px 0', 
+                                fontSize: '14px', 
+                                color: '#ffffff',
+                                lineHeight: '1.6'
+                            }}>
+                            How does this manifest in my relationships: It manifests as hyper-sensitivity to how the other person is feeling. Did I do something wrong? Do you still like me? It also 
+                            manifests as a lack of perception, gullibility, and second guessing myself. Ohhhhh you tried to kiss my best friend and I'm insecure? That makes sense! How does it 
+                            manifest in the workforce? A heavy sense of being inadequate. Not productive enough. Self-sacrificing. Scared of my own bosses, who very much care about if I am overworked, 
+                            overwhelmed, or overstressed. The tricky part about healing from one extreme is that you often visit the other extreme, and I'm still wondering if it's possible to find 
+                            the middle. I'm so grateful to have left the environment that kept me in the strict unspoken rules, and to be in places where it's possible to exhibit some of my own 
+                            style. Setting boundaries becomes necessary once you reach an extreme. 
+                             </p>
+                            <div style={{ 
+                                fontSize: '12px', 
+                                color: '#0084FF',
+                                fontStyle: 'italic'
+                            }}>
+                                Posted on June 17, 2025 • 3 min read ✨
+                            </div>
+                        </div>
+
+
+
+
+
+
+
                         <div style={{
                             background: '#2a2a2a',
                             padding: '20px',
@@ -130,7 +200,7 @@ export default function BlogScreen() {
                                 color: '#ffffff',
                                 lineHeight: '1.6'
                             }}>
-                            This is going to be a seriously unserious blog post about a reality TV gal that seriously stirs emotions inside me. I am going to be talking about 
+                                                      This is going to be a seriously unserious blog post about a reality TV gal that seriously stirs emotions inside me. I am going to be talking about 
                             Huda from love island! Love island is one of my faves. Lets talk about it. I am going to admit, this is so bad, but I haven't even watched this season 
                             yet, and still the Huda clips I am seeing circling on social media are so impactful to me and I'm going to unpack this. I see a younger version of 
                             myself in Huda. I know the world is so upset with her, and I personally feel the second hand embarrassment of her actions, because her actions are so 
@@ -144,14 +214,15 @@ export default function BlogScreen() {
                             never get into, but lets just say my growth was extremely stunted. From social skills to emotional regulation, I was a mess. Watching others get flamed for 
                             behaviors I would exhibit actually helped me understand how my interactions with others may have been either harmful, and why. Some behaviors I thought were normal, 
                             absolutely were NOT, and hearing groups collectively analyze and talk shit helped me get down to the WHY.
-                            I've had the great honor and privilege (also pain and shame) of having certain people in my life express certain toxic behaviors that I had. At the ripe age 
-                            of 25, it's been about 3 years since I've received a real brutal criticism sesh. My poor friends hear me beg for a yelp review on my personality, which is 
+                            I've had the great honor and privilege (also pain and shame) of having certain people in my life express certain toxic behaviors that I had. It's been about 3 years since 
+                            I've received a real brutal criticism sesh. My poor friends hear me beg for a yelp review on my personality, which is 
                             probably so annoying in itself but they give me the validation I need. I used to struggle so much with 
                             introspection that I had to BEG my friends to tell me I'm not an alien. And since no one will give me a true critique, I watch reality TV and try to align 
                             myself with everyone I see on TV. This is actually slightly embarrassing to admit lol but here we are, and why not! Huda, I'm so sorry to bring you into my 
                             mess, but just know I see you, I hear you, I wish the world wasn't so hard on you, and the harsh reality critiques really hurt me when I did receive them, and 
                             I just hope they don't hurt you the way they hurt me. I truly cannot imagine the mass hatred she is going to feel when she checks her phone for the first time. 
-                            I had very close friends, at a time that I thought we were on amazing terms, every day I was thinking about how grateful I was to have them, hit me with a list of 
+                            I had very close friends, at a time that I thought we were on amazing terms, every day I was thinking about how grateful I was to have them during one of the most 
+                            tender times of my life, hit me with a list of 
                             things they didn't like about me. BRUTAL. I am not someone that really struggles with depression, but I was the most hated in the villa, borderline voted off the island!
                             But it truly was a gift that changed my life. My therapist doesn't really agree and thought it was harsh (some of the critiques were straight up 
                             nitpicks, you know the stage in a relationship where you just start hating the way someone breathes?) But there were definitely some pieces of gold in there! 
