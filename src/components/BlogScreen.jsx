@@ -108,6 +108,88 @@ export default function BlogScreen() {
 
 
 
+                        <div style={{
+                            background: '#2a2a2a',
+                            padding: '20px',
+                            borderRadius: '12px',
+                            marginBottom: '15px',
+                            boxShadow: '0 4px 8px rgba(0, 132, 255, 0.1)',
+                            border: '1px solid #3a3a3a'
+                        }}>
+                            <h3 style={{ 
+                                margin: '0 0 10px 0', 
+                                fontSize: '20px',
+                                color: '#0084FF'
+                            }}>
+                            Mattel Presents:
+                            </h3>
+                            <p style={{ 
+                                margin: '0 0 10px 0', 
+                                fontSize: '14px', 
+                                color: '#ffffff',
+                                lineHeight: '1.6'
+                            }}>
+                            Up until the last days of my great grandma's life, she had a cigarette in hand, freshly dyed red curls, a full beat, a freshly ironed outfit, and some male 
+                            suitor circling her house, while she was carefully posed in her copper colored leather chair. A few years prior, she was infamous for guarding her perch 
+                            while my great grandpa 
+                            would work endless hours running his A&W bus stop, seemingly in an attempt to provide for his family and keep his wife satisfied. This bus stop in a small town in 
+                            Southern Colorado not only kept that line of my family afloat, but it seemed to have been a fairly significant source of wealth. In some ways, my grandma passed her 
+                            freshly dyed red curls down to me. I've always had dark, almost black, straightened hair. However, it has always been well kept. I have always prioritized looking my 
+                            best and developing 
+                            my own sense of style, the same way my great grandma had her own distinct look. Preserving looks has been a survival mechanism for the women in my family. My aunt 
+                            wouldn't answer the door -even if she was dying a painful death- if she didn't have makeup on. My mom apologizes to me when she just wakes up and she isn't 2 hours into 
+                            her makeup routine. "Don't look at me, I don't have makeup on!" to her own daughter, who couldn't care any less! And I've noticed a surge in comments lately about my 
+                            'girly' nature. It's almost like I am cast aside by both men and women due to my bubblegum dress, my pin straight hair, and my gold hoop earrings that have the same 
+                            circadian rhythm as me. Somewhere along the way, I started to realize it wasn't just a maternal quirk, it was a survival mechanism shaped by the world's inability 
+                            to acknowledge women's autonomy. You can 
+                            probably imagine what a family dynamic looks like when appearances are the number one priority. Here's a sneak peak of the whispers in the corner at Christmas:
+                             "I can't believe she 
+                            ate that much" or "geez, she's really getting fat!" or "why would she wear x to y event?". These are obviously very shallow, underdeveloped conversations which have been 
+                            one of the main issues I have had to face myself. When you focus on bimbo-fying yourself for 24 years, you look back during year 25 and recognize that you may be socially 
+                            underdeveloped since your crutch has been sturdy enough. This has been a really tough current for me to navigate. If I swim into the current and stop caring about 
+                            my appearance, I feel less motivated, less confident, less inspired, and I will still receive flack. I float where the current pleases, and I receive odd 
+                            comments about my girly laugh, my girly accent, my girly personality, and I also will still receive flack.
+                            I have been fortunate enough to attend university, to have traveled, 
+                            to have experienced feminist literature and also be surrounded by pick me's. I feel like I have lived a lot of lives in a very short amount of time, due to curiosity and 
+                            also circumstance. What I want to figure out how to articulate, an obvious truth that people probably already know, but I am going to say it anyway: Women are torn down 
+                            for anything and everything they do, and I am asking anyone reading this not to contribute to that problem. I have had men mock my laugh, a laugh that took me many years 
+                            of therapy to feel comfortable releasing in the wild. It's not just an "I'm just messing with you" type of a mock, but almost a disgust for my giggle. I have had 
+                            women comment about how girly I am, and they don't really get along with girly girls. I really am in disbelief that this is the conversation I am having in 2025, but I have 
+                            felt stumped recently by the amount of comments I get. Humans aren't one dimensional things, no matter how much you try to fit a peg in a round hole. A true feminist 
+                             wants women to be exactly who and what they are, whether they take up space with frills and curls, take up space with their personality, or take no 
+                            space at all. As long as that woman is not harming anyone, your perception or opinion of her is irrelevant, and you should keep it to yourself. I am personally working on 
+                            asserting myself more often, so definitely keep it to yourself around me. My feminine appearance 
+                            comes from a long line of women who weren't afforded the opportunity of independence, and instead, relied on the currency of appearance to afford their way in life. I do not 
+                            and will never feel ashamed about carrying those women with me when I capitalize on my ability to do both. I am not girly, I am not masculine, I am a mix of traits. I grew up 
+                            playing a ton of sports, studied computer science, competing against men and women in golf, and playing the role of my dad's son as the only child. I also love making art, 
+                            singing, getting ready to go dancing, buying and trying new makeup, and flirting without apology. Just because 
+                            someone perceives 
+                            you as a decorative shell doesn't mean you don't have substance inside. Some people can't understand that your experience on earth is probably nuanced, most likely 
+                            formulated by 
+                            something a lot deeper than the shallow pool they insisted on diving head first into. When I was very young, I was intensely bullied for my appearance. I was obsessed 
+                            with Michael 
+                            Jackson to the 
+                            point I was Michael Jackson for halloween for 3 years straight! And I will say, I looked the entire part, because I was so unattractive as a child. Truthfully, I barely looked 
+                            like a girl (I was like 8, hop off 
+                            my buckets)! My mom has always been drop dead gorgeous. I was about 10 years old when my mom took my friend and I to a restaurant. An old woman who babysat my mom growing up 
+                            looked at my friend, who has always been gorgeous, and told my mom that her daughter was so beautiful. I can confirm, the old woman was definitely not referring to me, and my 
+                            mom definitely did not jump to correct her! Nobody corrected her. An air thick with embarrassment 
+                            around my looks hung over our heads. I felt a sense of shame in that moment, holding back tears behind my fugly bobcut and my boyish face. My girliness is a response to my 
+                            life experiences, and also something I lean into. Maybe my appearance has gained validation that I did not receive growing up. My looks have protected me in some ways and they 
+                            have made me a target in others. I received comments when I was ugly, I received comments when I was gorgeous, I receive comments now that I'm somewhere in the middle. Please, 
+                            allow me to 
+                            dye my hair red and maintain my pin curls on my death bed.
+                            
+                             </p>
+                            <div style={{ 
+                                fontSize: '12px', 
+                                color: '#0084FF',
+                                fontStyle: 'italic'
+                            }}>
+                                Posted on August 14, 2025 • 4 min read ✨
+                            </div>
+                        </div>
+
 
 
 
@@ -124,7 +206,7 @@ export default function BlogScreen() {
                                 fontSize: '20px',
                                 color: '#0084FF'
                             }}>
-                            I don't yell, I sprint
+                            Opinion vs Fact
                             </h3>
                             <p style={{ 
                                 margin: '0 0 10px 0', 
@@ -132,49 +214,179 @@ export default function BlogScreen() {
                                 color: '#ffffff',
                                 lineHeight: '1.6'
                             }}>
-                            Let's talk generational trauma. I'm going on strong of about 10 years of therapy, thank the LORD. Silence in my household growing up was not a good thing, but neither 
-                            was noise. I grew up in a household where hypervigilance was the norm, probably similar to a lot of people around me. I'm not hear to talk about my family, or my 
-                            upbringing, but I'm here to talk about the person it turned me into and how it stunted me in some areas and built me in others. I grew up in a "find the scariest 
-                            girl in the room and punch her like this, here, let me show you" household, and it took me a little bit too long to realize the absurdity of such a mindset. Coming 
-                            from generational widespread distrust bred a level of anxiety and mistrust of others that took way too long to deconstruct. The hard part about fighting your norm, 
-                            your environmental upbringing, is learning that there are other ways to exist than the only reality you've ever known. Once you pinpoint the toxic behaviors, then what? 
-                            Well, in my case, I swung to the opposing team. My aggression was on full display for a very long time, and at this point in time, I display a lot of overly tolerant, 
-                            overly 'kind' behaviors. When people say "I don't trust them, they're too nice" I fear they're speaking about people like me. Someone who saw how mentally destructive 
-                            anger was to the people around them, that they struggle to display anger, or even the slightest dissatisfaction. This has manifested in me struggling to stand up for 
-                            myself. Keep in mind, instead of saying something like "Please don't do x, I don't appreciate it because x", I was taught "wrap their hair around your hand and swing 
-                            as hard as you can". Did this make me resilient? In a way, yeah. Did this make me likable? Not at all! It's funny because it's contradictory. To survive, we have 
-                            needed groups throughout history. 'It takes a village' is not just a cute little quote, it's survival. This is where I admit, I still struggle. Hyper-independence, 
-                            scarcity mindset, over explaining, fear of anger in myself and others, guilt over boundaries, a series of behaviors that are self harming on both sides of the spectrum. 
-                            I avoid intimacy due to not being 'perfect', loud emotions feel like an attack, it is all so overwhelming sometimes, especially around people who have 'power' over me. 
-                            I grew up in a space where second place was not an option. I grew up in a space where the garage door opened and I already felt a sense of guilt for something I probably 
-                            didn't do but would still absorb the blame. I grew up in a space where there was no such thing as a neutral emotion. Neutrality in my day to day life carries an air of 
-                            shame and guilt. If it's not positive, it must be negative! Right?! 
-                            </p>
-
-                            <p style={{ 
-                                margin: '0 0 10px 0', 
-                                fontSize: '14px', 
-                                color: '#ffffff',
-                                lineHeight: '1.6'
-                            }}>
-                            How does this manifest in my relationships: It manifests as hyper-sensitivity to how the other person is feeling. Did I do something wrong? Do you still like me? It also 
-                            manifests as a lack of perception, gullibility, and second guessing myself. Ohhhhh you tried to kiss my best friend and I'm insecure? That makes sense! How does it 
-                            manifest in the workforce? A heavy sense of being inadequate. Not productive enough. Self-sacrificing. Scared of my own bosses, who very much care about if I am overworked, 
-                            overwhelmed, or overstressed. The tricky part about healing from one extreme is that you often visit the other extreme, and I'm still wondering if it's possible to find 
-                            the middle. I'm so grateful to have left the environment that kept me in the strict unspoken rules, and to be in places where it's possible to exhibit some of my own 
-                            style. Setting boundaries becomes necessary once you reach an extreme. 
+                            When did we as a society collectively decide to give opinions the same weight as facts?
+                             From a young age, I have conducted my life on an evidence-based reality. I've always given more weight to people 
+                            who dedicate their lives to researching and gathering numerical data about a situation than some podcast bro on youtube who most likely profits off of chaos 
+                            and click bait. When did we blur the lines between journalism and opinion based commentary? Are we going to regulate media that fear mongers and inspires 
+                            hate and intense emotions, or are we going to keep allowing social media companies to profit off of gullible people? Does every single opinion need or deserve 
+                            a microphone or a platform? When did we decide to platform alt-right nazis and market it as debate? (Jubilee, I'm looking at you). The white nationalist rhetoric 
+                            does NOT deserve a platform. And now that we have decided we can label anything as 'debate', the word has officially lost it's meaning, 
+                            great job clickbait youtubers! Why do we as a society shun scientists, professors, journalists, and peer reviewed research? Is it because it is more difficult to 
+                            digest than "democrats/republicans are lizard people"? How do you solve problems in a society where truth and basic facts cannot be agreed upon? When did we ditch nuance? 
+                            You feel like immigrants are harmful, okay, give me evidence that 
+                            immigrants are more harmful than Americans. I don't know a single American who would not want a violent criminal to be prosecuted and deported. I don't know a 
+                            single politican who hasn't pushed that 
+                            exact agenda, so why are we pretending that you can't champion immigrant rights and also want criminals to be held accountable? Why, to some people, can't both 
+                            be true at the same time? Why instead of the simplistic, under developed thought of "immigrants are bad" can't we acknowledge that the process for immigration is 
+                            expensive, time sensitive, and that there are multiple types of immigrants? Most immigrants crossed our borders legally and overstayed their visa. Why can't 
+                            we acknowledge that there are refugee immigrants, family based immigration, job shortage visa immigrants, student visa immigrants, green card holders, naturalized 
+                            citizens, etc. Why can't we acknowledge that we do this same runaround every few decades? We need immigrants for xyz reason, lets bring them in. A few decades later, 
+                            operation 'insert slur here', I as a politician am going to fear monger people, frame immigrants as the enemy, and use that as my platform to run on. Then, I am 
+                            going to violently and inhumanely deport the people I invited to this country in order to give Americans a common enemy.Why don't we acknowledge that I probably 
+                            shouldn't have opinions on things I know nothing about? If I don't know what financial burdens, legal 
+                            processes, and testing looks like, then why should I even be afforded an opinion about immigration? 
+                            "They should just cross legally!" says a young privileged person from the burbs, biggest struggle 
+                            being their highschool breakup, also knows absolutely nothing about the immigration process, and also has no drive to search up "United States involvement" to 
+                            further understand why exactly people need to leave their home country in the first place. Why do we respect opinions that are not rooted in fact, but in a gross 
+                            black 
+                            and white, underdeveloped, parroted phrase they 
+                            heard on a podcast? You do not have an informed opinion because you heard it on a popular podcast one time. You saw a facebook post one time. You had a false sense 
+                            of being informed, 
+                            and due to Americans' inability to decipher a source, other's listened and parroted you too!
+                            This is how a nation sinks. No, I do not respect opinions that cause cruel and unusual harm to groups of people. No, I actually don't think everyone deserves to have 
+                            an opinion on everything. When I am in conversation with someone and I am not informed on a topic, then my opinion is invalid, and actually unstated. I don't speak 
+                            on things I am not informed about. What I will do is listen to your point of view, go home, do my own research, and then hopefully have the opportunity to come back 
+                            another day to discuss. My sources are not social media, podcasts, or word of mouth. Someone today posted on facebook about falling fertility rates and their 
+                            correlation to the covid vaccine. Let's break this down: the study they were referring to, the fertility rate study, refers to the amount of women who have children. 
+                            It does not at all take into account their biological ability to reproduce, and there are many reasons women don't reproduce. In my geography course, I learned that 
+                            this is actually expected for a first world countries. First world countries often grant women autonomy and the ability to choose when they want to produce, have 
+                            more control over their financial situation, have access to higher education and employment opportunities, etc. These freedoms have historically lead to women either 
+                            waiting to have children, having less children, or having no children at all. Unfortunately, this person with their inability and refusal to conduct their own 
+                            research, reads the word fertility, the words covid vaccine are plastered right next to it, and are completely unaware of the context and further meaning of the study. 
+                            This post ends up receiving thousands of reposts, and an underdeveloped conspiracy is born. Too many people feel educated on something they are not.
+                            Watching this unfold in real time is painful to watch. I try to speak with people, but a lot of time their internal biases are so strong, and these propaganda-ish 
+                            posts are so validating to their biases, that they are simply too far gone.
                              </p>
                             <div style={{ 
                                 fontSize: '12px', 
                                 color: '#0084FF',
                                 fontStyle: 'italic'
                             }}>
-                                Posted on June 17, 2025 • 3 min read ✨
+                                Posted on July 30, 2025 • 5 min read ✨
                             </div>
                         </div>
 
 
 
+
+                        <div style={{
+                            background: '#2a2a2a',
+                            padding: '20px',
+                            borderRadius: '12px',
+                            marginBottom: '15px',
+                            boxShadow: '0 4px 8px rgba(0, 132, 255, 0.1)',
+                            border: '1px solid #3a3a3a'
+                        }}>
+                            <h3 style={{ 
+                                margin: '0 0 10px 0', 
+                                fontSize: '20px',
+                                color: '#0084FF'
+                            }}>
+                            Deja Who?
+                            </h3>
+                            <p style={{ 
+                                margin: '0 0 10px 0', 
+                                fontSize: '14px', 
+                                color: '#ffffff',
+                                lineHeight: '1.6'
+                            }}>
+                            I question if God is real. I don't think this is very controversial, maybe in my houseold I would get a side eye. As someone who values a balance 
+                            of logic,
+                            creativity, and spirituality, there is a constant bickering in my mind about everything. Working on fostering creativity and logic at the same 
+                            time is a back and forth I've never wrestled. One thing I know is that my intuition has never lied 
+                            to me, and there is something curious about our human ability to sense certain warnings or feelings. I dreamt about what my grandma wore in her coffin when 
+                            I was 10. My dad had a dream I snuck out the singular night I ever snuck out. I sensed 30 seconds before I got robbed that I was about to get robbed. 
+                            It sounds like a typical episode of 'not so raven' but it wasn't a visualization, it was a primal feeling of hair standing on the back of my neck and a quick "oh no" 
+                            engulfing my brain. Unfortunately, 
+                            I'm a roll over and freeze type of gal so my money didn't survive the situation, but I did! Miniscule coincidences eventually pile up until you have to start asking 
+                            some questions. I fully believe in intuition 
+                            and a higher power, hang out with a mother for one day and you know it exists. I want to explore the brief connections I find with random people that belong to 
+                            no specific sex, age, race, ideals, etc. There is a feeling of instant understanding that is challenging to articulate, but I met a man at a coffee shop and 
+                            felt that same feeling for the first time in about a year. We stared at each other, laughed a little bit, I got his business card, and we left it at that. 
+                            I connect with a lot of people, I can get along with anyone, but to feel an instant otherworldly 
+                            connection is one of those questions I hope is finally answered in a dream. I need to clarify that these connections are not romantic, it's a similar feeling 
+                            to going to your childhood best friend's house and you hang out so much that you can read each other's minds. When you look at each other and laugh and no one 
+                            else knows what's going on. It's like having a secret conversation that no one else knows about, and even the two involved can't articulate it. I found this 
+                            connection with a man at a coffee shop, an older woman at a bar, and my friend's sister, and I really can't think of any more right now, but moments of running into 
+                            these people always reawakens my spirituality. Is God just a cope, or is he an embodiment of the potential humans have but can't quite grasp? I think that sometimes 
+                            I feed into a toxic culture and forget how little it means to meet KPI's and how much more it means to exist on a floating rock where dinosaurs bigger than my house 
+                            probably curled up where I sleep. Moments like these remind me that not everything needs an explanation, and that not everything that feels heavy actually weighs 
+                            much. Learning to sit in the discomfort of not knowing, and also giving value to the fact that there is so much we don't know, and what we do know is often given 
+                            way more emotion than what it deserves. It always makes me question how much more our ancestors most likely relied on these premonitions that kept them alive, 
+                            fostered these senses through tradition and chant, only to live in a society that shuns and demeans intuition. I have never felt more close to the spiritual realm 
+                            than when I joined a cult church for like 3 weeks (different story for another day) and we would set timers and pray. I think I prayed for 30 minutes straight, 
+                            pretty atypical for a city girl like me, but in that moment I truly felt a presence and a connection to the outside world that I don't know if I could ever 
+                            replicate. There is power in fully surrendering and speaking into the universe/God/higher power, because the universe consists of so much more than we will ever 
+                            comprehend. This is my way of saying try fostering that connection and get rid of microsoft teams!
+                             </p>
+                            <div style={{ 
+                                fontSize: '12px', 
+                                color: '#0084FF',
+                                fontStyle: 'italic'
+                            }}>
+                                Posted on July 2, 2025 • 3 min read ✨
+                            </div>
+                        </div>
+
+
+
+
+                        <div style={{
+                            background: '#2a2a2a',
+                            padding: '20px',
+                            borderRadius: '12px',
+                            marginBottom: '15px',
+                            boxShadow: '0 4px 8px rgba(0, 132, 255, 0.1)',
+                            border: '1px solid #3a3a3a'
+                        }}>
+                            <h3 style={{ 
+                                margin: '0 0 10px 0', 
+                                fontSize: '20px',
+                                color: '#0084FF'
+                            }}>
+                            It Takes a Village
+                            </h3>
+                            <p style={{ 
+                                margin: '0 0 10px 0', 
+                                fontSize: '14px', 
+                                color: '#ffffff',
+                                lineHeight: '1.6'
+                            }}>
+                            Let's talk generational trauma. I'm going on strong of about 10 years of therapy, thank the LORD. Silence in my household growing up was 
+                            not a good thing, but neither was noise. I grew up in a household where hypervigilance was the norm, probably similar to a lot of people 
+                            around me. I'm not here to talk about my family, or my upbringing, but I'm here to talk about the person it turned me into and how it stunted 
+                            me in some areas and built me in others. I grew up in a "find the scariest girl in the room and punch her like this, here, let me show you" 
+                            household, and it took me a little bit too long to realize the absurdity of such a mindset. Coming from generational widespread distrust bred 
+                            a level of anxiety and mistrust of others that took way too long to deconstruct. The hard part about fighting your norm, your environmental 
+                            upbringing, is learning that there are other ways to exist than the only reality you've ever known. Once you pinpoint the toxic behaviors, 
+                            then what? Well, in my case, I swung to the opposing team. My aggression was on full display for a very long time, and at this point in time, 
+                            I display a lot of overly tolerant, overly 'kind' behaviors. When people say "I don't trust them, they're too nice" I fear they're speaking 
+                            about people like me. Someone who saw how mentally destructive anger was to the people around them, that they struggle to display anger, or 
+                            even the slightest dissatisfaction. This has manifested in me struggling to stand up for myself. Keep in mind, instead of saying something 
+                            like "Please don't do x, I don't appreciate it because x", I was taught "wrap their hair around your hand and swing as hard as you can". Did 
+                            this make me resilient? In a way, yeah. Did this make me likable? Not at all! It's funny because it's contradictory. To survive, we have 
+                            needed groups throughout history. 'It takes a village' is not just a cute little quote, it's survival. This is where I admit, I still struggle. 
+                            Hyper-independence, scarcity mindset, over explaining, fear of anger in myself and others, guilt over boundaries, a series of behaviors that 
+                            are self harming on both sides of the spectrum. I avoid intimacy due to not being 'perfect', loud emotions feel like an attack, it is all so 
+                            overwhelming sometimes, especially around people who have 'power' over me. I grew up in a space where second place was not an option. I grew 
+                            up in a space where the garage door opened and I already felt a sense of guilt for something I probably didn't do but would still absorb the 
+                            blame. I grew up in a space where there was no such thing as a neutral emotion. Neutrality in my day to day life carries an air of shame and 
+                            guilt. If it's not positive, it must be negative! Right?! How does this manifest in my relationships: It manifests as hyper-sensitivity to 
+                            how the other person is feeling. Did I do something wrong? Do you still like me? It also manifests as a lack of perception, gullibility, and 
+                            second guessing myself. Ohhhhh you tried to kiss my best friend and I'm insecure? That makes sense! How does it manifest in the workforce? 
+                            A heavy sense of being inadequate. Not productive enough. Self-sacrificing. Scared of my own bosses, who very much care about if I am 
+                            overworked, overwhelmed, or overstressed. The tricky part about healing from one extreme is that you often visit the other extreme, and I'm 
+                            still wondering if it's possible to find the middle. I'm so grateful to have left the environment that kept me in the strict unspoken rules, 
+                            and to be in places where it's possible to exhibit some of my own style. Setting boundaries becomes necessary once you reach an extreme.
+                             </p>
+                            <div style={{ 
+                                fontSize: '12px', 
+                                color: '#0084FF',
+                                fontStyle: 'italic'
+                            }}>
+                                Posted on June 30, 2025 • 2 min read ✨
+                            </div>
+                        </div>
 
 
 
