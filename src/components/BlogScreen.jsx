@@ -128,57 +128,56 @@ export default function BlogScreen() {
                                 fontSize: '14px', 
                                 color: '#ffffff',
                                 lineHeight: '1.8',
-                                fontStyle: 'italic',
-                                whiteSpace: 'pre-wrap'
+                                fontStyle: 'italic'
                             }}>
-The neighborhood cat skimmed my car today. 
-his fluffy coat perched, 
-cocky eyes darting from me to his prey, 
-from me back to his prey.
+The neighborhood cat skimmed my car today.<br/>
+his fluffy coat perched,<br/>
+cocky eyes darting from me to his prey,<br/>
+from me back to his prey.<br/><br/>
 
-He rubbed against my door, as if to wake the part of me 
-I thought I'd put to rest.
+He rubbed against my door, as if to wake the part of me<br/>
+I thought I'd put to rest.<br/><br/>
 
-It's been years since I've entertained a neighborhood cat. 
-That one, too, slipped in and out.
+It's been years since I've entertained a neighborhood cat.<br/>
+That one, too, slipped in and out.<br/><br/>
 
-Back and forth in his affections
-Enamored by my touch one day
-Clawing me the next
+Back and forth in his affections<br/>
+Enamored by my touch one day<br/>
+Clawing me the next<br/><br/>
 
-This new cat tolerates my affection, 
-but my neighbors garbage bins enchant him more.
+This new cat tolerates my affection,<br/>
+but my neighbors garbage bins enchant him more.<br/><br/>
 
-Chasing the approval of a thing 
-who has no need for it.
-Fed by others, 
-nestled in the warm hood of the girl's car down the street— 
-he frequents homes, but rarely mine.
+Chasing the approval of a thing<br/>
+who has no need for it.<br/>
+Fed by others,<br/>
+nestled in the warm hood of the girl's car down the street—<br/>
+he frequents homes, but rarely mine.<br/><br/>
 
-My door stays open, 
-my sheets soft, 
-my body smooth and warm
-Food prepped with tenderness
-Bottom lip drooping with desperation 
+My door stays open,<br/>
+my sheets soft,<br/>
+my body smooth and warm<br/>
+Food prepped with tenderness<br/>
+Bottom lip drooping with desperation<br/><br/>
 
-Meanwhile, another stray skims my legs in my darkest hours, 
-his hunger and need plain.
-His pure intention noticeable
-His lips drooping with desperation
+Meanwhile, another stray skims my legs in my darkest hours,<br/>
+his hunger and need plain.<br/>
+His pure intention noticeable<br/>
+His lips drooping with desperation<br/><br/>
 
-And still, I entertain the shifty cat— 
-the one who appears, 
-reminds me of his presence, 
-and vanishes into the neighbor's garden gnomes.
+And still, I entertain the shifty cat—<br/>
+the one who appears,<br/>
+reminds me of his presence,<br/>
+and vanishes into the neighbor's garden gnomes.<br/><br/>
 
-And I am left empty in my cupboard, 
-his chin propped high by his ego 
-assured I'll leave catnip on my porch tonight, 
-skimming unnecessary
+And I am left empty in my cupboard,<br/>
+his chin propped high by his ego<br/>
+assured I'll leave catnip on my porch tonight,<br/>
+skimming unnecessary<br/><br/>
 
-Neighborhood cat. 
-Running to me, 
-offering nothing in return, 
+Neighborhood cat.<br/>
+Running to me,<br/>
+offering nothing in return,<br/>
 fueling his smirk with my yearning.
                             </div>
                             <div style={{ 
