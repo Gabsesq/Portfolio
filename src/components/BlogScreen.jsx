@@ -131,33 +131,55 @@ export default function BlogScreen() {
                                 fontStyle: 'italic',
                                 whiteSpace: 'pre-wrap'
                             }}>
-The neighborhood cat skimmed my car today. his fluffy coat perched, cocky eyes darting from me to his prey, from me back to his prey.
+The neighborhood cat skimmed my car today. 
+his fluffy coat perched, 
+cocky eyes darting from me to his prey, 
+from me back to his prey.
 
-He rubbed against my door, as if to wake the part of me I thought I'd put to rest.
+He rubbed against my door, as if to wake the part of me 
+I thought I'd put to rest.
 
-It's been years since I've had a neighborhood cat. That one, too, slipped in and out.
+It's been years since I've entertained a neighborhood cat. 
+That one, too, slipped in and out.
 
 Back and forth in his affections
 Enamored by my touch one day
 Clawing me the next
 
-This new cat tolerates my affection, but my neighbors garbage bins enchant him more.
+This new cat tolerates my affection, 
+but my neighbors garbage bins enchant him more.
 
-Chasing the approval of a thing who has no need for it.
-Fed by others, nestled in the warm hood of the girl's car down the street— he frequents homes, but rarely mine.
+Chasing the approval of a thing 
+who has no need for it.
+Fed by others, 
+nestled in the warm hood of the girl's car down the street— 
+he frequents homes, but rarely mine.
 
-Even though my door stays open, my sheets soft, my body smooth and warm
+My door stays open, 
+my sheets soft, 
+my body smooth and warm
 Food prepped with tenderness
 Bottom lip drooping with desperation 
 
-Meanwhile, another stray skims my legs in my darkest hours, his hunger and need plain.
+Meanwhile, another stray skims my legs in my darkest hours, 
+his hunger and need plain.
 His pure intention noticeable
 His lips drooping with desperation
- And still, I entertain the shifty cat— the one who appears, reminds me of his presence, and vanishes into the neighbor's garden gnomes.
 
-And I am left empty in my cupboard, his chin propped higher by his ego assured I'll leave catnip on my porch tonight, skimming unnecessary
+And still, I entertain the shifty cat— 
+the one who appears, 
+reminds me of his presence, 
+and vanishes into the neighbor's garden gnomes.
 
-Neighborhood cat. Running to me, offering nothing in return, fueling his smirk with my yearning.
+And I am left empty in my cupboard, 
+his chin propped high by his ego 
+assured I'll leave catnip on my porch tonight, 
+skimming unnecessary
+
+Neighborhood cat. 
+Running to me, 
+offering nothing in return, 
+fueling his smirk with my yearning.
                             </div>
                             <div style={{ 
                                 fontSize: '12px', 
