@@ -129,7 +129,7 @@ export default function BlogScreen() {
                                 color: '#ffffff',
                                 lineHeight: '1.8',
                                 fontStyle: 'italic',
-                                whiteSpace: 'pre-line'
+                                whiteSpace: 'pre-wrap'
                             }}>
 The neighborhood cat skimmed my car today. his fluffy coat perched, cocky eyes darting from me to his prey, from me back to his prey.
 
