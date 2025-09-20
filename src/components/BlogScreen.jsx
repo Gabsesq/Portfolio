@@ -154,13 +154,15 @@ Fed by others,<br/>
 nestled in the warm hood of the girl's car down the street—<br/>
 he frequents homes, but rarely mine.<br/><br/>
 
-My door stays open,<br/>
-my sheets soft,<br/>
-my body smooth and warm<br/>
-Food prepped with tenderness<br/>
-Bottom lip drooping with desperation<br/><br/>
+I leave the front door cracked,<br/>
+Mangle my sheets into the shape of an invitation,<br/>
+Offer my curated body, smooth and warm<br/>
+Welcoming scents escape my kitchen<br/>
+Bottom lip wilting with desperation<br/><br/>
 
-Meanwhile, another stray skims my legs in my darkest hours,<br/>
+Meanwhile, a different stray sneaks through my back door<br/>
+He skims my legs in my darkest hours,<br/>
+He lays mice next to my flower garden,<br/>
 his hunger and need plain.<br/>
 His pure intention noticeable<br/>
 His lips drooping with desperation<br/><br/>
@@ -173,7 +175,7 @@ and vanishes into the neighbor's garden gnomes.<br/><br/>
 And I am left empty in my cupboard,<br/>
 his chin propped high by his ego<br/>
 assured I'll leave catnip on my porch tonight,<br/>
-skimming unnecessary<br/><br/>
+smug in my affections.<br/><br/>
 
 Neighborhood cat.<br/>
 Running to me,<br/>
