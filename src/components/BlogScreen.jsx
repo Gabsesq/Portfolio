@@ -173,7 +173,7 @@ export default function BlogScreen() {
                                 color: '#0084FF',
                                 fontStyle: 'italic'
                             }}>
-                                Posted on August 14, 2025 • 4 min read ✨
+                                Posted on September 24, 2025 • 3 min read ✨
                             </div>
                         </div>
 
