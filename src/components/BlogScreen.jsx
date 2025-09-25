@@ -108,6 +108,77 @@ export default function BlogScreen() {
 
 
 
+
+
+                        <div style={{
+                            background: '#2a2a2a',
+                            padding: '20px',
+                            borderRadius: '12px',
+                            marginBottom: '15px',
+                            boxShadow: '0 4px 8px rgba(0, 132, 255, 0.1)',
+                            border: '1px solid #3a3a3a'
+                        }}>
+                            <h3 style={{ 
+                                margin: '0 0 10px 0', 
+                                fontSize: '20px',
+                                color: '#0084FF'
+                            }}>
+                            A Great Performance
+                            </h3>
+                            <p style={{ 
+                                margin: '0 0 10px 0', 
+                                fontSize: '14px', 
+                                color: '#ffffff',
+                                lineHeight: '1.6'
+                            }}>
+                            I always find myself flirting with the idea of being something I am not. When I people watch, I am curious about their quirks.
+                            There is always a lingering judgement of whether or not they are performing on a stage, hoping to elicit emotion from their audience. 
+                            I remember being around 14 years old, asking my dad what the purpose of having friends was. He was stuck in his silence, and really didn't 
+                            have much of an answer. Something that came so naturally, biologically, to others... never came to me. Every characteristic felt like a 
+                            fake plea for attention. Now that I am a bit older, I can grasp nuance and I have actually experienced joy from being around my 
+                            friends. It feels like socialization in general is a performance. Little pockets in the middle are where you 
+                            find the truer connection, authenticity, and an actual glimpse into someone's being. I used to judge performative people, until I realized (I think)
+                            they are only looking to foster connection, something I always craved but never needed. I am a little bit tooooo comfortable in my own company 
+                            and solitude<br/><br/>
+                            
+                            I find myself caring way too little, or at least way less than others, about how I am perceived. I show up to the performance like a fat, 
+                            happy audience member, ready with my theater snacks. Ready to add little value, 
+                            while mentally profiting off the show. Why does nothing interest me that much? More specifically, why don't I have the urge to be interesting or to 
+                            fit in? 
+                            The interesting thing is, performative people are the people that enthrall me the most. I admire them, I learn from them, I enjoy their 
+                            company. A part of me wants to be like them. But when it comes down to it, I enjoy listening to their summary and I don't much enjoy 
+                            partaking in it myself. I watch people perform and profess, I feel slight envy that I am not that way, I think about life if I were to be 
+                            that way, and then I don't feel like curating that side of myself. What does it mean when your curiosity only reaches the extent of 
+                            admiration? Is performance an act to try to connect to others? I feel deeply about observing, analyzing, thinking, but I don't feel like participating. 
+                            I don't have the urge to be that interesting, but I have a constant hunger to consume their performance. The weird thing is, I am not 
+                            insistent on consuming information outside of the people around me. Media doesn't interest me much, but people in my vicinity do. 
+                            My hands have always been the catalyst to my desires, not that performative in nature. 
+                            Not as fun to talk about as literature, movies, or music. I enjoy making random art projects, painting nails, writing, coding, braiding, 
+                            golfing, painting, digital art, playing sports etc. I find my joy in entertaining my senses. I feel most satisfied when cold rain ruins my makeup, 
+                            I feel euphoric around vibrant sunsets and crisp air, my hair stands up when a great song comes on, I feel intense joy when dancing. But I don't 
+                            particularly find anything interesting 
+                            about sharing that with others. It almost feels cyclical. 
+                            I admire those who perform, those performers watch other performers (actors, artists, etc), and those performers watch for my fat happy approval. <br/><br/>
+
+                            I think that I am true to what really fascinates me, but that doesn't make me any more authentic. Maybe other's interests are just more 
+                            fascinating in nature. I think it just means my hobbies are more 
+                            isolated, and maybe this is how introverts are born. However, I love being around people, strumming the invisible strings that connect us. I feel 
+                            that my presence is extroverted, but my portrayal is introverted. There is a constant lingering pressure, being around so many interesting people, 
+                            to convert my admiration into action. I think that the most likeable people are the people who perform with ease, simply because they are authentic 
+                            in their love for hobbies and learnings that are just simply more interesting to discuss than other hobbies and learnings. This is my brain at 10:37pm, 
+                            one eye open, tug of war between my bed and crafting my chain jewelry!
+                             </p>
+                            <div style={{ 
+                                fontSize: '12px', 
+                                color: '#0084FF',
+                                fontStyle: 'italic'
+                            }}>
+                                Posted on August 14, 2025 • 4 min read ✨
+                            </div>
+                        </div>
+
+
+
                         <div style={{
                             background: '#2a2a2a',
                             padding: '20px',
@@ -156,16 +227,16 @@ he frequents homes, but rarely mine.<br/><br/>
 
 I leave the front door cracked,<br/>
 Mangle my sheets into the shape of an invitation,<br/>
-Offer my curated body, smooth and warm<br/>
-Welcoming scents escape my kitchen<br/>
-Bottom lip wilting with desperation<br/><br/>
+Offer my curated body, smooth, warm, and affectatious<br/>
+Welcoming scents billow from my kitchen<br/>
+Lower chin dimpling with desperation<br/><br/>
 
 Meanwhile, a different stray sneaks through my back door<br/>
 He skims my legs in my darkest hours,<br/>
 He lays mice next to my flower garden,<br/>
 his hunger and need plain.<br/>
 His pure intention noticeable<br/>
-His lips drooping with desperation<br/><br/>
+His ears forward with desperation<br/><br/>
 
 And still, I entertain the shifty cat—<br/>
 the one who appears,<br/>
