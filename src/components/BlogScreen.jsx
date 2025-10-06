@@ -108,6 +108,76 @@ export default function BlogScreen() {
 
 
 
+                        <div style={{
+                            background: '#2a2a2a',
+                            padding: '20px',
+                            borderRadius: '12px',
+                            marginBottom: '15px',
+                            boxShadow: '0 4px 8px rgba(0, 132, 255, 0.1)',
+                            border: '1px solid #3a3a3a'
+                        }}>
+                            <h3 style={{ 
+                                margin: '0 0 10px 0', 
+                                fontSize: '20px',
+                                color: '#0084FF'
+                            }}>
+                            Brain Hand Mouth
+                            </h3>
+                            <div style={{ 
+                                margin: '0 0 10px 0', 
+                                fontSize: '14px', 
+                                color: '#ffffff',
+                                lineHeight: '1.8',
+                                fontStyle: 'italic'
+                            }}>
+I chopped my hands off today<br/>
+The only channel between my inner world and the external<br/>
+Severed my hands this morning, rendered me mute.<br/>
+Uncontrollable blots of red engulf the walls<br/>
+Like a bad kid with their mom's Dior lip<br/><br/>
+
+My only form of communication neutered<br/>
+My lips upholding a weight they could never bare<br/>
+My tongue backed up with the same blood as my hands<br/>
+Uncontrolled, indecipherable, disconnected<br/>
+Complete Isolation from the quilted blanket I had spent my life sewing<br/><br/>
+
+'Solitary' is the wrong word for this feeling<br/>
+My hands once kept a tight braid between me and you<br/>
+And the world<br/>
+My fingers limp<br/>
+Turning braid into untamed waves<br/><br/>
+
+When I severed my nerves<br/>
+With my painter's edge this morning<br/>
+I did it to see what my lips could come up with<br/><br/>
+
+Throat tight from hesitation<br/>
+The singular thread connecting my lips and my mind<br/>
+Hanging by a basting stitch<br/>
+And a pathetic twine<br/><br/>
+
+What If I:<br/>
+1. Sew my hands back on<br/>
+2. Gather some pink thread and needle<br/>
+3. Stitch from my bottom lip, to my tongue, up through my nose, into my brain, back down through my top lip<br/>
+4. Finish with a backstitch or two<br/><br/>
+
+Would I reign my words?<br/><br/>
+
+But I cannot get past step 1.<br/>
+I chopped my hands off this morning.<br/>
+So I won't know.
+                            </div>
+                            <div style={{ 
+                                fontSize: '12px', 
+                                color: '#0084FF',
+                                fontStyle: 'italic'
+                            }}>
+                                Posted on October 5, 2025 • 2 min read ✨
+                            </div>
+                        </div>
+
 
 
                         <div style={{
