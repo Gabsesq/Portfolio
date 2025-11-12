@@ -53,11 +53,14 @@ export default function ContactScreen() {
             <div style={{
                 width: '514px',
                 height: '697px',
-                background: 'linear-gradient(145deg, #f0f0f0, #e6e6e6)',
+                backgroundImage: 'url("/legs.jpg")',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
                 padding: '20px',
                 borderRadius: '20px',
                 fontFamily: 'Arial, sans-serif',
-                color: '#333',
+                color: 'white',
                 overflow: 'auto',
                 boxShadow: 'inset 0 0 10px rgba(0,0,0,0.1)',
                 transform: 'scale(-1, 1)'
@@ -65,7 +68,7 @@ export default function ContactScreen() {
                 <h2 style={{ 
                     margin: '0 0 15px 0',
                     fontSize: '24px',
-                    color: '#2c3e50',
+                    color: 'white',
                     textAlign: 'center'
                 }}>
                     Contact Me
@@ -77,11 +80,14 @@ export default function ContactScreen() {
                         placeholder="Your Name"
                         value={formData.name}
                         onChange={(e) => setFormData({...formData, name: e.target.value})}
+                        className="contact-input"
                         style={{
                             padding: '12px',
                             borderRadius: '8px',
                             border: '4px solid #ddd',
-                            fontSize: '16px'
+                            fontSize: '16px',
+                            color: 'white',
+                            backgroundColor: 'rgba(0, 0, 0, 0.6)'
                         }}
                         required
                     />
@@ -91,11 +97,14 @@ export default function ContactScreen() {
                         placeholder="Your Email"
                         value={formData.email}
                         onChange={(e) => setFormData({...formData, email: e.target.value})}
+                        className="contact-input"
                         style={{
                             padding: '12px',
                             borderRadius: '8px',
                             border: '4px solid #ddd',
-                            fontSize: '16px'
+                            fontSize: '16px',
+                            color: 'white',
+                            backgroundColor: 'rgba(0, 0, 0, 0.6)'
                         }}
                         required
                     />
@@ -104,6 +113,7 @@ export default function ContactScreen() {
                         placeholder="Your Message"
                         value={formData.message}
                         onChange={(e) => setFormData({...formData, message: e.target.value})}
+                        className="contact-input"
                         style={{
                             padding: '12px',
                             borderRadius: '8px',
@@ -113,7 +123,8 @@ export default function ContactScreen() {
                             fontSize: '16px',
                             fontFamily: 'Arial, sans-serif',
                             lineHeight: '1.4',
-                            backgroundColor: 'white'
+                            backgroundColor: 'rgba(0, 0, 0, 0.6)',
+                            color: 'white'
                         }}
                         required
                     />
@@ -125,7 +136,7 @@ export default function ContactScreen() {
                             padding: '12px',
                             borderRadius: '8px',
                             border: 'none',
-                            background: isSubmitting ? '#cccccc' : '#0084ff',
+                            background: isSubmitting ? '#333333' : '#000000',
                             color: 'white',
                             fontSize: '16px',
                             cursor: isSubmitting ? 'not-allowed' : 'pointer',

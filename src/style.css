@@ -206,7 +206,7 @@ canvas {
 .chat-container {
     scrollbar-width: thin;
     -ms-overflow-style: none;
-    scrollbar-color: #0084FF #1a1a1a;
+    scrollbar-color: #8B0000 #1a1a1a;
 }
 
 .chat-container::-webkit-scrollbar {
@@ -218,12 +218,12 @@ canvas {
 }
 
 .chat-container::-webkit-scrollbar-thumb {
-    background: #0084FF;
+    background: #8B0000;
     border-radius: 3px;
 }
 
 .chat-container::-webkit-scrollbar-thumb:hover {
-    background: #0073e6;
+    background: #A52A2A;
 }
 
 .chat-container::-webkit-scrollbar-button:single-button {
@@ -250,6 +250,25 @@ canvas {
         max-width: 80% !important; /* Ensure bubbles don't get too wide on mobile */
         margin: 2px 0 !important;
     }
+}
+
+/* Contact form input placeholder styling */
+.contact-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    opacity: 1;
+}
+
+.contact-input::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-input::-moz-placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    opacity: 1;
+}
+
+.contact-input:-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.7);
 }
 
 

@@ -65,7 +65,10 @@ export default function ChatScreen() {
                 style={{
                     width: '590px',
                     height: '270px',
-                    background: '#1a1a1a',
+                    backgroundImage: 'url("/desert.jpg")',
+                    backgroundSize: '100%',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
                     color: 'white',
                     padding: '8px',
                     fontFamily: 'Arial, sans-serif',
@@ -88,7 +91,7 @@ export default function ChatScreen() {
                         width: '100%',
                         transform: 'scale(-1, 1)',
                         scrollbarWidth: 'thin',
-                        scrollbarColor: '#0084FF #1a1a1a',
+                        scrollbarColor: '#8B0000 #1a1a1a',
                         msOverflowStyle: '-ms-autohiding-scrollbar', // Better scrolling for IE/Edge
                         touchAction: 'pan-y' // Enable vertical touch scrolling
                     }}
@@ -98,7 +101,8 @@ export default function ChatScreen() {
                             key={index}
                             className="message-bubble"
                             style={{
-                                background: '#0084FF',
+                                background: 'black',
+                                color: '#ffd6e6',
                                 padding: '4px 8px',
                                 borderRadius: '6px',
                                 maxWidth: index === messages.length - 1 ? '200px' : '300px',

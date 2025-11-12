@@ -1,7 +1,7 @@
 // @ts-nocheck
 import { useLoader, useThree } from "@react-three/fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useMemo } from "react";
 import * as THREE from 'three';
 import "./style.css";
 import { TextureLoader } from 'three';
@@ -12,6 +12,32 @@ import InstagramScreen from './components/InstagramScreen';
 import ContactScreen from './components/ContactScreen';
 
 export default function Room() {
+    // Create gradient texture for windows
+    const windowGradientTexture = useMemo(() => {
+        const canvas = document.createElement('canvas');
+        canvas.width = 256;
+        canvas.height = 256;
+        const context = canvas.getContext('2d');
+        
+        // Create gradient from dark purple (top) to orange (bottom)
+        // Swapped colors because mesh rotation flips the texture
+        const gradient = context.createLinearGradient(0, 0, 0, canvas.height);
+        gradient.addColorStop(0, '#FF8C00'); // Orange (will appear at bottom due to rotation)
+        gradient.addColorStop(1, '#4B0082'); // Dark purple (will appear at top due to rotation)
+        
+        context.fillStyle = gradient;
+        context.fillRect(0, 0, canvas.width, canvas.height);
+        
+        const texture = new THREE.CanvasTexture(canvas);
+        texture.encoding = THREE.sRGBEncoding;
+        texture.magFilter = THREE.LinearFilter;
+        texture.minFilter = THREE.LinearFilter;
+        texture.flipY = false; // Don't flip - keep purple on top
+        texture.needsUpdate = true;
+        
+        return texture;
+    }, []);
+    
     // Load all 3D models
     const bed = useLoader(GLTFLoader, "/bed.glb");
     const table = useLoader(GLTFLoader, "/table.glb");
@@ -24,6 +50,7 @@ export default function Room() {
     const mirror = useLoader(GLTFLoader, "/mirror.glb");
     const chair = useLoader(GLTFLoader, "/chair.glb");
     const woodTexture = useLoader(TextureLoader, "/woodFloor.jfif");
+    const ralphPicture = useLoader(TextureLoader, "/ralph.jpg");
     const window = useLoader(GLTFLoader, "/window.glb");
     const curtains = useLoader(GLTFLoader, "/CURTAINS.glb");
     const { camera, gl } = useThree();
@@ -69,6 +96,16 @@ export default function Room() {
             woodTexture.needsUpdate = true;      // Added to ensure updates
         }
     }, [woodTexture]);
+
+    useEffect(() => {
+        if (ralphPicture) {
+            ralphPicture.encoding = THREE.sRGBEncoding;
+            ralphPicture.magFilter = THREE.LinearFilter;
+            ralphPicture.minFilter = THREE.LinearMipmapLinearFilter;
+            ralphPicture.generateMipmaps = true;
+            ralphPicture.needsUpdate = true;
+        }
+    }, [ralphPicture]);
 
 
     // Add this function at the top of your Room component to create a reusable box
@@ -206,6 +243,15 @@ export default function Room() {
                 scale={0.45}
             />
 
+            {/* Picture above bed */}
+            <mesh position={[110, 130, -224]}>
+                <planeGeometry args={[50, 60]} />
+                <meshStandardMaterial 
+                    map={ralphPicture}
+                    side={THREE.DoubleSide}
+                />
+            </mesh>
+
             {/* IKEA Storage Boxes - arranged in a line along z-axis with adjusted spacing */}
             <IkeaBox position={[140, -25, -35]} />
             <IkeaBox position={[140, -25, -70]} />
@@ -300,12 +346,12 @@ export default function Room() {
 
             {/* Sky planes behind windows */}
             <mesh 
-                position={[-90, 160, -223]} // Slightly behind first window
+                position={[-90, 160, -219]} // Slightly behind first window
                 rotation-y={Math.PI}
             >
                 <planeGeometry args={[120, 150]} />
                 <meshStandardMaterial 
-                    color="#55B3E1" 
+                    map={windowGradientTexture}
                     side={THREE.DoubleSide}
                 />
             </mesh>
@@ -316,8 +362,7 @@ export default function Room() {
             >
                 <planeGeometry args={[120, 150]} />
                 <meshStandardMaterial 
-                    color="#55B3E1"
-                    
+                    map={windowGradientTexture}
                     side={THREE.DoubleSide}
                 />
             </mesh>
