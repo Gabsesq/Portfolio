@@ -271,4 +271,12 @@ canvas {
     color: rgba(255, 255, 255, 0.7);
 }
 
+/* Spotify Player at Bottom - Responsive Styles */
+@media screen and (max-width: 768px) {
+    .spotify-player-bottom {
+        width: calc(100% - 40px) !important;
+        max-width: 300px;
+    }
+}
+
 

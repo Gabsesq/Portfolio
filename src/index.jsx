@@ -114,6 +114,7 @@ function App() {
     const [activeView, setActiveView] = useState('default');
     const { progress } = useProgress();
     const [isLoading, setIsLoading] = useState(true);
+    const [isSpotifyVisible, setIsSpotifyVisible] = useState(true);
 
     useEffect(() => {
         if (progress >= 100) {
@@ -140,7 +141,8 @@ function App() {
                 display: 'flex',
                 flexDirection: 'row',
                 gap: '1rem',
-                width: 'fit-content'
+                width: 'fit-content',
+                alignItems: 'center'
             }}>
                 <button 
                     className={`nav-item ${activeView === 'about' ? 'active' : ''}`}
@@ -190,6 +192,75 @@ function App() {
                     />
                 </Suspense>
             </Canvas>
+            
+            {/* Spotify Player at Bottom Center */}
+            {!isLoading && (
+                <div style={{
+                    position: 'fixed',
+                    bottom: '20px',
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                    zIndex: 1000,
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    gap: '8px',
+                    opacity: isLoading ? 0 : 1,
+                    transition: 'opacity 0.5s ease-in'
+                }}>
+                    {isSpotifyVisible && (
+                        <div 
+                            className="spotify-player-bottom"
+                            style={{
+                                width: '300px',
+                                height: '80px',
+                                borderRadius: '8px',
+                                overflow: 'hidden',
+                                boxShadow: '0 2px 8px rgba(0,0,0,0.3)'
+                            }}
+                        >
+                            <iframe 
+                                src="https://open.spotify.com/embed/playlist/5SWHCmctDQ8yoQ2Npblhno?utm_source=generator&theme=1&view=list&t=0" 
+                                width="100%" 
+                                height="80" 
+                                frameBorder="0" 
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                                loading="lazy"
+                                style={{ 
+                                    borderRadius: '8px',
+                                    border: 'none'
+                                }}
+                                title="Spotify Playlist"
+                            />
+                        </div>
+                    )}
+                    <button
+                        onClick={() => setIsSpotifyVisible(!isSpotifyVisible)}
+                        style={{
+                            padding: '6px 12px',
+                            borderRadius: '6px',
+                            border: '1px solid rgba(255, 255, 255, 0.3)',
+                            background: 'rgba(19, 17, 17, 0.1)',
+                            backdropFilter: 'blur(2px)',
+                            color: 'white',
+                            cursor: 'pointer',
+                            fontSize: '12px',
+                            fontFamily: 'Arial, sans-serif',
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.5px',
+                            transition: 'all 0.3s ease'
+                        }}
+                        onMouseEnter={(e) => {
+                            e.target.style.background = 'rgba(255, 255, 255, 0.2)';
+                        }}
+                        onMouseLeave={(e) => {
+                            e.target.style.background = 'rgba(19, 17, 17, 0.1)';
+                        }}
+                    >
+                        {isSpotifyVisible ? 'Hide Music' : 'Show Music'}
+                    </button>
+                </div>
+            )}
             
             <Analytics />
         </>

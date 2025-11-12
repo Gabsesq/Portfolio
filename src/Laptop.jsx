@@ -168,7 +168,7 @@ export default function Room() {
             {/* Main ceiling light - warmer and brighter */}
             <pointLight 
                 position={[0, 90, 0]}
-                intensity={.5} 
+                intensity={0} 
                 color="#ffd4a3" // Warmer color
                 distance={400}
                 decay={2}
@@ -180,7 +180,7 @@ export default function Room() {
             {/* Window light simulation */}
             <directionalLight 
                 position={[-90, 160, -210]}  // Position matching first window
-                intensity={.2} 
+                intensity={.1} 
                 color="#ffecd9"
             />
             
