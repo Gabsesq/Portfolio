@@ -46,6 +46,11 @@ canvas {
     transform-origin: center;
 }
 
+.laptop-screen {
+    pointer-events: auto;
+    transform-origin: center;
+}
+
 .screen-content {
     display: flex;
     flex-direction: column;

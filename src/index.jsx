@@ -219,6 +219,7 @@ function App() {
                                     borderRadius: '8px',
                                     overflow: 'hidden',
                                     boxShadow: '0 2px 8px rgba(0,0,0,0.3)',
+                                    position: 'relative',
                                     display: 'none' // Hidden by default, shown on desktop via CSS
                                 }}
                             >
@@ -231,10 +232,23 @@ function App() {
                                     loading="lazy"
                                     style={{ 
                                         borderRadius: '8px',
-                                        border: 'none'
+                                        border: 'none',
+                                        filter: 'hue-rotate(-10deg) saturate(1.1) brightness(0.95)'
                                     }}
                                     title="Spotify Playlist"
                                 />
+                                {/* Reddish overlay to match mobile */}
+                                <div style={{
+                                    position: 'absolute',
+                                    top: 0,
+                                    left: 0,
+                                    right: 0,
+                                    bottom: 0,
+                                    pointerEvents: 'none',
+                                    background: 'linear-gradient(to bottom, rgb(255, 174, 174), rgb(255, 129, 129))',
+                                    borderRadius: '14px',
+                                    mixBlendMode: 'multiply'
+                                }} />
                             </div>
                             {/* Mobile: Compact player with just controls */}
                             <div 

@@ -23,6 +23,7 @@ export default function BlogScreen() {
             rotation-y={0}
             rotation-z={0}
             distanceFactor={15}
+            pointerEvents="auto"
         >
             <div 
                 style={{
@@ -36,7 +37,8 @@ export default function BlogScreen() {
                     fontFamily: 'Arial, sans-serif',
                     overflow: 'hidden',
                     position: 'relative',
-                    borderRadius: '10px'
+                    borderRadius: '10px',
+                    pointerEvents: 'auto'
                 }}
             >
                 <div 
@@ -56,7 +58,8 @@ export default function BlogScreen() {
                         msOverflowStyle: '-ms-autohiding-scrollbar',
                         touchAction: 'pan-y',
                         height: '100%',
-                        overscrollBehavior: 'contain'
+                        overscrollBehavior: 'contain',
+                        pointerEvents: 'auto'
                     }}
                 >
                     <div style={{
