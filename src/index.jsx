@@ -113,8 +113,9 @@ function App() {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        if (progress === 100) {
-            setTimeout(() => setIsLoading(false), 1000);
+        if (progress >= 100) {
+            const timeout = setTimeout(() => setIsLoading(false), 500);
+            return () => clearTimeout(timeout);
         }
     }, [progress]);
 
@@ -124,7 +125,7 @@ function App() {
 
     return (
         <>
-            {isLoading && <LoadingScreen progress={progress} />}
+            {isLoading && <LoadingScreen />}
             
             <div className="nav-menu" style={{ 
                 opacity: isLoading ? 0 : 1,

@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'Exmouth';
+    src: url('/exmouth_.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 @media (max-width: 600px) {
     .laptop iframe {
         width: 300px;

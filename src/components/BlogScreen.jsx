@@ -55,7 +55,10 @@ export default function BlogScreen() {
                 style={{
                     width: '735px',
                     height: '440px',
-                    background: '#1a1a1a',
+                    backgroundImage: 'url("/crazy.jpg")',
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
                     padding: '20px',
                     fontFamily: 'Arial, sans-serif',
                     overflow: 'hidden',
@@ -77,7 +80,7 @@ export default function BlogScreen() {
                         padding: '20px',
                         boxSizing: 'border-box',
                         scrollbarWidth: 'thin',
-                        scrollbarColor: '#0084FF #1a1a1a',
+                        scrollbarColor: '#ffffff80 #1a1a1a',
                         msOverflowStyle: '-ms-autohiding-scrollbar',
                         touchAction: 'pan-y',
                         transform: 'translateZ(0)',
@@ -98,26 +101,29 @@ export default function BlogScreen() {
                         }}>
                             <h2 style={{ 
                                 margin: 0, 
-                                fontSize: '36px',
-                                color: '#0084FF',
+                                fontSize: '60px',
+                            fontFamily: "'Exmouth', Arial, sans-serif",
+                            color: '#ffffff',
                                 textShadow: '2px 2px 4px rgba(0, 132, 255, 0.2)'
                             }}>
-                                Blogger
+                                Bring Back Blogging
                             </h2>
                         </div>
 
                         <div style={{
-                            background: '#2a2a2a',
+                            background: 'rgba(0, 0, 0, 0.65)',
                             padding: '20px',
                             borderRadius: '12px',
                             marginBottom: '15px',
                             boxShadow: '0 4px 8px rgba(0, 132, 255, 0.1)',
-                            border: '1px solid #3a3a3a'
+                        border: '1px solid rgba(255,255,255,0.3)',
+                        color: '#ffffff'
                         }}>
                             <h3 style={{ 
                                 margin: '0 0 10px 0', 
-                                fontSize: '20px',
-                                color: '#0084FF'
+                                fontSize: '30px',
+                                fontFamily: "'Exmouth', Arial, sans-serif",
+                                color: '#ffffff'
                             }}>
                             I'll Take a Double
                             </h3>
@@ -126,7 +132,7 @@ export default function BlogScreen() {
                                 fontSize: '14px', 
                                 color: '#ffffff',
                                 lineHeight: '1.8',
-                                fontStyle: 'italic'
+                                textAlign: 'left'
                             }}>
 In 1518, a woman and her daughter began dancing in the streets of modern day France, 
 part of the Holy Roman Empire. They danced until they collapsed from exhaustion, and 
@@ -178,8 +184,7 @@ I’ll take a glass of ergot and I will dance in honor of those who danced befor
                             </div>
                             <div style={{ 
                                 fontSize: '12px', 
-                                color: '#0084FF',
-                                fontStyle: 'italic'
+                                color: '#ffffff',
                             }}>
                                 Posted on November 6, 2025 • 2 min read ✨
                             </div>
@@ -193,17 +198,18 @@ I’ll take a glass of ergot and I will dance in honor of those who danced befor
 
 
                         <div style={{
-                            background: '#2a2a2a',
+                            background: 'rgba(0, 0, 0, 0.65)',
                             padding: '20px',
                             borderRadius: '12px',
                             marginBottom: '15px',
                             boxShadow: '0 4px 8px rgba(0, 132, 255, 0.1)',
-                            border: '1px solid #3a3a3a'
+                            border: '1px solid rgba(255,255,255,0.3)'
                         }}>
                             <h3 style={{ 
                                 margin: '0 0 10px 0', 
                                 fontSize: '20px',
-                                color: '#0084FF'
+                                fontFamily: "'Exmouth', Arial, sans-serif",
+                                color: '#ffffff'
                             }}>
                             Brain Hand Mouth
                             </h3>
@@ -212,7 +218,8 @@ I’ll take a glass of ergot and I will dance in honor of those who danced befor
                                 fontSize: '14px', 
                                 color: '#ffffff',
                                 lineHeight: '1.8',
-                                fontStyle: 'italic'
+                                fontStyle: 'italic',
+                                
                             }}>
 I chopped my hands off today<br/>
 The only channel between my inner world and the external<br/>
@@ -236,7 +243,7 @@ When I severed my nerves<br/>
 With my painter's edge this morning<br/>
 I did it to see what my lips could come up with<br/><br/>
 
-Throat tight from hesitation<br/>
+Throat clasped with ignorance<br/>
 The singular thread connecting my lips and my mind<br/>
 Hanging by a basting stitch<br/>
 And a pathetic twine<br/><br/>
@@ -255,7 +262,7 @@ So I won't know.
                             </div>
                             <div style={{ 
                                 fontSize: '12px', 
-                                color: '#0084FF',
+                                color: '#ffffff',
                                 fontStyle: 'italic'
                             }}>
                                 Posted on October 5, 2025 • 2 min read ✨
@@ -265,18 +272,19 @@ So I won't know.
 
 
                         <div style={{
-                            background: '#2a2a2a',
+                            background: 'rgba(0, 0, 0, 0.65)',
                             padding: '20px',
                             borderRadius: '12px',
                             marginBottom: '15px',
                             boxShadow: '0 4px 8px rgba(0, 132, 255, 0.1)',
-                            border: '1px solid #3a3a3a'
+                            border: '1px solid rgba(255,255,255,0.3)'
                         }}>
-                            <h3 style={{ 
-                                margin: '0 0 10px 0', 
-                                fontSize: '20px',
-                                color: '#0084FF'
-                            }}>
+                        <h3 style={{ 
+                            margin: '0 0 10px 0', 
+                            fontSize: '20px',
+                            fontFamily: "'Exmouth', Arial, sans-serif",
+                            color: '#ffffff'
+                        }}>
                             A Great Performance
                             </h3>
                             <p style={{ 
@@ -324,7 +332,7 @@ So I won't know.
                              </p>
                             <div style={{ 
                                 fontSize: '12px', 
-                                color: '#0084FF',
+                                color: '#ffffff',
                                 fontStyle: 'italic'
                             }}>
                                 Posted on September 24, 2025 • 3 min read ✨
@@ -334,18 +342,19 @@ So I won't know.
 
 
                         <div style={{
-                            background: '#2a2a2a',
+                            background: 'rgba(0, 0, 0, 0.65)',
                             padding: '20px',
                             borderRadius: '12px',
                             marginBottom: '15px',
                             boxShadow: '0 4px 8px rgba(0, 132, 255, 0.1)',
-                            border: '1px solid #3a3a3a'
+                            border: '1px solid rgba(255,255,255,0.3)'
                         }}>
-                            <h3 style={{ 
-                                margin: '0 0 10px 0', 
-                                fontSize: '20px',
-                                color: '#0084FF'
-                            }}>
+                        <h3 style={{ 
+                            margin: '0 0 10px 0', 
+                            fontSize: '20px',
+                            fontFamily: "'Exmouth', Arial, sans-serif",
+                            color: '#ffffff'
+                        }}>
                             Neighborhood Cat
                             </h3>
                             <div style={{ 
@@ -409,7 +418,7 @@ fueling his smirk with my yearning.
                             </div>
                             <div style={{ 
                                 fontSize: '12px', 
-                                color: '#0084FF',
+                                color: '#ffffff',
                                 fontStyle: 'italic'
                             }}>
                                 Posted on September, 2025 • 2 min read ✨
@@ -419,17 +428,18 @@ fueling his smirk with my yearning.
 
 
                         <div style={{
-                            background: '#2a2a2a',
+                            background: 'rgba(0, 0, 0, 0.65)',
                             padding: '20px',
                             borderRadius: '12px',
                             marginBottom: '15px',
                             boxShadow: '0 4px 8px rgba(0, 132, 255, 0.1)',
-                            border: '1px solid #3a3a3a'
+                            border: '1px solid rgba(255,255,255,0.3)'
                         }}>
                             <h3 style={{ 
                                 margin: '0 0 10px 0', 
                                 fontSize: '20px',
-                                color: '#0084FF'
+                                fontFamily: '\'Exmouth\', Arial, sans-serif',
+                                color: '#ffffff'
                             }}>
                             Mattel Presents:
                             </h3>
@@ -493,7 +503,7 @@ fueling his smirk with my yearning.
                              </p>
                             <div style={{ 
                                 fontSize: '12px', 
-                                color: '#0084FF',
+                                color: '#ffffff',
                                 fontStyle: 'italic'
                             }}>
                                 Posted on August 14, 2025 • 4 min read ✨
@@ -504,17 +514,18 @@ fueling his smirk with my yearning.
 
 
                         <div style={{
-                            background: '#2a2a2a',
+                            background: 'rgba(0, 0, 0, 0.65)',
                             padding: '20px',
                             borderRadius: '12px',
                             marginBottom: '15px',
                             boxShadow: '0 4px 8px rgba(0, 132, 255, 0.1)',
-                            border: '1px solid #3a3a3a'
+                            border: '1px solid rgba(255,255,255,0.3)'
                         }}>
                             <h3 style={{ 
                                 margin: '0 0 10px 0', 
                                 fontSize: '20px',
-                                color: '#0084FF'
+                                fontFamily: '\'Exmouth\', Arial, sans-serif',
+                                color: '#ffffff'
                             }}>
                             Opinion vs Fact
                             </h3>
@@ -569,7 +580,7 @@ fueling his smirk with my yearning.
                              </p>
                             <div style={{ 
                                 fontSize: '12px', 
-                                color: '#0084FF',
+                                color: '#ffffff',
                                 fontStyle: 'italic'
                             }}>
                                 Posted on July 30, 2025 • 5 min read ✨
@@ -580,17 +591,18 @@ fueling his smirk with my yearning.
 
 
                         <div style={{
-                            background: '#2a2a2a',
+                            background: 'rgba(0, 0, 0, 0.65)',
                             padding: '20px',
                             borderRadius: '12px',
                             marginBottom: '15px',
                             boxShadow: '0 4px 8px rgba(0, 132, 255, 0.1)',
-                            border: '1px solid #3a3a3a'
+                            border: '1px solid rgba(255,255,255,0.3)'
                         }}>
                             <h3 style={{ 
                                 margin: '0 0 10px 0', 
                                 fontSize: '20px',
-                                color: '#0084FF'
+                                fontFamily: '\'Exmouth\', Arial, sans-serif',
+                                color: '#ffffff'
                             }}>
                             Deja Who?
                             </h3>
@@ -631,7 +643,7 @@ fueling his smirk with my yearning.
                              </p>
                             <div style={{ 
                                 fontSize: '12px', 
-                                color: '#0084FF',
+                                color: '#ffffff',
                                 fontStyle: 'italic'
                             }}>
                                 Posted on July 2, 2025 • 3 min read ✨
@@ -642,17 +654,18 @@ fueling his smirk with my yearning.
 
 
                         <div style={{
-                            background: '#2a2a2a',
+                            background: 'rgba(0, 0, 0, 0.65)',
                             padding: '20px',
                             borderRadius: '12px',
                             marginBottom: '15px',
                             boxShadow: '0 4px 8px rgba(0, 132, 255, 0.1)',
-                            border: '1px solid #3a3a3a'
+                            border: '1px solid rgba(255,255,255,0.3)'
                         }}>
                             <h3 style={{ 
                                 margin: '0 0 10px 0', 
                                 fontSize: '20px',
-                                color: '#0084FF'
+                                fontFamily: '\'Exmouth\', Arial, sans-serif',
+                                color: '#ffffff'
                             }}>
                             It Takes a Village
                             </h3>
@@ -691,7 +704,7 @@ fueling his smirk with my yearning.
                              </p>
                             <div style={{ 
                                 fontSize: '12px', 
-                                color: '#0084FF',
+                                color: '#ffffff',
                                 fontStyle: 'italic'
                             }}>
                                 Posted on June 30, 2025 • 2 min read ✨
@@ -702,17 +715,18 @@ fueling his smirk with my yearning.
 
 
                         <div style={{
-                            background: '#2a2a2a',
+                            background: 'rgba(0, 0, 0, 0.65)',
                             padding: '20px',
                             borderRadius: '12px',
                             marginBottom: '15px',
                             boxShadow: '0 4px 8px rgba(0, 132, 255, 0.1)',
-                            border: '1px solid #3a3a3a'
+                            border: '1px solid rgba(255,255,255,0.3)'
                         }}>
                             <h3 style={{ 
                                 margin: '0 0 10px 0', 
                                 fontSize: '20px',
-                                color: '#0084FF'
+                                fontFamily: '\'Exmouth\', Arial, sans-serif',
+                                color: '#ffffff'
                             }}>
                             The Shoe Might Still and Sorta Used to Fit
                             </h3>
@@ -757,7 +771,7 @@ fueling his smirk with my yearning.
                              </p>
                             <div style={{ 
                                 fontSize: '12px', 
-                                color: '#0084FF',
+                                color: '#ffffff',
                                 fontStyle: 'italic'
                             }}>
                                 Posted on June 17, 2025 • 3 min read ✨
@@ -770,17 +784,18 @@ fueling his smirk with my yearning.
 
 
                         <div style={{
-                            background: '#2a2a2a',
+                            background: 'rgba(0, 0, 0, 0.65)',
                             padding: '20px',
                             borderRadius: '12px',
                             marginBottom: '15px',
                             boxShadow: '0 4px 8px rgba(0, 132, 255, 0.1)',
-                            border: '1px solid #3a3a3a'
+                            border: '1px solid rgba(255,255,255,0.3)'
                         }}>
                             <h3 style={{ 
                                 margin: '0 0 10px 0', 
                                 fontSize: '20px',
-                                color: '#0084FF'
+                                fontFamily: '\'Exmouth\', Arial, sans-serif',
+                                color: '#ffffff'
                             }}>
                             Piece and Peace
                             </h3>
@@ -810,7 +825,7 @@ fueling his smirk with my yearning.
                             for others, and anyone who has been immersed in my life is a part of my f'ed up little puzzle </p>
                             <div style={{ 
                                 fontSize: '12px', 
-                                color: '#0084FF',
+                                color: '#ffffff',
                                 fontStyle: 'italic'
                             }}>
                                 Posted on June 5th, 2025 • 2 in read ✨
@@ -822,17 +837,18 @@ fueling his smirk with my yearning.
 
 
                         <div style={{
-                            background: '#2a2a2a',
+                            background: 'rgba(0, 0, 0, 0.65)',
                             padding: '20px',
                             borderRadius: '12px',
                             marginBottom: '15px',
                             boxShadow: '0 4px 8px rgba(0, 132, 255, 0.1)',
-                            border: '1px solid #3a3a3a'
+                            border: '1px solid rgba(255,255,255,0.3)'
                         }}>
                             <h3 style={{ 
                                 margin: '0 0 10px 0', 
                                 fontSize: '20px',
-                                color: '#0084FF'
+                                fontFamily: '\'Exmouth\', Arial, sans-serif',
+                                color: '#ffffff'
                             }}>
                             Ego and passion
                             </h3>
@@ -867,7 +883,7 @@ fueling his smirk with my yearning.
                             </p>
                             <div style={{ 
                                 fontSize: '12px', 
-                                color: '#0084FF',
+                                color: '#ffffff',
                                 fontStyle: 'italic'
                             }}>
                                 Posted on May 20th, 2025 • 3 min read ✨
@@ -879,17 +895,18 @@ fueling his smirk with my yearning.
 
 
                         <div style={{
-                            background: '#2a2a2a',
+                            background: 'rgba(0, 0, 0, 0.65)',
                             padding: '20px',
                             borderRadius: '12px',
                             marginBottom: '15px',
                             boxShadow: '0 4px 8px rgba(0, 132, 255, 0.1)',
-                            border: '1px solid #3a3a3a'
+                            border: '1px solid rgba(255,255,255,0.3)'
                         }}>
                             <h3 style={{ 
                                 margin: '0 0 10px 0', 
                                 fontSize: '20px',
-                                color: '#0084FF'
+                                fontFamily: '\'Exmouth\', Arial, sans-serif',
+                                color: '#ffffff'
                             }}>
                             Yearly Goal Check In
                             </h3>
@@ -927,7 +944,7 @@ fueling his smirk with my yearning.
                             </p>
                             <div style={{ 
                                 fontSize: '12px', 
-                                color: '#0084FF',
+                                color: '#ffffff',
                                 fontStyle: 'italic'
                             }}>
                                 Posted on April 30th, 2025 • 6 min read ✨
@@ -941,17 +958,18 @@ fueling his smirk with my yearning.
 
 
                         <div style={{
-                            background: '#2a2a2a',
+                            background: 'rgba(0, 0, 0, 0.65)',
                             padding: '20px',
                             borderRadius: '12px',
                             marginBottom: '15px',
                             boxShadow: '0 4px 8px rgba(0, 132, 255, 0.1)',
-                            border: '1px solid #3a3a3a'
+                            border: '1px solid rgba(255,255,255,0.3)'
                         }}>
                             <h3 style={{ 
                                 margin: '0 0 10px 0', 
                                 fontSize: '20px',
-                                color: '#0084FF'
+                                fontFamily: '\'Exmouth\', Arial, sans-serif',
+                                color: '#ffffff'
                             }}>
                             Break Down to Break Through
                             </h3>
@@ -995,7 +1013,7 @@ fueling his smirk with my yearning.
                             </p>
                             <div style={{ 
                                 fontSize: '12px', 
-                                color: '#0084FF',
+                                color: '#ffffff',
                                 fontStyle: 'italic'
                             }}>
                                 Posted on April 8th, 2025 • 6 min read ✨
@@ -1006,17 +1024,18 @@ fueling his smirk with my yearning.
 
 
                         <div style={{
-                            background: '#2a2a2a',
+                            background: 'rgba(0, 0, 0, 0.65)',
                             padding: '20px',
                             borderRadius: '12px',
                             marginBottom: '15px',
                             boxShadow: '0 4px 8px rgba(0, 132, 255, 0.1)',
-                            border: '1px solid #3a3a3a'
+                            border: '1px solid rgba(255,255,255,0.3)'
                         }}>
                             <h3 style={{ 
                                 margin: '0 0 10px 0', 
                                 fontSize: '20px',
-                                color: '#0084FF'
+                                fontFamily: '\'Exmouth\', Arial, sans-serif',
+                                color: '#ffffff'
                             }}>
                             Building Community
                             </h3>
@@ -1047,7 +1066,7 @@ fueling his smirk with my yearning.
                             </p>
                             <div style={{ 
                                 fontSize: '12px', 
-                                color: '#0084FF',
+                                color: '#ffffff',
                                 fontStyle: 'italic'
                             }}>
                                 Posted on March 20th, 2025 • 6 min read ✨
@@ -1058,17 +1077,18 @@ fueling his smirk with my yearning.
 
 
                         <div style={{
-                            background: '#2a2a2a',
+                            background: 'rgba(0, 0, 0, 0.65)',
                             padding: '20px',
                             borderRadius: '12px',
                             marginBottom: '15px',
                             boxShadow: '0 4px 8px rgba(0, 132, 255, 0.1)',
-                            border: '1px solid #3a3a3a'
+                            border: '1px solid rgba(255,255,255,0.3)'
                         }}>
                             <h3 style={{ 
                                 margin: '0 0 10px 0', 
                                 fontSize: '20px',
-                                color: '#0084FF'
+                                fontFamily: '\'Exmouth\', Arial, sans-serif',
+                                color: '#ffffff'
                             }}>
                             Relationship Dynamics
                             </h3>
@@ -1100,7 +1120,7 @@ fueling his smirk with my yearning.
                             </p>
                             <div style={{ 
                                 fontSize: '12px', 
-                                color: '#0084FF',
+                                color: '#ffffff',
                                 fontStyle: 'italic'
                             }}>
                                 Posted on March 3rd, 2025 • 6 min read ✨
@@ -1108,17 +1128,18 @@ fueling his smirk with my yearning.
                         </div>
                                             
                         <div style={{
-                            background: '#2a2a2a',
+                            background: 'rgba(0, 0, 0, 0.65)',
                             padding: '20px',
                             borderRadius: '12px',
                             marginBottom: '15px',
                             boxShadow: '0 4px 8px rgba(0, 132, 255, 0.1)',
-                            border: '1px solid #3a3a3a'
+                            border: '1px solid rgba(255,255,255,0.3)'
                         }}>
                             <h3 style={{ 
                                 margin: '0 0 10px 0', 
                                 fontSize: '20px',
-                                color: '#0084FF'
+                                fontFamily: '\'Exmouth\', Arial, sans-serif',
+                                color: '#ffffff'
                             }}>
                                 Gender Wars
                             </h3>
@@ -1158,7 +1179,7 @@ fueling his smirk with my yearning.
                             </p>
                             <div style={{ 
                                 fontSize: '12px', 
-                                color: '#0084FF',
+                                color: '#ffffff',
                                 fontStyle: 'italic'
                             }}>
                                 Posted on February 24, 2025 • 6 min read ✨
@@ -1168,17 +1189,18 @@ fueling his smirk with my yearning.
 
                         {/* Blog Posts */}
                         <div style={{
-                            background: '#2a2a2a',
+                            background: 'rgba(0, 0, 0, 0.65)',
                             padding: '20px',
                             borderRadius: '12px',
                             marginBottom: '15px',
                             boxShadow: '0 4px 8px rgba(0, 132, 255, 0.1)',
-                            border: '1px solid #3a3a3a'
+                            border: '1px solid rgba(255,255,255,0.3)'
                         }}>
                             <h3 style={{ 
                                 margin: '0 0 10px 0', 
                                 fontSize: '20px',
-                                color: '#0084FF'
+                                fontFamily: '\'Exmouth\', Arial, sans-serif',
+                                color: '#ffffff'
                             }}>
                                 Dopamine Overload
                             </h3>
@@ -1207,7 +1229,7 @@ fueling his smirk with my yearning.
                             </p>
                             <div style={{ 
                                 fontSize: '12px', 
-                                color: '#0084FF',
+                                color: '#ffffff',
                                 fontStyle: 'italic'
                             }}>
                                 Posted on February 3rd, 2025 • 4 min read ✨
@@ -1215,17 +1237,18 @@ fueling his smirk with my yearning.
                         </div>
                         {/* Blog Posts */}
                         <div style={{
-                            background: '#2a2a2a',
+                            background: 'rgba(0, 0, 0, 0.65)',
                             padding: '20px',
                             borderRadius: '12px',
                             marginBottom: '15px',
                             boxShadow: '0 4px 8px rgba(0, 132, 255, 0.1)',
-                            border: '1px solid #3a3a3a'
+                            border: '1px solid rgba(255,255,255,0.3)'
                         }}>
                             <h3 style={{ 
                                 margin: '0 0 10px 0', 
                                 fontSize: '20px',
-                                color: '#0084FF'
+                                fontFamily: '\'Exmouth\', Arial, sans-serif',
+                                color: '#ffffff'
                             }}>
                                 Creative Calling
                             </h3>
@@ -1253,7 +1276,7 @@ fueling his smirk with my yearning.
                             </p>
                             <div style={{ 
                                 fontSize: '12px', 
-                                color: '#0084FF',
+                                color: '#ffffff',
                                 fontStyle: 'italic'
                             }}>
                                 Posted on January 29, 2025 • 4 min read ✨
@@ -1261,17 +1284,18 @@ fueling his smirk with my yearning.
                         </div>
                         {/* Blog Posts */}
                         <div style={{
-                            background: '#2a2a2a',
+                            background: 'rgba(0, 0, 0, 0.65)',
                             padding: '20px',
                             borderRadius: '12px',
                             marginBottom: '15px',
                             boxShadow: '0 4px 8px rgba(0, 132, 255, 0.1)',
-                            border: '1px solid #3a3a3a'
+                            border: '1px solid rgba(255,255,255,0.3)'
                         }}>
                             <h3 style={{ 
                                 margin: '0 0 10px 0', 
                                 fontSize: '20px',
-                                color: '#0084FF'
+                                fontFamily: '\'Exmouth\', Arial, sans-serif',
+                                color: '#ffffff'
                             }}>
                                 Future with Automation
                             </h3>
@@ -1301,7 +1325,7 @@ fueling his smirk with my yearning.
                             </p>
                             <div style={{ 
                                 fontSize: '12px', 
-                                color: '#0084FF',
+                                color: '#ffffff',
                                 fontStyle: 'italic'
                             }}>
                                 Posted on January 28, 2025 • 4 min read ✨
@@ -1309,17 +1333,18 @@ fueling his smirk with my yearning.
                         </div>
                         {/* Blog Posts */}
                         <div style={{
-                            background: '#2a2a2a',
+                            background: 'rgba(0, 0, 0, 0.65)',
                             padding: '20px',
                             borderRadius: '12px',
                             marginBottom: '15px',
                             boxShadow: '0 4px 8px rgba(0, 132, 255, 0.1)',
-                            border: '1px solid #3a3a3a'
+                            border: '1px solid rgba(255,255,255,0.3)'
                         }}>
                             <h3 style={{ 
                                 margin: '0 0 10px 0', 
                                 fontSize: '20px',
-                                color: '#0084FF'
+                                fontFamily: '\'Exmouth\', Arial, sans-serif',
+                                color: '#ffffff'
                             }}>
                                 Misinformation
                             </h3>
@@ -1345,7 +1370,7 @@ fueling his smirk with my yearning.
                             </p>
                             <div style={{ 
                                 fontSize: '12px', 
-                                color: '#0084FF',
+                                color: '#ffffff',
                                 fontStyle: 'italic'
                             }}>
                                 Posted on January 22, 2025 • 4 min read ✨
@@ -1354,17 +1379,18 @@ fueling his smirk with my yearning.
                     
                     
                         <div style={{
-                            background: '#2a2a2a',
+                            background: 'rgba(0, 0, 0, 0.65)',
                             padding: '20px',
                             borderRadius: '12px',
                             marginBottom: '15px',
                             boxShadow: '0 4px 8px rgba(0, 132, 255, 0.1)',
-                            border: '1px solid #3a3a3a'
+                            border: '1px solid rgba(255,255,255,0.3)'
                         }}>
                             <h3 style={{ 
                                 margin: '0 0 10px 0', 
                                 fontSize: '20px',
-                                color: '#0084FF'
+                                fontFamily: '\'Exmouth\', Arial, sans-serif',
+                                color: '#ffffff'
                             }}>
                                 Trump Inauguration
                             </h3>
@@ -1386,7 +1412,7 @@ fueling his smirk with my yearning.
                             </p>
                             <div style={{ 
                                 fontSize: '12px', 
-                                color: '#0084FF',
+                                color: '#ffffff',
                                 fontStyle: 'italic'
                             }}>
                                 Posted on January 21, 2025 • 5 min read ✨
@@ -1395,17 +1421,18 @@ fueling his smirk with my yearning.
 
                         {/* Making this website Blog Post */}
                         <div style={{
-                            background: '#2a2a2a',
+                            background: 'rgba(0, 0, 0, 0.65)',
                             padding: '20px',
                             borderRadius: '12px',
                             marginBottom: '15px',
                             boxShadow: '0 4px 8px rgba(0, 132, 255, 0.1)',
-                            border: '1px solid #3a3a3a'
+                            border: '1px solid rgba(255,255,255,0.3)'
                         }}>
                             <h3 style={{ 
                                 margin: '0 0 10px 0', 
                                 fontSize: '20px',
-                                color: '#0084FF'
+                                fontFamily: '\'Exmouth\', Arial, sans-serif',
+                                color: '#ffffff'
                             }}>
                                 Making this website
                             </h3>
@@ -1425,7 +1452,7 @@ fueling his smirk with my yearning.
                             </p>
                             <div style={{ 
                                 fontSize: '12px', 
-                                color: '#0084FF',
+                                color: '#ffffff',
                                 fontStyle: 'italic'
                             }}>
                                 Posted on January 1, 2025 • 3 min read ✨
