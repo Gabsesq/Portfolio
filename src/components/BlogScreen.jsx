@@ -102,9 +102,93 @@ export default function BlogScreen() {
                                 color: '#0084FF',
                                 textShadow: '2px 2px 4px rgba(0, 132, 255, 0.2)'
                             }}>
-                                ✨ My Blog ✨
+                                Blogger
                             </h2>
                         </div>
+
+                        <div style={{
+                            background: '#2a2a2a',
+                            padding: '20px',
+                            borderRadius: '12px',
+                            marginBottom: '15px',
+                            boxShadow: '0 4px 8px rgba(0, 132, 255, 0.1)',
+                            border: '1px solid #3a3a3a'
+                        }}>
+                            <h3 style={{ 
+                                margin: '0 0 10px 0', 
+                                fontSize: '20px',
+                                color: '#0084FF'
+                            }}>
+                            I'll Take a Double
+                            </h3>
+                            <div style={{ 
+                                margin: '0 0 10px 0', 
+                                fontSize: '14px', 
+                                color: '#ffffff',
+                                lineHeight: '1.8',
+                                fontStyle: 'italic'
+                            }}>
+In 1518, a woman and her daughter began dancing in the streets of modern day France, 
+part of the Holy Roman Empire. They danced until they collapsed from exhaustion, and 
+they woke up to dance again. Slowly, people began joining the woman and her daughter, 
+also claiming to have lost control. Pious leaders and governing officials began siccing 
+musicians and bands at this hot mess of a crowd, which only made the dancing worse. 
+Many of them dead from dancing through and past their injuries.<br/><br/>
+
+Academics have a few theories. The mold grown on rye bread, ergot, has a similar effect 
+as LSD. Some believe it was dark magic, and the Lord knows I don’t question other realms. 
+Some thought it was simply a mass hysteria due to food shortages, wealth gap, the cycle 
+we tend to face every few generations.<br/><br/>
+
+I’m not sure if it’s the ergot or the dark magic or the wealth gap, but I feel that I 
+could have been one of them. I have felt my body quelling the dance for the past few 
+years. My hysteria masked by deliria, dissociation. A word thrown around by those who don’t 
+know what it feels like to lose your ability to do anything beyond eat, sleep, survive, and 
+barely that.<br/><br/>
+
+Have you ever tried to talk to your friend while you’re under water? You read their waving 
+lips and you hear the inflections, and your brain almost renders correctly, but not quite. 
+This is the first year I have awakened from my drowning, and I am ready to dance in the 
+street. My body’s attempt at self preservation has turned into something much, much more 
+lonely. One ear out of water, one ear submerged, one half of my body sinking and the other 
+gasping for air.<br/><br/>
+
+From academically successful, friends family and connection, gut laughter, to delayed processing 
+and a memory decapitated. My heart hurts because I once tasted the savory notes of life. I 
+was capable of processing them. Awakening from my slumber opens a new door of difficulties, as 
+when I was under water, the disconnection was comforting. Now I am just cold, wet, and grasping 
+for warmth with an iced hand. Scraping for normalcy and connection.<br/><br/>
+
+There is something hellish about ‘almost’ or ‘a little bit’. Every area of my life there hangs 
+a feeling of almost and not quite. I’m feeling no emotions and too many at once.<br/><br/>
+
+I love you and I don’t<br/>
+I’m happy and I’m not<br/>
+I’m miserable and I’m ecstatic<br/>
+I’m boring and I’m electric<br/>
+I’m electric and I’m not<br/>
+I’m inspired and I’m apathetic<br/>
+I’m sick and I’m youthful<br/>
+I’m youthful and I’m not<br/>
+You enthrall me and you don’t<br/>
+I care and I do not<br/><br/>
+
+I’ll take a glass of ergot and I will dance in honor of those who danced before me
+
+                            </div>
+                            <div style={{ 
+                                fontSize: '12px', 
+                                color: '#0084FF',
+                                fontStyle: 'italic'
+                            }}>
+                                Posted on November 6, 2025 • 2 min read ✨
+                            </div>
+                        </div>
+
+
+
+
+
 
 
 
