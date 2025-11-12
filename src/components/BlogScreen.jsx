@@ -168,7 +168,7 @@ for warmth with an iced hand. Scraping for normalcy and connection.<br/><br/>
 There is something hellish about ‘almost’ or ‘a little bit’. Every area of my life there hangs 
 a feeling of almost and not quite. I’m feeling no emotions and too many at once.<br/><br/>
 
-I love you and I don’t<br/>
+I love it and I don’t<br/>
 I’m happy and I’m not<br/>
 I’m miserable and I’m ecstatic<br/>
 I’m boring and I’m electric<br/>
@@ -176,7 +176,7 @@ I’m electric and I’m not<br/>
 I’m inspired and I’m apathetic<br/>
 I’m sick and I’m youthful<br/>
 I’m youthful and I’m not<br/>
-You enthrall me and you don’t<br/>
+They enthrall me and they don’t<br/>
 I care and I do not<br/><br/>
 
 I’ll take a glass of ergot and I will dance in honor of those who danced before me
