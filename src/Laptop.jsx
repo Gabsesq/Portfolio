@@ -138,19 +138,19 @@ export default function Room() {
             />
             
             {/* Increased ambient light for better overall illumination */}
-            <ambientLight intensity={0.3} color="#fff5eb" />
+            <ambientLight intensity={0.1} color="#fff5eb" />
             
             {/* Window light simulation */}
             <directionalLight 
                 position={[-90, 160, -210]}  // Position matching first window
-                intensity={1.2} 
+                intensity={.2} 
                 color="#ffecd9"
             />
             
             {/* Second window light */}
             <directionalLight 
                 position={[212, 160, 80]}    // Position matching second window
-                intensity={.3} 
+                intensity={.1} 
                 color="#ffecd9"
             />
             

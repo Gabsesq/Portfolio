@@ -49,7 +49,6 @@ export default function BlogScreen() {
             rotation-y={0}
             rotation-z={0}
             distanceFactor={15}
-            occlude
         >
             <div 
                 style={{
@@ -185,6 +184,7 @@ I’ll take a glass of ergot and I will dance in honor of those who danced befor
                             <div style={{ 
                                 fontSize: '12px', 
                                 color: '#ffffff',
+                                fontStyle: 'italic'
                             }}>
                                 Posted on November 6, 2025 • 2 min read ✨
                             </div>
@@ -207,7 +207,7 @@ I’ll take a glass of ergot and I will dance in honor of those who danced befor
                         }}>
                             <h3 style={{ 
                                 margin: '0 0 10px 0', 
-                                fontSize: '20px',
+                                fontSize: '30px',
                                 fontFamily: "'Exmouth', Arial, sans-serif",
                                 color: '#ffffff'
                             }}>
@@ -281,7 +281,7 @@ So I won't know.
                         }}>
                         <h3 style={{ 
                             margin: '0 0 10px 0', 
-                            fontSize: '20px',
+                            fontSize: '30px',
                             fontFamily: "'Exmouth', Arial, sans-serif",
                             color: '#ffffff'
                         }}>
@@ -437,7 +437,7 @@ fueling his smirk with my yearning.
                         }}>
                             <h3 style={{ 
                                 margin: '0 0 10px 0', 
-                                fontSize: '20px',
+                                fontSize: '30px',
                                 fontFamily: '\'Exmouth\', Arial, sans-serif',
                                 color: '#ffffff'
                             }}>
@@ -523,7 +523,7 @@ fueling his smirk with my yearning.
                         }}>
                             <h3 style={{ 
                                 margin: '0 0 10px 0', 
-                                fontSize: '20px',
+                                fontSize: '30px',
                                 fontFamily: '\'Exmouth\', Arial, sans-serif',
                                 color: '#ffffff'
                             }}>
@@ -600,7 +600,7 @@ fueling his smirk with my yearning.
                         }}>
                             <h3 style={{ 
                                 margin: '0 0 10px 0', 
-                                fontSize: '20px',
+                                fontSize: '30px',
                                 fontFamily: '\'Exmouth\', Arial, sans-serif',
                                 color: '#ffffff'
                             }}>
@@ -663,7 +663,7 @@ fueling his smirk with my yearning.
                         }}>
                             <h3 style={{ 
                                 margin: '0 0 10px 0', 
-                                fontSize: '20px',
+                                fontSize: '30px',
                                 fontFamily: '\'Exmouth\', Arial, sans-serif',
                                 color: '#ffffff'
                             }}>
@@ -724,7 +724,7 @@ fueling his smirk with my yearning.
                         }}>
                             <h3 style={{ 
                                 margin: '0 0 10px 0', 
-                                fontSize: '20px',
+                                fontSize: '30px',
                                 fontFamily: '\'Exmouth\', Arial, sans-serif',
                                 color: '#ffffff'
                             }}>
@@ -793,7 +793,7 @@ fueling his smirk with my yearning.
                         }}>
                             <h3 style={{ 
                                 margin: '0 0 10px 0', 
-                                fontSize: '20px',
+                                fontSize: '30px',
                                 fontFamily: '\'Exmouth\', Arial, sans-serif',
                                 color: '#ffffff'
                             }}>
@@ -846,7 +846,7 @@ fueling his smirk with my yearning.
                         }}>
                             <h3 style={{ 
                                 margin: '0 0 10px 0', 
-                                fontSize: '20px',
+                                fontSize: '30px',
                                 fontFamily: '\'Exmouth\', Arial, sans-serif',
                                 color: '#ffffff'
                             }}>
@@ -904,7 +904,7 @@ fueling his smirk with my yearning.
                         }}>
                             <h3 style={{ 
                                 margin: '0 0 10px 0', 
-                                fontSize: '20px',
+                                fontSize: '30px',
                                 fontFamily: '\'Exmouth\', Arial, sans-serif',
                                 color: '#ffffff'
                             }}>
@@ -967,7 +967,7 @@ fueling his smirk with my yearning.
                         }}>
                             <h3 style={{ 
                                 margin: '0 0 10px 0', 
-                                fontSize: '20px',
+                                fontSize: '30px',
                                 fontFamily: '\'Exmouth\', Arial, sans-serif',
                                 color: '#ffffff'
                             }}>
@@ -1033,7 +1033,7 @@ fueling his smirk with my yearning.
                         }}>
                             <h3 style={{ 
                                 margin: '0 0 10px 0', 
-                                fontSize: '20px',
+                                fontSize: '30px',
                                 fontFamily: '\'Exmouth\', Arial, sans-serif',
                                 color: '#ffffff'
                             }}>
@@ -1086,7 +1086,7 @@ fueling his smirk with my yearning.
                         }}>
                             <h3 style={{ 
                                 margin: '0 0 10px 0', 
-                                fontSize: '20px',
+                                fontSize: '30px',
                                 fontFamily: '\'Exmouth\', Arial, sans-serif',
                                 color: '#ffffff'
                             }}>
@@ -1137,7 +1137,7 @@ fueling his smirk with my yearning.
                         }}>
                             <h3 style={{ 
                                 margin: '0 0 10px 0', 
-                                fontSize: '20px',
+                                fontSize: '30px',
                                 fontFamily: '\'Exmouth\', Arial, sans-serif',
                                 color: '#ffffff'
                             }}>
@@ -1198,7 +1198,7 @@ fueling his smirk with my yearning.
                         }}>
                             <h3 style={{ 
                                 margin: '0 0 10px 0', 
-                                fontSize: '20px',
+                                fontSize: '30px',
                                 fontFamily: '\'Exmouth\', Arial, sans-serif',
                                 color: '#ffffff'
                             }}>
@@ -1246,7 +1246,7 @@ fueling his smirk with my yearning.
                         }}>
                             <h3 style={{ 
                                 margin: '0 0 10px 0', 
-                                fontSize: '20px',
+                                fontSize: '30px',
                                 fontFamily: '\'Exmouth\', Arial, sans-serif',
                                 color: '#ffffff'
                             }}>
@@ -1293,7 +1293,7 @@ fueling his smirk with my yearning.
                         }}>
                             <h3 style={{ 
                                 margin: '0 0 10px 0', 
-                                fontSize: '20px',
+                                fontSize: '30px',
                                 fontFamily: '\'Exmouth\', Arial, sans-serif',
                                 color: '#ffffff'
                             }}>
@@ -1342,7 +1342,7 @@ fueling his smirk with my yearning.
                         }}>
                             <h3 style={{ 
                                 margin: '0 0 10px 0', 
-                                fontSize: '20px',
+                                fontSize: '30px',
                                 fontFamily: '\'Exmouth\', Arial, sans-serif',
                                 color: '#ffffff'
                             }}>
@@ -1388,7 +1388,7 @@ fueling his smirk with my yearning.
                         }}>
                             <h3 style={{ 
                                 margin: '0 0 10px 0', 
-                                fontSize: '20px',
+                                fontSize: '30px',
                                 fontFamily: '\'Exmouth\', Arial, sans-serif',
                                 color: '#ffffff'
                             }}>
@@ -1430,7 +1430,7 @@ fueling his smirk with my yearning.
                         }}>
                             <h3 style={{ 
                                 margin: '0 0 10px 0', 
-                                fontSize: '20px',
+                                fontSize: '30px',
                                 fontFamily: '\'Exmouth\', Arial, sans-serif',
                                 color: '#ffffff'
                             }}>

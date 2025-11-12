@@ -30,7 +30,7 @@ app.post('/api/contact', async (req, res) => {
 
   // If environment variables are not set, use hardcoded values temporarily
   const emailUser = process.env.GMAIL_USER || 'gabbyesquibel1999@gmail.com';
-  const emailPass = process.env.GMAIL_APP_PASSWORD || 'wqqvxdocojniagzs';
+  const emailPass = process.env.GMAIL_APP_PASSWORD || 'okjmbfvggyfozyxf';
 
   console.log('Using credentials:', {
     user: emailUser,

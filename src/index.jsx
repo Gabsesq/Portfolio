@@ -87,21 +87,24 @@ export default function CameraAnimation({ activeView }) {
 
         const view = viewPositions[activeView];
         
-        gsap.to(camera.position, {
+        // Use a timeline to sync position and rotation animations
+        const tl = gsap.timeline({ overwrite: true });
+        
+        tl.to(camera.position, {
             x: view.position.x,
             y: view.position.y,
             z: view.position.z,
-            duration: 2,
-            ease: "power2.inOut"
-        });
-
-        gsap.to(camera.rotation, {
+            duration: 1.2,
+            ease: "power1.out"
+        }, 0);
+        
+        tl.to(camera.rotation, {
             x: view.rotation.x,
             y: view.rotation.y,
             z: view.rotation.z,
-            duration: 2,
-            ease: "power2.inOut"
-        });
+            duration: 1.2,
+            ease: "power1.out"
+        }, 0);
     }, [camera, activeView]);
 
     return null;
