@@ -4,8 +4,6 @@ import { useState, useEffect, useRef } from "react";
 export default function BlogScreen() {
     const blogContainerRef = useRef(null);
     const [isMobile, setIsMobile] = useState(false);
-    const [startY, setStartY] = useState(0);
-    const [scrollTop, setScrollTop] = useState(0);
 
     useEffect(() => {
         // Check if device is mobile
@@ -14,31 +12,7 @@ export default function BlogScreen() {
         if (blogContainerRef.current) {
             blogContainerRef.current.scrollTop = 0;
         }
-
-        // Handle touch events for mobile scrolling
-        const handleTouchStart = (e) => {
-            setStartY(e.touches[0].clientY);
-        };
-
-        const handleTouchMove = (e) => {
-            e.preventDefault();
-            const deltaY = startY - e.touches[0].clientY;
-            const container = e.currentTarget;
-            container.scrollTop = scrollTop + deltaY;
-            setScrollTop(container.scrollTop);
-        };
-
-        const container = blogContainerRef.current;
-        if (container && isMobile) {
-            container.addEventListener('touchstart', handleTouchStart);
-            container.addEventListener('touchmove', handleTouchMove, { passive: false });
-            
-            return () => {
-                container.removeEventListener('touchstart', handleTouchStart);
-                container.removeEventListener('touchmove', handleTouchMove);
-            };
-        }
-    }, [isMobile, startY, scrollTop]);
+    }, []);
 
     return (
         <Html
@@ -66,7 +40,6 @@ export default function BlogScreen() {
                 }}
             >
                 <div 
-
                     ref={blogContainerRef}
                     style={{
                         position: 'absolute',
@@ -82,9 +55,8 @@ export default function BlogScreen() {
                         scrollbarColor: '#ffffff80 #1a1a1a',
                         msOverflowStyle: '-ms-autohiding-scrollbar',
                         touchAction: 'pan-y',
-                        transform: 'translateZ(0)',
                         height: '100%',
-                        willChange: 'transform'
+                        overscrollBehavior: 'contain'
                     }}
                 >
                     <div style={{

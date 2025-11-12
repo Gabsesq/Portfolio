@@ -273,9 +273,24 @@ canvas {
 
 /* Spotify Player at Bottom - Responsive Styles */
 @media screen and (max-width: 768px) {
-    .spotify-player-bottom {
-        width: calc(100% - 40px) !important;
+    .spotify-desktop {
+        display: none !important;
+    }
+    
+    .spotify-mobile {
+        display: block !important;
+        width: calc(100vw - 40px) !important;
         max-width: 300px;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .spotify-desktop {
+        display: block !important;
+    }
+    
+    .spotify-mobile {
+        display: none !important;
     }
 }
 
