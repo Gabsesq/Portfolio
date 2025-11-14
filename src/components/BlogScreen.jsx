@@ -122,8 +122,7 @@ we tend to face every few generations.<br/><br/>
 
 I’m not sure if it’s the ergot or the dark magic or the wealth gap, but I feel that I 
 could have been one of them. I have felt my body quelling the dance for the past few 
-years. My hysteria masked by deliria, dissociation. A word thrown around by those who don’t 
-know what it feels like to lose your ability to do anything beyond eat, sleep, survive, and 
+years. My hysteria masked by deliria, dissociation. Losing your ability to do anything beyond eat, sleep, survive, and 
 barely that.<br/><br/>
 
 Have you ever tried to talk to your friend while you’re under water? You read their waving 
@@ -133,7 +132,7 @@ street. My body’s attempt at self preservation has turned into something much,
 lonely. One ear out of water, one ear submerged, one half of my body sinking and the other 
 gasping for air.<br/><br/>
 
-From academically successful, friends family and connection, gut laughter, to delayed processing 
+Delayed processing 
 and a memory decapitated. My heart hurts because I once tasted the savory notes of life. I 
 was capable of processing them. Awakening from my slumber opens a new door of difficulties, as 
 when I was under water, the disconnection was comforting. Now I am just cold, wet, and grasping 
