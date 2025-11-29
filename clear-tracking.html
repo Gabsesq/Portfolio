@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clear Tracking</title>
+</head>
+<body>
+    <h1>Clear Visitor Tracking</h1>
+    <p>Click the button below to clear the tracking flag, then visit your portfolio site again.</p>
+    <button onclick="clearTracking()">Clear Tracking Flag</button>
+    <p id="status"></p>
+    
+    <script>
+        function clearTracking() {
+            sessionStorage.removeItem('visitorTracked');
+            document.getElementById('status').textContent = '✅ Tracking flag cleared! Now visit your portfolio site.';
+        }
+        
+        // Check current status
+        if (sessionStorage.getItem('visitorTracked')) {
+            document.getElementById('status').textContent = 'Current status: Already tracked this session';
+        } else {
+            document.getElementById('status').textContent = 'Current status: Not tracked yet';
+        }
+    </script>
+</body>
+</html>
+
