@@ -84,6 +84,102 @@ export default function BlogScreen() {
                             </h2>
                         </div>
 
+
+
+
+
+
+
+                        <div style={{
+                            background: 'rgba(0, 0, 0, 0.65)',
+                            padding: '20px',
+                            borderRadius: '12px',
+                            marginBottom: '15px',
+                            boxShadow: '0 4px 8px rgba(0, 132, 255, 0.1)',
+                        border: '1px solid rgba(255,255,255,0.3)',
+                        color: '#ffffff'
+                        }}>
+                            <h3 style={{ 
+                                margin: '0 0 10px 0', 
+                                fontSize: '30px',
+                                fontFamily: "'Exmouth', Arial, sans-serif",
+                                color: '#ffffff'
+                            }}>
+                            Chalant
+                            </h3>
+                            <div style={{ 
+                                margin: '0 0 10px 0', 
+                                fontSize: '14px', 
+                                color: '#ffffff',
+                                lineHeight: '1.8',
+                                textAlign: 'left'
+                            }}>
+
+I learned a harsh truth these past few months, and it cracked open a dozen other 
+realizations I didn’t know I needed. For years, without fully noticing, I was avoidant 
+in my relationships: friendships, dating, community, everything. Looking back, it was 
+obvious I was trying to outrun pain. I told myself I was protecting my mind, but really, 
+I was avoiding some of life’s most necessary lessons. 
+
+If I had to summarize my recent revelation, it would be this<br/><br/> Avoiding intimacy 
+with others is avoiding intimacy with yourself.<br/><br/>
+
+I care deeply about someone. The way our relationship began was 
+completely outside my comfort zone, and it pushed me into a version of myself I hadn’t met yet. 
+I promised myself this year that I would stop waiting for things to happen and actually pursue 
+what I want. That one decision has already changed the path my life was heading down.
+
+I want this person to experience the best parts of me only, but that is not realistic. That is 
+the avoidant anthem. Part of experiencing life fully is accepting where you are at, and allowing 
+others to perceive you, perfect or not. I used to hide behind 
+“self-improvement” to justify keeping people at a distance, not allowing anyone to fully 
+experience me. Still, I can’t help but think about who I might have become 
+sooner if I had let myself be open earlier. Could I have worked through the uglier parts of 
+myself had I been open with others? Could I have learned to be more vulnerable by practicing 
+with others? <br/><br/>
+
+For a long time, I avoided deep friendships and deeper love. I kept my connections fun and 
+low-maintenance. I walked away at the first red flag. I avoided vulnerable conversations. At the time, 
+it felt freeing. Looking back, it was empty. No emotion, no challenge, no growth.
+
+Every major moment of growth in my life came from something painful. And every truly rewarding 
+moment came from doing something that scared me. Taking a risk, being vulnerable, pushing past 
+what I thought I could handle. Comfort keeps you stuck. The experiences that make you feel 
+alive come from choosing to lean in instead of backing out. I am choosing to experience a full 
+life with it's entire range of emotions. <br/><br/>
+
+If you never take the trip, send the message, make the move, try something embarrassing, 
+or start over when it feels awkward, you guarantee your own stagnation. Older generations 
+were pushed into failure and rejection, and it shaped them into people with depth. Now it’s 
+easier than ever to distract ourselves and call it contentment when it’s really just existence. 
+The 'nonchalant' epidemic is robbing us of a full life. 'Nonchalant' is a scapegoat for 
+avoiding forward progress, learning new things, feeling new depths, acknowledging our short-comings.
+
+Now I find myself standing in front of someone I can't imagine my life without, managing knots 
+I thought I 
+had already untangled. I untangled some, but mainly I removed the variables and I looked away. 
+I’m learning, right now, that I’m not perfect, they’re not perfect, and 
+no one ever will be. And I’m accepting that choosing to grow, individually and together, will always 
+bring us closer to who we’re meant to be, whether we stay side by side forever or eventually 
+take different paths. Exposing myself to potential pain is worth the love I want to give and receive.
+                            </div>
+                            <div style={{ 
+                                fontSize: '12px', 
+                                color: '#ffffff',
+                                fontStyle: 'italic'
+                            }}>
+                                Posted on November 28, 2025 • 2 min read ✨
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
+
                         <div style={{
                             background: 'rgba(0, 0, 0, 0.65)',
                             padding: '20px',
