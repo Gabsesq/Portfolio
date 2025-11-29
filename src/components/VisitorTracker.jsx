@@ -22,6 +22,8 @@ export default function VisitorTracker() {
             ? 'http://localhost:3001/api/track-visitor'
             : '/api/track-visitor';
 
+          console.log('🔍 Attempting to track visitor at:', apiUrl);
+
           const response = await fetch(apiUrl, {
             method: 'POST',
             headers: {
@@ -32,11 +34,16 @@ export default function VisitorTracker() {
           if (response.ok) {
             const data = await response.json();
             sessionStorage.setItem('visitorTracked', 'true');
-            console.log('Visitor tracked:', data.location);
+            console.log('✅ Visitor tracked:', data.location || data.message);
+          } else {
+            const errorData = await response.text();
+            console.error('❌ Tracking failed:', response.status, errorData);
           }
         } catch (error) {
-          // Fail silently - don't interrupt user experience
-          console.log('Visitor tracking unavailable:', error.message);
+          // Log error so we can debug
+          console.error('❌ Visitor tracking error:', error.message);
+          console.log('💡 Make sure the Express server is running: npm run server');
+          console.log('💡 Or check browser console for CORS/network errors');
         }
       };
 
@@ -44,6 +51,8 @@ export default function VisitorTracker() {
       const timeout = setTimeout(trackVisitor, 2000);
       
       return () => clearTimeout(timeout);
+    } else {
+      console.log('ℹ️ Visitor already tracked this session');
     }
   }, []);
 

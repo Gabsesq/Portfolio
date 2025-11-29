@@ -70,8 +70,11 @@ async function getLocationFromIP(ip) {
 // Visitor tracking endpoint
 app.post('/api/track-visitor', async (req, res) => {
   try {
+    console.log('📊 Visitor tracking request received');
     const clientIP = getClientIP(req);
+    console.log('📍 Client IP:', clientIP);
     const locationData = await getLocationFromIP(clientIP);
+    console.log('🌍 Location data:', locationData);
     const timestamp = new Date().toISOString();
     
     // Get additional metadata from request
@@ -111,6 +114,8 @@ app.post('/api/track-visitor', async (req, res) => {
 
     // Save to file
     await fs.writeFile(visitorsFile, JSON.stringify(visitors, null, 2));
+    
+    console.log('✅ Visitor saved:', `${visitorData.city}, ${visitorData.state}`);
 
     res.status(200).json({ 
       success: true, 
