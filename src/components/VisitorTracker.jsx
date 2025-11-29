@@ -15,14 +15,21 @@ export default function VisitorTracker() {
       const trackVisitor = async () => {
         try {
           // Determine the API endpoint based on environment
+          // In local dev, always try Express server first (saves to JSON file)
           // In production on Vercel, use /api/track-visitor
-          // In local dev, use the Express server endpoint
-          const isDev = import.meta.env.DEV;
-          const apiUrl = isDev 
+          const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+          
+          // Always use Express server when on localhost (saves to file)
+          const apiUrl = isLocalhost
             ? 'http://localhost:3001/api/track-visitor'
             : '/api/track-visitor';
 
           console.log('🔍 Attempting to track visitor at:', apiUrl);
+          console.log('🌐 Hostname:', window.location.hostname);
+          
+          if (isLocalhost) {
+            console.log('💡 Using Express server - data will save to server/visitors.json');
+          }
 
           const response = await fetch(apiUrl, {
             method: 'POST',
@@ -35,15 +42,26 @@ export default function VisitorTracker() {
             const data = await response.json();
             sessionStorage.setItem('visitorTracked', 'true');
             console.log('✅ Visitor tracked:', data.location || data.message);
+            if (isLocalhost) {
+              console.log('💾 Data saved to server/visitors.json');
+            }
           } else {
             const errorData = await response.text();
             console.error('❌ Tracking failed:', response.status, errorData);
+            if (isLocalhost) {
+              console.error('💡 Make sure Express server is running: npm run server');
+            }
           }
         } catch (error) {
           // Log error so we can debug
           console.error('❌ Visitor tracking error:', error.message);
-          console.log('💡 Make sure the Express server is running: npm run server');
-          console.log('💡 Or check browser console for CORS/network errors');
+          const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+          if (isLocalhost) {
+            console.error('💡 Make sure the Express server is running: npm run server');
+            console.error('💡 Server should be on: http://localhost:3001');
+          } else {
+            console.error('💡 Check browser console for CORS/network errors');
+          }
         }
       };
 
