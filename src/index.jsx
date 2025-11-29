@@ -10,6 +10,7 @@ import gsap from "gsap";
 import { useProgress } from "@react-three/drei";
 import LoadingScreen from "./components/LoadingScreen";
 import { Analytics } from '@vercel/analytics/react';
+import VisitorTracker from "./components/VisitorTracker";
 
 
 export default function CameraAnimation({ activeView }) {
@@ -289,6 +290,7 @@ function App() {
             )}
             
             <Analytics />
+            <VisitorTracker />
         </>
     );
 }

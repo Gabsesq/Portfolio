@@ -5,6 +5,7 @@ import dotenv from 'dotenv';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import path from 'path';
+import fs from 'fs/promises';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -24,6 +25,129 @@ console.log('Environment check:', {
 const app = express();
 app.use(cors());
 app.use(express.json());
+
+// Helper function to get client IP address
+const getClientIP = (req) => {
+  return req.headers['x-forwarded-for']?.split(',')[0] || 
+         req.headers['x-real-ip'] || 
+         req.connection?.remoteAddress || 
+         req.socket?.remoteAddress ||
+         'unknown';
+};
+
+// Helper function to get geolocation from IP
+async function getLocationFromIP(ip) {
+  // Skip if IP is localhost or unknown
+  if (!ip || ip === 'unknown' || ip.startsWith('127.') || ip.startsWith('::1') || ip.startsWith('192.168.') || ip.startsWith('10.')) {
+    return { city: 'Local', region: 'Development', country: 'Local' };
+  }
+
+  try {
+    // Using free ip-api.com service (no API key required for basic usage)
+    // Alternative: ipapi.co, ipstack.com (require free API keys)
+    const response = await fetch(`http://ip-api.com/json/${ip}?fields=status,message,country,regionName,city,lat,lon,isp,query`);
+    const data = await response.json();
+    
+    if (data.status === 'success') {
+      return {
+        city: data.city || 'Unknown',
+        region: data.regionName || 'Unknown',
+        country: data.country || 'Unknown',
+        latitude: data.lat || null,
+        longitude: data.lon || null,
+        isp: data.isp || 'Unknown',
+        ip: data.query || ip
+      };
+    } else {
+      return { city: 'Unknown', region: 'Unknown', country: 'Unknown', ip };
+    }
+  } catch (error) {
+    console.error('Error fetching geolocation:', error);
+    return { city: 'Unknown', region: 'Unknown', country: 'Unknown', ip };
+  }
+}
+
+// Visitor tracking endpoint
+app.post('/api/track-visitor', async (req, res) => {
+  try {
+    const clientIP = getClientIP(req);
+    const locationData = await getLocationFromIP(clientIP);
+    const timestamp = new Date().toISOString();
+    
+    // Get additional metadata from request
+    const visitorData = {
+      timestamp,
+      ip: locationData.ip || clientIP,
+      city: locationData.city,
+      state: locationData.region,
+      country: locationData.country,
+      latitude: locationData.latitude,
+      longitude: locationData.longitude,
+      isp: locationData.isp,
+      userAgent: req.headers['user-agent'] || 'Unknown',
+      referer: req.headers['referer'] || 'Direct',
+      language: req.headers['accept-language']?.split(',')[0] || 'Unknown'
+    };
+
+    // Read existing visitors
+    const visitorsFile = path.join(__dirname, 'visitors.json');
+    let visitors = [];
+    
+    try {
+      const data = await fs.readFile(visitorsFile, 'utf-8');
+      visitors = JSON.parse(data);
+    } catch (error) {
+      // File doesn't exist or is invalid, start fresh
+      visitors = [];
+    }
+
+    // Add new visitor
+    visitors.push(visitorData);
+
+    // Keep only last 1000 visitors to prevent file from getting too large
+    if (visitors.length > 1000) {
+      visitors = visitors.slice(-1000);
+    }
+
+    // Save to file
+    await fs.writeFile(visitorsFile, JSON.stringify(visitors, null, 2));
+
+    res.status(200).json({ 
+      success: true, 
+      message: 'Visitor tracked successfully',
+      location: `${visitorData.city}, ${visitorData.state}`
+    });
+  } catch (error) {
+    console.error('Error tracking visitor:', error);
+    res.status(500).json({ 
+      success: false, 
+      message: 'Error tracking visitor',
+      details: error.message 
+    });
+  }
+});
+
+// Endpoint to view visitor data (you can add authentication here)
+app.get('/api/visitors', async (req, res) => {
+  try {
+    const visitorsFile = path.join(__dirname, 'visitors.json');
+    const data = await fs.readFile(visitorsFile, 'utf-8');
+    const visitors = JSON.parse(data);
+    
+    res.status(200).json({
+      success: true,
+      count: visitors.length,
+      visitors: visitors.reverse() // Most recent first
+    });
+  } catch (error) {
+    console.error('Error reading visitors:', error);
+    res.status(500).json({ 
+      success: false, 
+      message: 'Error reading visitor data',
+      details: error.message 
+    });
+  }
+});
 
 app.post('/api/contact', async (req, res) => {
   const { name, email, message } = req.body;
