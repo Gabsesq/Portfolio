@@ -105,6 +105,82 @@ export default function BlogScreen() {
                                 fontFamily: "'Exmouth', Arial, sans-serif",
                                 color: '#ffffff'
                             }}>
+                            Shroud
+                            </h3>
+                            <div style={{ 
+                                margin: '0 0 10px 0', 
+                                fontSize: '14px', 
+                                color: '#ffffff',
+                                lineHeight: '1.8',
+                                textAlign: 'left',
+                                fontStyle: 'italic'
+                            }}>
+
+It slipped into my knit top and slithered downward<br/>
+I almost caught it when it snagged my cargo pocket <br/><br/>
+
+It was too slippery to grasp<br/>
+I tried handling it with gloves<br/><br/>
+
+But the shadow jumped, intertwining itself<br/>
+Into the identity of my hair<br/><br/>
+
+Intuition muffled by it’s hands<br/>
+Spiritual protection weak, falling out<br/><br/>
+
+I bought a new lantern<br/>
+To try to exterminate the pest<br/><br/>
+
+I moved it to different areas of the room<br/>
+Placed the lamp in every position you could think of<br/><br/>
+
+When I held the lantern, the shadow was slight but harsh<br/>
+When I placed the lantern across the room, it was blurry but overwhelming in size<br/><br/>
+
+I bought another lantern and I moved to a bigger room<br/>
+But the shadows multiplied and the large space echoed<br/><br/>
+
+My room keeps expanding<br/>
+My shadows stretch: darker, longer, more numerous<br/><br/>
+
+More lanterns make them more<br/>
+No light makes them all<br/>
+One light makes them stark<br/><br/>
+
+Help me live alongside you
+                            </div>
+                            <div style={{ 
+                                fontSize: '12px', 
+                                color: '#ffffff',
+                                fontStyle: 'italic'
+                            }}>
+                                Posted on December 7, 2025 • 1 min read ✨
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
+
+                        <div style={{
+                            background: 'rgba(0, 0, 0, 0.65)',
+                            padding: '20px',
+                            borderRadius: '12px',
+                            marginBottom: '15px',
+                            boxShadow: '0 4px 8px rgba(0, 132, 255, 0.1)',
+                        border: '1px solid rgba(255,255,255,0.3)',
+                        color: '#ffffff'
+                        }}>
+                            <h3 style={{ 
+                                margin: '0 0 10px 0', 
+                                fontSize: '30px',
+                                fontFamily: "'Exmouth', Arial, sans-serif",
+                                color: '#ffffff'
+                            }}>
                             Chalant
                             </h3>
                             <div style={{ 
