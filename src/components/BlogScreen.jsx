@@ -84,6 +84,164 @@ export default function BlogScreen() {
                             </h2>
                         </div>
 
+                        <div style={{
+                            background: 'rgba(0, 0, 0, 0.65)',
+                            padding: '20px',
+                            borderRadius: '12px',
+                            marginBottom: '15px',
+                            boxShadow: '0 4px 8px rgba(0, 132, 255, 0.1)',
+                        border: '1px solid rgba(255,255,255,0.3)',
+                        color: '#ffffff'
+                        }}>
+                            <h3 style={{ 
+                                margin: '0 0 10px 0', 
+                                fontSize: '30px',
+                                fontFamily: "'Exmouth', Arial, sans-serif",
+                                color: '#ffffff'
+                            }}>
+                            AEO GEO SEO
+                            </h3>
+                            <div style={{ 
+                                margin: '0 0 10px 0', 
+                                fontSize: '14px', 
+                                color: '#ffffff',
+                                lineHeight: '1.8',
+                                textAlign: 'left'
+                            }}>
+
+My new wave has been AEO, GEO, and SEO improvements to websites. It’s like crack, trying to gather citations from AI. JSON-LD, structured data, fresh new ideas for Perplexity, alt text and readable images, meaningful blog posts, cracking the code of something no one has figured out. Exhilarating.
+                            </div>
+                            <div style={{ 
+                                fontSize: '12px', 
+                                color: '#ffffff',
+                                fontStyle: 'italic'
+                            }}>
+                                Posted on September 1st, 2026 • 1 min read ✨
+                            </div>
+                        </div>
+
+                        <div style={{
+                            background: 'rgba(0, 0, 0, 0.65)',
+                            padding: '20px',
+                            borderRadius: '12px',
+                            marginBottom: '15px',
+                            boxShadow: '0 4px 8px rgba(0, 132, 255, 0.1)',
+                        border: '1px solid rgba(255,255,255,0.3)',
+                        color: '#ffffff'
+                        }}>
+                            <h3 style={{ 
+                                margin: '0 0 10px 0', 
+                                fontSize: '30px',
+                                fontFamily: "'Exmouth', Arial, sans-serif",
+                                color: '#ffffff'
+                            }}>
+                            Buddy
+                            </h3>
+                            <div style={{ 
+                                margin: '0 0 10px 0', 
+                                fontSize: '14px', 
+                                color: '#ffffff',
+                                lineHeight: '1.8',
+                                textAlign: 'left'
+                            }}>
+
+Wow. I watched Buddy and it was a hard watch for a gal like me. Watching the desperation, not for love, but for approval. The bottomless pit of discontent, fueled by forced validation. Someone called it 'need for love', I call it an epidemic of narcissism; an epidemic of no validation being enough validation.
+Tip-toeing over the emotions of an entity that doesn’t realize it is a vortex of an empty pit. Light patting to make the room feel okay, while disregarding your own needs and emotions.<br/><br/>
+
+Everyone collectively gathering to protect this dark entity. Enabling this entity. If Buddy were representative of real life, it would be one person, tops, standing up to defeat that status quo. In real life, people constantly bend and disfigure themselves, disfigure those around them, to soothe the undiagnosed beast.
+                            </div>
+                            <div style={{ 
+                                fontSize: '12px', 
+                                color: '#ffffff',
+                                fontStyle: 'italic'
+                            }}>
+                                Posted on September 19, 2026 • 1 min read ✨
+                            </div>
+                        </div>
+
+                        <div style={{
+                            background: 'rgba(0, 0, 0, 0.65)',
+                            padding: '20px',
+                            borderRadius: '12px',
+                            marginBottom: '15px',
+                            boxShadow: '0 4px 8px rgba(0, 132, 255, 0.1)',
+                        border: '1px solid rgba(255,255,255,0.3)',
+                        color: '#ffffff'
+                        }}>
+                            <h3 style={{ 
+                                margin: '0 0 10px 0', 
+                                fontSize: '30px',
+                                fontFamily: "'Exmouth', Arial, sans-serif",
+                                color: '#ffffff'
+                            }}>
+                            Tradwife
+                            </h3>
+                            <div style={{ 
+                                margin: '0 0 10px 0', 
+                                fontSize: '14px', 
+                                color: '#ffffff',
+                                lineHeight: '1.8',
+                                textAlign: 'left'
+                            }}>
+
+The tradwife wave actually makes sense. I am someone who has an abundance of dreams. I want to harness every hobby, make every trinket I want, sew every dress I can’t afford. And in the back of my mind, I want to monetize it too. I want to start multiple businesses, code multiple apps. The worst part is I’m decent at all of these things, but I can’t choose.<br/><br/>
+
+Let’s rewind. Looking at myself, I am let loose and wild. I am all over the place. I am Sylvia Plath's fig tree analogy. It takes a lot of mental load to feel like a failure because I can’t pick one path. Tradwife is a life chosen for you. It removes the arduous decisions and choices that all adults must make. It infantilizes and narrows your options, removing that burden from your mind.<br/><br/>
+
+Freedom feels like a burden sometimes. Am I using it correctly? Will I ever be satisfied? Am I smart enough, and capable enough, to exercise my free will? It is a lot to carry. And it is much less of a mental burden to carry the path that is already decided for you. I can’t say that the work is easier, but I can definitely say that the mental clarity in the moment is easier. One purpose and one passion only.<br/><br/>
+
+All of this coming from someone who is self-destructive in that I am supposed to narrow, but I can’t bring myself to do it. Picking one career, one hobby, one friend group, feels like being trapped in a glass box. I salivate on the walls of transparency while I watch everyone around me do something I want to do. I dream of motherhood and a child-free life. I want Chinese for dinner and also Mexican and also Peruvian. I want to be a software developer, a graphic designer, an engineer, and an architect. I want to live in Texas and also Peru and maybe Spain. But I don’t want to live there forever.<br/><br/>
+
+Permanence and townie syndrome scare me beyond words. And the funny part is, I am so paralyzed by my abundance of decisions that the decision I make is “do nothing.” Unfortunate.
+                            </div>
+                            <div style={{ 
+                                fontSize: '12px', 
+                                color: '#ffffff',
+                                fontStyle: 'italic'
+                            }}>
+                                Posted on July 19, 2026 • 3 min read ✨
+                            </div>
+                        </div>
+
+                        <div style={{
+                            background: 'rgba(0, 0, 0, 0.65)',
+                            padding: '20px',
+                            borderRadius: '12px',
+                            marginBottom: '15px',
+                            boxShadow: '0 4px 8px rgba(0, 132, 255, 0.1)',
+                        border: '1px solid rgba(255,255,255,0.3)',
+                        color: '#ffffff'
+                        }}>
+                            <h3 style={{ 
+                                margin: '0 0 10px 0', 
+                                fontSize: '30px',
+                                fontFamily: "'Exmouth', Arial, sans-serif",
+                                color: '#ffffff'
+                            }}>
+                            Bitch Allegations
+                            </h3>
+                            <div style={{ 
+                                margin: '0 0 10px 0', 
+                                fontSize: '14px', 
+                                color: '#ffffff',
+                                lineHeight: '1.8',
+                                textAlign: 'left'
+                            }}>
+
+I want to be a bitch. If someone called me a bitch, that probably means I set a boundary. I asked for extra dressing. I asked for a raise. I called out poor behavior. I chose the path of direct communication and saved myself from a life of resentment, a life of mental debate.<br/><br/>
+
+I asked “what do you mean by that?” “Are you doing okay?” “Can you elaborate?” I am a humungo bitch because I assert myself. It feels great.
+                            </div>
+                            <div style={{ 
+                                fontSize: '12px', 
+                                color: '#ffffff',
+                                fontStyle: 'italic'
+                            }}>
+                                Posted on June 10, 2026 • 1 min read ✨
+                            </div>
+                        </div>
+
+
 
 
 
